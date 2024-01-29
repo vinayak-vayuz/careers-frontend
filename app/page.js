@@ -1,15 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Permanent_Marker } from "next/font/google";
+import { Permanent_Marker, Bungee } from "next/font/google";
 
 const permanent_Marker = Permanent_Marker({
+  weight: "400",
+  subsets: ["latin"],
+});
+const bungee = Bungee({
   weight: "400",
   subsets: ["latin"],
 });
 
 export default function Home() {
   return (
-    <main className="flex gap-2">
+    <main className="flex flex-col gap-2">
       <header className="w-full p-4 flex justify-center">
         <Image
           className="absolute top-4 left-4 scale-75"
@@ -134,6 +138,33 @@ export default function Home() {
           </button>
         </div>
       </header>
+      <main
+        className={`${bungee.className} w-full min-h-[80vh] text-[85px] leading-[100px] flex flex-col justify-center items-center text-center`}
+      >
+        <h1 className="flex justify-center items-center gap-4">
+          <span className="text-white">We Are</span>
+          <span className="font-outline-2">People</span>
+        </h1>
+        <h1 className="flex justify-center items-center gap-4">
+          <div>
+            <span className="text-white">W</span>
+            <span className="font-outline-2">ho</span>
+          </div>
+          <div>
+            <span className="font-outline-2">ca</span>
+            <span className="text-white">re</span>
+          </div>
+          <div>
+            <span className="text-white">A</span>
+            <span className="font-outline-2">bout</span>
+          </div>
+        </h1>
+        <h1>
+          <span className="text-white">Y</span>
+          <span className="font-outline-2">o</span>
+          <span className="text-white">u</span>
+        </h1>
+      </main>
     </main>
   );
 }
