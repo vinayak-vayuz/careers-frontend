@@ -190,7 +190,7 @@ export default function Home() {
           <h1>#Roadto100</h1>
         </div>
         <svg
-          className="absolute top-[45%] -translate-y-[50%] left-4"
+          className="fixed top-[50%] -translate-y-[50%] left-4"
           xmlns="http://www.w3.org/2000/svg"
           width="26"
           height="214"
@@ -1220,8 +1220,26 @@ export default function Home() {
         <div className="w-1/2 min-h-[80vh] flex justify-center items-center">
           <div className="relative">
             <Image src={"/images/teal_bg.svg"} width={334} height={702} />
-            <Image className="scale-75 absolute -top-5 -right-5" src={"/images/bubble.svg"} width={252} height={184} />
-            <Image className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2" src={"/images/peg.svg"} width={287} height={197} />
+            <div>
+              <Image
+                className="scale-75 absolute -top-5 -right-5"
+                src={"/images/bubble.svg"}
+                width={252}
+                height={184}
+              />
+              <h1
+                className={`${cherry_Bomb_One.className} text-2xl text-center text-white absolute top-10 right-14 -rotate-12`}
+              >
+                We Can &<br />
+                we will!!
+              </h1>
+            </div>
+            <Image
+              className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+              src={"/images/peg.svg"}
+              width={287}
+              height={197}
+            />
           </div>
         </div>
       </main>
