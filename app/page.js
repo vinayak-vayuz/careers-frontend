@@ -1195,8 +1195,27 @@ export default function Home() {
           </div>
         </div>
         {/* Video Section */}
-        <div className="w-full min-h-[50vh] bg-green-500">
-
+        <div className="w-full min-h-[50vh] bg-green-500"></div>
+      </main>
+      <main className="px-14 py-8 w-full min-h-screen">
+        <div className="w-1/2 h-[80vh] flex flex-col justify-between gap-5">
+          <div>
+            <div>
+              <h1 className={`${bungee.className} text-8xl text-white`}>Our</h1>
+              <h1 className={`${bungee.className} text-8xl text-white`}>
+                SBUs
+              </h1>
+            </div>
+            <p className="text-[#DDDDDD]">
+              Empowering Futures, Unleashing Potential: Our SBUs - Pillars of
+              Excellence in Every Endeavor.
+            </p>
+          </div>
+          <p className="text-[#DDDDDD]">
+            The Product Engineering Group pioneers technological innovation,
+            crafting market-leading solutions through creativity, precision, and
+            a commitment to excellence. Join our transformative journey.
+          </p>
         </div>
       </main>
     </main>
