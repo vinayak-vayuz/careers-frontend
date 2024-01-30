@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Permanent_Marker, Bungee, Cherry_Bomb_One } from "next/font/google";
+import {
+  Permanent_Marker,
+  Bungee,
+  Cherry_Bomb_One,
+  Montserrat,
+} from "next/font/google";
 
 const permanent_Marker = Permanent_Marker({
   weight: "400",
@@ -14,10 +19,14 @@ const cherry_Bomb_One = Cherry_Bomb_One({
   weight: "400",
   subsets: ["latin"],
 });
+const montserrat = Montserrat({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-2">
+    <main className="relative flex flex-col gap-2">
       <header className="w-full p-4 flex justify-center">
         <Image
           className="absolute top-4 left-4 scale-75"
@@ -145,7 +154,7 @@ export default function Home() {
         </div>
       </header>
       <main
-        className={`${bungee.className} w-full min-h-[80vh] relative flex flex-col justify-center items-center text-center`}
+        className={`${bungee.className} w-full min-h-[85vh] relative flex flex-col justify-center items-center text-center`}
       >
         <h1 className="text-[85px] leading-[100px] flex justify-center items-center gap-4">
           <span className="text-white">We Are</span>
@@ -318,6 +327,97 @@ export default function Home() {
             stroke-width="1.5"
           />
         </svg>
+      </main>
+      <main className="w-full min-h-screen">
+        <div
+          className={`${montserrat.className} flex justify-center items-center gap-4 text-white text-4xl`}
+        >
+          <h1>respect Time</h1>
+          <h1>Plan well</h1>
+          <h1>deliver Quality</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_829_105)">
+              <path
+                d="M37.5 20C37.5 24.6413 35.6563 29.0925 32.3744 32.3744C29.0925 35.6563 24.6413 37.5 20 37.5C15.3587 37.5 10.9075 35.6563 7.62563 32.3744C4.34374 29.0925 2.5 24.6413 2.5 20C2.5 15.3587 4.34374 10.9075 7.62563 7.62563C10.9075 4.34374 15.3587 2.5 20 2.5C24.6413 2.5 29.0925 4.34374 32.3744 7.62563C35.6563 10.9075 37.5 15.3587 37.5 20ZM0 20C0 25.3043 2.10714 30.3914 5.85786 34.1421C9.60859 37.8929 14.6957 40 20 40C25.3043 40 30.3914 37.8929 34.1421 34.1421C37.8929 30.3914 40 25.3043 40 20C40 14.6957 37.8929 9.60859 34.1421 5.85786C30.3914 2.10714 25.3043 0 20 0C14.6957 0 9.60859 2.10714 5.85786 5.85786C2.10714 9.60859 0 14.6957 0 20ZM18.75 8.75V20C18.75 20.4141 18.9609 20.8047 19.3047 21.0391L26.8047 26.0391C27.3828 26.4219 28.1562 26.2656 28.5391 25.6953C28.9219 25.125 28.7656 24.3438 28.1953 23.9609L21.25 19.3281V8.75C21.25 8.0625 20.6875 7.5 20 7.5C19.3125 7.5 18.75 8.0625 18.75 8.75Z"
+                fill="#FC0600"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_829_105">
+                <rect width="40" height="40" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_829_99)">
+              <path
+                d="M12.0156 5.633C12.7109 4.85957 12.6484 3.67988 11.875 2.98457C11.1016 2.28925 9.92188 2.35175 9.22656 3.12519L4.92969 7.89863L3.20312 6.17207C2.46875 5.4455 1.28125 5.4455 0.546875 6.17207C-0.1875 6.89863 -0.1875 8.09394 0.546875 8.8205L3.67188 11.9455C4.03906 12.3127 4.53125 12.508 5.04688 12.4924C5.5625 12.4768 6.04688 12.258 6.39063 11.8752L12.0156 5.62519V5.633ZM12.0156 18.133C12.7109 17.3596 12.6484 16.1799 11.875 15.4846C11.1016 14.7893 9.92188 14.8518 9.22656 15.6252L4.92969 20.3986L3.20312 18.6721C2.46875 17.9377 1.28125 17.9377 0.554688 18.6721C-0.171875 19.4064 -0.179688 20.5939 0.554688 21.3205L3.67969 24.4455C4.04688 24.8127 4.53906 25.008 5.05469 24.9924C5.57031 24.9768 6.05469 24.758 6.39844 24.3752L12.0234 18.1252L12.0156 18.133ZM16.875 9.37519H38.125C39.1641 9.37519 40 8.53925 40 7.50019C40 6.46113 39.1641 5.62519 38.125 5.62519H16.875C15.8359 5.62519 15 6.46113 15 7.50019C15 8.53925 15.8359 9.37519 16.875 9.37519ZM15 20.0002C15 21.0393 15.8359 21.8752 16.875 21.8752H38.125C39.1641 21.8752 40 21.0393 40 20.0002C40 18.9611 39.1641 18.1252 38.125 18.1252H16.875C15.8359 18.1252 15 18.9611 15 20.0002ZM12.5 32.5002C12.5 33.5393 13.3359 34.3752 14.375 34.3752H38.125C39.1641 34.3752 40 33.5393 40 32.5002C40 31.4611 39.1641 30.6252 38.125 30.6252H14.375C13.3359 30.6252 12.5 31.4611 12.5 32.5002ZM7.5 32.5002C7.5 31.8371 7.23661 31.2013 6.76777 30.7324C6.29893 30.2636 5.66304 30.0002 5 30.0002C4.33696 30.0002 3.70107 30.2636 3.23223 30.7324C2.76339 31.2013 2.5 31.8371 2.5 32.5002C2.5 33.1632 2.76339 33.7991 3.23223 34.268C3.70107 34.7368 4.33696 35.0002 5 35.0002C5.66304 35.0002 6.29893 34.7368 6.76777 34.268C7.23661 33.7991 7.5 33.1632 7.5 32.5002Z"
+                fill="#0AD80A"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_829_99">
+                <rect width="40" height="40" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_829_93)">
+              <path
+                d="M3.75 20C3.75 15.6902 5.46205 11.557 8.50951 8.50951C11.557 5.46205 15.6902 3.75 20 3.75C24.3098 3.75 28.443 5.46205 31.4905 8.50951C34.538 11.557 36.25 15.6902 36.25 20C36.25 24.3098 34.538 28.443 31.4905 31.4905C28.443 34.538 24.3098 36.25 20 36.25C15.6902 36.25 11.557 34.538 8.50951 31.4905C5.46205 28.443 3.75 24.3098 3.75 20ZM40 20C40 14.6957 37.8929 9.60859 34.1421 5.85786C30.3914 2.10714 25.3043 0 20 0C14.6957 0 9.60859 2.10714 5.85786 5.85786C2.10714 9.60859 0 14.6957 0 20C0 25.3043 2.10714 30.3914 5.85786 34.1421C9.60859 37.8929 14.6957 40 20 40C25.3043 40 30.3914 37.8929 34.1421 34.1421C37.8929 30.3914 40 25.3043 40 20ZM26.125 24.8516C24.9375 26.1328 22.9062 27.5 20 27.5C17.0938 27.5 15.0625 26.1328 13.875 24.8516C13.1719 24.0938 11.9844 24.0391 11.2266 24.7422C10.4688 25.4453 10.4141 26.6328 11.1172 27.3906C12.8359 29.25 15.8047 31.25 19.9922 31.25C24.1797 31.25 27.1562 29.2578 28.8672 27.3906C29.5703 26.6328 29.5234 25.4453 28.7578 24.7422C27.9922 24.0391 26.8125 24.0859 26.1094 24.8516H26.125ZM26.2812 17.1875C27.1094 17.1875 27.8359 17.4844 28.2656 17.9453C28.8594 18.5781 29.8438 18.6094 30.4766 18.0156C31.1094 17.4219 31.1406 16.4375 30.5469 15.8047C29.4141 14.5938 27.7969 14.0625 26.2812 14.0625C24.7656 14.0625 23.1484 14.5938 22.0156 15.8047C21.4219 16.4375 21.4609 17.4219 22.0859 18.0156C22.7109 18.6094 23.7031 18.5703 24.2969 17.9453C24.7266 17.4922 25.4531 17.1875 26.2812 17.1875ZM15.7656 17.9453C16.3594 18.5781 17.3438 18.6094 17.9766 18.0156C18.6094 17.4219 18.6406 16.4375 18.0469 15.8047C16.9141 14.5938 15.2969 14.0625 13.7812 14.0625C12.2656 14.0625 10.6484 14.5938 9.51562 15.8047C8.92188 16.4375 8.96094 17.4219 9.58594 18.0156C10.2109 18.6094 11.2031 18.5703 11.7969 17.9453C12.2266 17.4922 12.9531 17.1875 13.7812 17.1875C14.6094 17.1875 15.3359 17.4844 15.7656 17.9453Z"
+                fill="#F60163"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_829_93">
+                <rect
+                  width="40"
+                  height="40"
+                  fill="white"
+                  transform="matrix(-1 0 0 1 40 0)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <h1>respect Time</h1>
+        </div>
+        <div className="my-8 flex flex-wrap justify-center items-center gap-4 text-2xl">
+          <div className="bg-primary-gradient border rounded-lg flex justify-center items-center">
+            <button className="w-full h-full px-4 py-2 bg-black button-gradient-primary">
+              Designer
+            </button>
+          </div>
+          <button className="px-4 py-2 border border-white rounded-lg text-white">
+            Web Developers
+          </button>
+          <button className="px-4 py-2 border border-white rounded-lg text-white">
+            Mobile Developers
+          </button>
+          <button className="px-4 py-2 border border-white rounded-lg text-white">
+            Marketing
+          </button>
+          <button className="px-4 py-2 border border-white rounded-lg text-white">
+            Human Resources
+          </button>
+        </div>
       </main>
     </main>
   );

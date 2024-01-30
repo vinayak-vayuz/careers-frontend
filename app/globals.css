@@ -35,3 +35,27 @@ body {
     -webkit-text-stroke: 2px white;
   }
 }
+.bg-primary-gradient {
+  background: linear-gradient(
+    92deg,
+    #08a7ce 4.29%,
+    #f60163 45.01%,
+    #fc0600 61.23%,
+    #f60 89.79%,
+    #0ad80a 97.67%
+  );
+}
+.button-gradient-primary {
+  background: linear-gradient(
+    92deg,
+    #08a7ce 4.29%,
+    #f60163 45.01%,
+    #fc0600 61.23%,
+    #f60 89.79%,
+    #0ad80a 97.67%
+  );
+  background-clip: text;
+  text-decoration: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
