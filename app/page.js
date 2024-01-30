@@ -400,7 +400,7 @@ export default function Home() {
           <h1>respect Time</h1>
         </div>
         <div className="my-8 flex flex-wrap justify-center items-center gap-4 text-2xl">
-          <div className="bg-primary-gradient border rounded-lg flex justify-center items-center">
+          <div className="p-0.5 bg-primary-gradient border rounded-lg flex justify-center items-center">
             <button className="w-full h-full px-4 py-2 bg-black button-gradient-primary">
               Designer
             </button>
