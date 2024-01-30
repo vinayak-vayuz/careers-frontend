@@ -424,7 +424,7 @@ export default function Home() {
           </button>
         </div>
         <div className="mb-8 mx-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {/* Job Card */}
+          {/* Job Card Section */}
           <div
             className={`${nunito.className} p-4 bg-[#202020] border border-[#313131] rounded-2xl`}
           >
@@ -1193,6 +1193,10 @@ export default function Home() {
               </button>
             </div>
           </div>
+        </div>
+        {/* Video Section */}
+        <div className="w-full min-h-[50vh] bg-green-500">
+
         </div>
       </main>
     </main>
