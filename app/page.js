@@ -1197,6 +1197,7 @@ export default function Home() {
         {/* Video Section */}
         <div className="w-full min-h-[50vh] bg-green-500"></div>
       </main>
+      {/* SBUs Section */}
       <main className="px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20">
         <div className="w-1/2 min-h-[80vh] flex flex-col justify-between gap-5">
           <div>
@@ -1240,6 +1241,27 @@ export default function Home() {
               width={287}
               height={197}
             />
+          </div>
+        </div>
+      </main>
+      {/* Legends Section */}
+      <main className="px-4 w-full min-h-screen">
+        <div className="w-1/2 flex gap-2">
+          <div className="flex flex-col gap-2">
+            <Image width={200} height={200} src={"/images/monika.png"} />
+            <Image width={200} height={200} src={"/images/suhani.png"} />
+            <Image width={200} height={200} src={"/images/saurabh.png"} />
+          </div>
+          <div className="flex flex-col gap-2">
+            <Image width={200} height={200} src={"/images/bidyut.png"} />
+            <Image width={200} height={200} src={"/images/ujjawal.png"} />
+            <Image width={200} height={200} src={"/images/priya.png"} />
+          </div>
+        </div>
+        <div className="w-1/2 flex gap-2">
+          <div>
+            <h1 className={`${bungee.className} text-8xl text-white`}>Our</h1>
+            <h1 className={`${bungee.className} text-8xl text-white`}>Legend</h1>
           </div>
         </div>
       </main>
