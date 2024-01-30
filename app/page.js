@@ -1197,8 +1197,8 @@ export default function Home() {
         {/* Video Section */}
         <div className="w-full min-h-[50vh] bg-green-500"></div>
       </main>
-      <main className="px-14 py-8 w-full min-h-screen">
-        <div className="w-1/2 h-[80vh] flex flex-col justify-between gap-5">
+      <main className="px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20">
+        <div className="w-1/2 min-h-[80vh] flex flex-col justify-between gap-5">
           <div>
             <div>
               <h1 className={`${bungee.className} text-8xl text-white`}>Our</h1>
@@ -1216,6 +1216,13 @@ export default function Home() {
             crafting market-leading solutions through creativity, precision, and
             a commitment to excellence. Join our transformative journey.
           </p>
+        </div>
+        <div className="w-1/2 min-h-[80vh] flex justify-center items-center">
+          <div className="relative">
+            <Image src={"/images/teal_bg.svg"} width={334} height={702} />
+            <Image className="scale-75 absolute -top-5 -right-5" src={"/images/bubble.svg"} width={252} height={184} />
+            <Image className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2" src={"/images/peg.svg"} width={287} height={197} />
+          </div>
         </div>
       </main>
     </main>
