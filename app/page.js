@@ -1,3 +1,5 @@
+"use client";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -7,6 +9,12 @@ import {
   Montserrat,
   Nunito,
 } from "next/font/google";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel, Pagination } from "swiper/modules";
+import "./swiper.css";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 
 const permanent_Marker = Permanent_Marker({
   weight: "400",
@@ -198,6 +206,7 @@ export default function Home() {
           height={214}
         />
       </main>
+      {/* Values Section */}
       <main className="w-full min-h-screen">
         <div
           className={`${montserrat.className} flex justify-center items-center gap-4 text-white text-4xl`}
@@ -1064,6 +1073,27 @@ export default function Home() {
       </main>
       {/* SBUs Section */}
       <main className="px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20">
+        {/* <Swiper
+          direction={"vertical"}
+          slidesPerView={1}
+          spaceBetween={0}
+          mousewheel={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Mousewheel, Pagination]}
+          className="mySwiper w-full h-screen"
+        >
+          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>Slide 5</SwiperSlide>
+          <SwiperSlide>Slide 6</SwiperSlide>
+          <SwiperSlide>Slide 7</SwiperSlide>
+          <SwiperSlide>Slide 8</SwiperSlide>
+          <SwiperSlide>Slide 9</SwiperSlide>
+        </Swiper> */}
         <div className="w-1/2 min-h-[80vh] flex flex-col justify-between gap-5">
           <div>
             <div>
