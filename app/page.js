@@ -12,9 +12,10 @@ import {
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper/modules";
-import "./swiper.css";
+// import "./swiper.css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
+import SBUs from "./components/SBUs";
 
 const permanent_Marker = Permanent_Marker({
   weight: "400",
@@ -38,6 +39,7 @@ const nunito = Nunito({
 });
 
 export default function Home() {
+  const [legend, setLegend] = useState(false);
   const legendData = [
     { imageSrc: "/images/monika.png", width: 200, height: 200 },
     { imageSrc: "/images/suhani.png", width: 200, height: 200 },
@@ -1081,6 +1083,7 @@ export default function Home() {
       </main>
       {/* SBUs Section */}
       <main className="px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20">
+        <SBUs />
         {/* <Swiper
           direction={"vertical"}
           slidesPerView={1}
@@ -1090,97 +1093,53 @@ export default function Home() {
             clickable: true,
           }}
           modules={[Mousewheel, Pagination]}
-          className="mySwiper w-full h-screen"
+          className="mySwiper"
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          <SwiperSlide>
+            <SBUs />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SBUs />
+          </SwiperSlide>
         </Swiper> */}
-        <div className="w-1/2 min-h-[80vh] flex flex-col justify-between gap-5">
-          <div>
-            <div>
-              <h1 className={`${bungee.className} text-8xl text-white`}>Our</h1>
-              <h1 className={`${bungee.className} text-8xl text-white`}>
-                SBUs
-              </h1>
-            </div>
-            <p className="text-[#DDDDDD]">
-              Empowering Futures, Unleashing Potential: Our SBUs - Pillars of
-              Excellence in Every Endeavor.
-            </p>
-          </div>
-          <p className="text-[#DDDDDD]">
-            The Product Engineering Group pioneers technological innovation,
-            crafting market-leading solutions through creativity, precision, and
-            a commitment to excellence. Join our transformative journey.
-          </p>
-        </div>
-        <div className="w-1/2 min-h-[80vh] flex justify-center items-center">
-          <div className="relative">
-            <Image src={"/images/teal_bg.svg"} width={334} height={702} />
-            <div>
-              <Image
-                className="scale-75 absolute -top-5 -right-5"
-                src={"/images/bubble.svg"}
-                width={252}
-                height={184}
-              />
-              <h1
-                className={`${cherry_Bomb_One.className} text-2xl text-center text-white absolute top-10 right-14 -rotate-12`}
-              >
-                We Can &<br />
-                we will!!
-              </h1>
-            </div>
-            <Image
-              className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
-              src={"/images/peg.svg"}
-              width={287}
-              height={197}
-            />
-          </div>
-        </div>
       </main>
       {/* Legends Section */}
       <main className="relative px-4 w-full min-h-screen flex">
-        <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2">
-          <div className="flex flex-wrap gap-2">
-            {legendData.map((data, index) => (
-              <Image width={200} height={200} src={data.imageSrc} />
-            ))}
+        <div className="flex">
+          <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2">
+            <div className="flex flex-wrap gap-2">
+              {legendData.map((data, index) => (
+                <Image width={200} height={200} src={data.imageSrc} />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="w-full md:w-[63%] md:min-h-screen flex items-center gap-2">
-          <div>
-            <h1 className={`${bungee.className} text-8xl text-white`}>Our</h1>
-            <h1 className={`${bungee.className} text-8xl text-white`}>
-              Legend
-            </h1>
-            <p className="text-lg text-[#DDDDDD]">
-              Legends are born when ordinary individuals go beyond the call of
-              duty, creating benchmarks of excellence that inspire the world to
-              reach new heights
-            </p>
+          <div className="w-full md:w-[63%] md:min-h-screen flex items-center gap-2">
+            <div>
+              <h1 className={`${bungee.className} text-8xl text-white`}>Our</h1>
+              <h1 className={`${bungee.className} text-8xl text-white`}>
+                Legend
+              </h1>
+              <p className="text-lg text-[#DDDDDD]">
+                Legends are born when ordinary individuals go beyond the call of
+                duty, creating benchmarks of excellence that inspire the world
+                to reach new heights
+              </p>
+            </div>
           </div>
+          <Image
+            className="w-32 absolute bottom-0 right-0"
+            src={"/icons/proud_vayuzer.svg"}
+            width={199}
+            height={200}
+            s
+          />
         </div>
-        <Image
-          className="w-32 absolute bottom-0 right-0"
-          src={"/icons/proud_vayuzer.svg"}
-          width={199}
-          height={200}s
-        />
-        <Image
+        <button
+          onClick={""}
           className="absolute top-1/2 -translate-y-1/2 right-0"
-          src={"/images/vip_button.svg"}
-          width={27}
-          height={484}
-        />
+        >
+          <Image src={"/images/vip_button.svg"} width={27} height={484} />
+        </button>
       </main>
     </main>
   );
