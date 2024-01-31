@@ -38,6 +38,14 @@ const nunito = Nunito({
 });
 
 export default function Home() {
+  const legendData = [
+    { imageSrc: "/images/monika.png", width: 200, height: 200 },
+    { imageSrc: "/images/suhani.png", width: 200, height: 200 },
+    { imageSrc: "/images/saurabh.png", width: 200, height: 200 },
+    { imageSrc: "/images/bidyut.png", width: 200, height: 200 },
+    { imageSrc: "/images/ujjawal.png", width: 200, height: 200 },
+    { imageSrc: "/images/priya.png", width: 200, height: 200 },
+  ];
   return (
     <main className="relative flex flex-col gap-2">
       {/* Header */}
@@ -1142,18 +1150,13 @@ export default function Home() {
       {/* Legends Section */}
       <main className="relative px-4 w-full min-h-screen flex">
         <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2">
-          <div className="flex flex-row sm:flex-col gap-2">
-            <Image width={200} height={200} src={"/images/monika.png"} />
-            <Image width={200} height={200} src={"/images/suhani.png"} />
-            <Image width={200} height={200} src={"/images/saurabh.png"} />
-          </div>
-          <div className="flex flex-row sm:flex-col gap-2">
-            <Image width={200} height={200} src={"/images/bidyut.png"} />
-            <Image width={200} height={200} src={"/images/ujjawal.png"} />
-            <Image width={200} height={200} src={"/images/priya.png"} />
+          <div className="flex flex-wrap gap-2">
+            {legendData.map((data, index) => (
+              <Image width={200} height={200} src={data.imageSrc} />
+            ))}
           </div>
         </div>
-        <div className="w-full md:w-[65%] md:min-h-screen flex items-center gap-2">
+        <div className="w-full md:w-[63%] md:min-h-screen flex items-center gap-2">
           <div>
             <h1 className={`${bungee.className} text-8xl text-white`}>Our</h1>
             <h1 className={`${bungee.className} text-8xl text-white`}>
@@ -1170,7 +1173,13 @@ export default function Home() {
           className="w-32 absolute bottom-0 right-0"
           src={"/icons/proud_vayuzer.svg"}
           width={199}
-          height={200}
+          height={200}s
+        />
+        <Image
+          className="absolute top-1/2 -translate-y-1/2 right-0"
+          src={"/images/vip_button.svg"}
+          width={27}
+          height={484}
         />
       </main>
     </main>
