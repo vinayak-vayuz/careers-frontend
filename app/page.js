@@ -52,16 +52,14 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
       {/* Values Section */}
-      <Values/>
+      <Values />
       {/* SBUs Section */}
-      <main className="px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20">
-        <ScrollSnap>
-          <PEG />
-        </ScrollSnap>
-        <motion.div className="progress" style={{ scaleX }} />
-      </main>
+      <ScrollSnap>
+        <PEG />
+      </ScrollSnap>
       {/* Legends Section */}
       <Legends />
+      <motion.div className="progress" style={{ scaleX }} />
     </main>
   );
 }
