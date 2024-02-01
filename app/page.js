@@ -1,11 +1,5 @@
 "use client";
 import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Pagination } from "swiper/modules";
-// import "./swiper.css";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 import {
   motion,
   useScroll,

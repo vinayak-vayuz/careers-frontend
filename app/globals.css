@@ -111,8 +111,6 @@ body {
   height: 400px; */
   position: relative;
   max-height: 100vh;
-  margin: 20px;
-  background: var(--white);
   overflow: hidden;
 }
 

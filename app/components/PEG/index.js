@@ -13,7 +13,7 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 const PEG = ({ className }) => {
   return (
     <>
-      <main className="px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20">
+      <main className="relative px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20">
         <div
           className={`${className} w-1/2 min-h-[80vh] flex flex-col justify-between gap-5`}
         >
@@ -36,7 +36,7 @@ const PEG = ({ className }) => {
           </p>
         </div>
         <div className="w-1/2 min-h-[80vh] flex justify-center items-center">
-          <div className="relative">
+          <div className="relative flex flex-col justify-between items-center gap-10">
             <Image src={"/images/teal_bg.svg"} width={334} height={702} />
             <div>
               <Image
@@ -58,6 +58,7 @@ const PEG = ({ className }) => {
               width={287}
               height={197}
             />
+            <Image src={"/images/pink_circle.svg"} width={334} height={702} />
           </div>
         </div>
       </main>
