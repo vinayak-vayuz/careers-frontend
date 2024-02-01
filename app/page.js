@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   motion,
   useScroll,
@@ -40,6 +40,23 @@ export default function Home() {
     restDelta: 0.001,
   });
 
+  console.log(scrollYProgress)
+
+  // Add state to determine whether to make the third section sticky
+  const [isSticky, setIsSticky] = useState(false);
+
+  // Change the value to trigger the sticky effect
+  const triggerSticky = 0.5; // Adjust this value based on your needs
+
+  // Update the state when the scrollYProgress exceeds the triggerSticky value
+  useEffect(() => {
+    if (scrollYProgress > triggerSticky) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  }, [scrollYProgress]);
+
   return (
     <main className="relative flex flex-col gap-2">
       {/* Header */}
@@ -49,8 +66,10 @@ export default function Home() {
       {/* Values Section */}
       <Values />
       {/* SBUs Section */}
-      <PEG />
-      <ArKa />
+      <div className={`sticky-container ${isSticky ? "sticky" : ""}`}>
+        <PEG />
+        <ArKa />
+      </div>
       {/* <ScrollSnap></ScrollSnap> */}
       {/* Legends Section */}
       <Legends />

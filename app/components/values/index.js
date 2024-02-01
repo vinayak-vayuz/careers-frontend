@@ -1,5 +1,5 @@
 import { Bungee, Cherry_Bomb_One, Montserrat, Nunito } from "next/font/google";
-import React from "react";
+import React, { useRef } from "react";
 
 const bungee = Bungee({
   weight: "400",
@@ -14,6 +14,22 @@ const nunito = Nunito({
   weight: "700",
   subsets: ["latin"],
 });
+
+function HorizontalMarquee() {
+  const el = useRef();
+  const tracker = useTracker(el);
+  const progress = useTrackerMotionValue(tracker);
+
+  const x = useTransform(progress, [0, 1], ["0vw", "-50vw"]);
+
+  return (
+    <section ref={el} className="Marquee Debug">
+      <motion.div style={{ x }}>
+        <h1>TEXT BIG TEXT BIG TEXT</h1>
+      </motion.div>
+    </section>
+  );
+}
 
 const Values = () => {
   return (
