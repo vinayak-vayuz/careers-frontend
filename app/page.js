@@ -12,6 +12,7 @@ import PEG from "./components/PEG";
 import Hero from "./components/hero";
 import Legends from "./components/legends";
 import Values from "./components/values";
+import ArKa from "./components/ArKa";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -48,9 +49,9 @@ export default function Home() {
       {/* Values Section */}
       <Values />
       {/* SBUs Section */}
-      <ScrollSnap>
-        <PEG />
-      </ScrollSnap>
+      <PEG />
+      <ArKa />
+      <ScrollSnap></ScrollSnap>
       {/* Legends Section */}
       <Legends />
       <motion.div className="progress" style={{ scaleX }} />

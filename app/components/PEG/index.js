@@ -35,7 +35,7 @@ const PEG = ({ className }) => {
             a commitment to excellence. Join our transformative journey.
           </p>
         </div>
-        <div className="w-1/2 min-h-[80vh] flex justify-center items-center">
+        <div className="w-1/2 min-h-[80vh] flex justify-end items-center">
           <div className="relative flex flex-col justify-between items-center gap-10">
             <Image src={"/images/teal_bg.svg"} width={334} height={702} />
             <div>
