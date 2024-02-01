@@ -40,7 +40,7 @@ export default function Home() {
     restDelta: 0.001,
   });
 
-  console.log(scrollYProgress)
+  console.log(scrollYProgress);
 
   // Add state to determine whether to make the third section sticky
   const [isSticky, setIsSticky] = useState(false);
@@ -64,6 +64,7 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
       {/* Values Section */}
+      
       <Values />
       {/* SBUs Section */}
       <div className={`sticky-container ${isSticky ? "sticky" : ""}`}>
