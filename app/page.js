@@ -51,7 +51,7 @@ export default function Home() {
       {/* SBUs Section */}
       <PEG />
       <ArKa />
-      <ScrollSnap></ScrollSnap>
+      {/* <ScrollSnap></ScrollSnap> */}
       {/* Legends Section */}
       <Legends />
       <motion.div className="progress" style={{ scaleX }} />

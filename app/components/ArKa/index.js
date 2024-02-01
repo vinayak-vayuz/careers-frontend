@@ -10,7 +10,7 @@ const cherry_Bomb_One = Cherry_Bomb_One({
   subsets: ["latin"],
 });
 
-const ArKa = ({className}) => {
+const ArKa = ({ className }) => {
   return (
     <main className="relative px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20">
       <div
@@ -27,9 +27,9 @@ const ArKa = ({className}) => {
           </p>
         </div>
         <p className="text-[#DDDDDD]">
-          The Product Engineering Group pioneers technological innovation,
-          crafting market-leading solutions through creativity, precision, and a
-          commitment to excellence. Join our transformative journey.
+          Arka is where UI/UX is a way of life, sculpting digital experiences
+          with intuitive interfaces that redefine user engagement through design
+          artistry and precision.
         </p>
       </div>
       <div className="w-1/2 min-h-[80vh] flex justify-end items-center">
