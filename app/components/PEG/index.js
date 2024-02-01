@@ -1,5 +1,5 @@
-import { Bungee, Cherry_Bomb_One } from "next/font/google";
 import Image from "next/image";
+import { Bungee, Cherry_Bomb_One } from "next/font/google";
 
 const bungee = Bungee({
   weight: "400",
@@ -10,7 +10,7 @@ const cherry_Bomb_One = Cherry_Bomb_One({
   subsets: ["latin"],
 });
 
-const SBUs = () => {
+const PEG = () => {
   return (
     <>
       <div className="w-1/2 min-h-[80vh] flex flex-col justify-between gap-5">
@@ -59,4 +59,4 @@ const SBUs = () => {
   );
 };
 
-export default SBUs;
+export default PEG;
