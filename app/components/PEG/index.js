@@ -10,10 +10,12 @@ const cherry_Bomb_One = Cherry_Bomb_One({
   subsets: ["latin"],
 });
 
-const PEG = () => {
+const PEG = ({ className }) => {
   return (
     <>
-      <div className="w-1/2 min-h-[80vh] flex flex-col justify-between gap-5">
+      <div
+        className={`${className} w-1/2 min-h-[80vh] flex flex-col justify-between gap-5`}
+      >
         <div>
           <div>
             <h1 className={`${bungee.className} text-8xl text-white`}>Our</h1>

@@ -92,9 +92,9 @@ body {
 
 /* Framer Motion */
 
-html {
+/* html {
   scroll-snap-type: y mandatory;
-}
+} */
 
 .section {
   height: 100vh;
@@ -131,6 +131,6 @@ html {
   left: 0;
   right: 0;
   height: 5px;
-  background: var(--accent);
-  bottom: 100px;
+  background: #fafafa;
+  bottom: 50px;
 }
