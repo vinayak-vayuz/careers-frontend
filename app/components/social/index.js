@@ -121,6 +121,14 @@ const Social = () => {
           ))}
         </div>
       </div>
+      <button>
+        <Image
+          className="absolute bottom-0 right-0"
+          src={"/images/social/top_social_button.png"}
+          width={205}
+          height={496}
+        />
+      </button>
     </div>
   );
 };
