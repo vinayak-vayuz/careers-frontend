@@ -13,6 +13,7 @@ import Hero from "./components/hero";
 import Legends from "./components/legends";
 import Values from "./components/values";
 import ArKa from "./components/ArKa";
+import Events from "./components/events";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -74,6 +75,8 @@ export default function Home() {
       {/* <ScrollSnap></ScrollSnap> */}
       {/* Legends Section */}
       <Legends />
+      {/* Events Section */}
+      <Events/>
       <motion.div className="progress" style={{ scaleX }} />
     </main>
   );
