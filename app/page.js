@@ -14,6 +14,7 @@ import Legends from "./components/legends";
 import Values from "./components/values";
 import ArKa from "./components/ArKa";
 import Events from "./components/events";
+import Social from "./components/social";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -77,6 +78,8 @@ export default function Home() {
       <Legends />
       {/* Events Section */}
       <Events />
+      {/* Social Section */}
+      <Social />
       <motion.div className="progress" style={{ scaleX }} />
     </main>
   );
