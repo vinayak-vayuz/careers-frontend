@@ -3,9 +3,9 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 const bungee = Bungee({
-    weight: "400",
-    subsets: ["latin"],
-  });
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const Legends = () => {
   const [legend, setLegend] = useState(true);
@@ -32,20 +32,7 @@ const Legends = () => {
     { imageSrc: "/images/priya.png", width: 200, height: 200 },
   ];
 
-  const vipData = [
-    { imageSrc: "/images/ayush.png", width: 334, height: 330 },
-    { imageSrc: "/images/raja.png", width: 330, height: 473 },
-    { imageSrc: "/images/monika.png", width: 331, height: 330 },
-    { imageSrc: "/images/ujjawal.png", width: 330, height: 473 },
-    { imageSrc: "/images/suhani_lg.png", width: 330, height: 473 },
-    { imageSrc: "/images/bhupendra.png", width: 330, height: 330 },
-    { imageSrc: "/images/sneha.png", width: 330, height: 473 },
-    { imageSrc: "/images/kushagra.png", width: 330, height: 330 },
-    { imageSrc: "/images/saurabh.png", width: 330, height: 473 },
-    { imageSrc: "/images/someone.png", width: 330, height: 473 },
-    { imageSrc: "/images/anupriya.png", width: 330, height: 330 },
-    { imageSrc: "/images/someone_2.png", width: 330, height: 473 },
-  ];
+  
   return (
     <main className="relative px-4 w-full max-h-screen flex">
       {legend ? (
@@ -94,7 +81,6 @@ const Legends = () => {
         <div className="w-full max-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
           {vipData.map((data, index) => (
             <Image
-              className="-hue-rotate-60"
               key={index}
               src={data.imageSrc}
               width={data.width}

@@ -65,18 +65,18 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
       {/* Values Section */}
-      
+
       <Values />
       {/* SBUs Section */}
-      <div className={`sticky-container ${isSticky ? "sticky" : ""}`}>
+      {/* <div className={`sticky-container ${isSticky ? "sticky" : ""}`}></div> */}
+      <ScrollSnap>
         <PEG />
-        <ArKa />
-      </div>
-      {/* <ScrollSnap></ScrollSnap> */}
+        {/* <ArKa /> */}
+      </ScrollSnap>
       {/* Legends Section */}
       <Legends />
       {/* Events Section */}
-      <Events/>
+      <Events />
       <motion.div className="progress" style={{ scaleX }} />
     </main>
   );
