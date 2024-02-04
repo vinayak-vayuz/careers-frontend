@@ -15,13 +15,13 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 const Hero = () => {
   return (
     <main
-      className={`${bungee.className} w-full min-h-[85vh] relative flex flex-col justify-center items-center text-center`}
+      className={`${bungee.className} w-full min-h-screen sm:min-h-[calc(100vh-100px)] relative flex flex-col justify-center items-center text-center`}
     >
-      <h1 className="text-[85px] leading-[100px] flex justify-center items-center gap-4">
+      <h1 className="text-[28px] xl:text-[85px] xl:leading-[100px] flex justify-center items-center gap-4">
         <span className="text-white">We Are</span>
         <span className="font-outline-2">People</span>
       </h1>
-      <h1 className="text-[85px] leading-[100px] flex justify-center items-center gap-4">
+      <h1 className="text-[28px] xl:text-[85px] xl:leading-[100px] flex justify-center items-center gap-4">
         <div>
           <span className="text-white">W</span>
           <span className="font-outline-2">ho</span>
@@ -35,7 +35,7 @@ const Hero = () => {
           <span className="font-outline-2">bout</span>
         </div>
       </h1>
-      <h1 className="text-[85px] leading-[100px]">
+      <h1 className="text-[28px] xl:text-[85px] xl:leading-[100px]">
         <span className="text-white">Y</span>
         <span className="font-outline-2">o</span>
         <span className="text-white">u</span>

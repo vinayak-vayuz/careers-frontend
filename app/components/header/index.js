@@ -3,9 +3,9 @@ import Image from "next/image";
 import React from "react";
 
 const permanent_Marker = Permanent_Marker({
-    weight: "400",
-    subsets: ["latin"],
-  });
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const Header = () => {
   return (
@@ -17,6 +17,9 @@ const Header = () => {
         height={38}
         alt="logo"
       />
+      <button className="block sm:hidden p-2 bg-[#5B5B5B] rounded-full absolute top-5 right-4">
+        <Image src={"/icons/search.svg"} width={18} height={18} alt="search" />
+      </button>
       <div className="hidden sm:flex sm:justify-end md:justify-center items-center gap-2">
         <button className="p-3 rounded-full bg-[#2C2C2C] flex justify-center items-center">
           <svg

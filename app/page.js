@@ -61,7 +61,7 @@ export default function Home() {
   }, [scrollYProgress]);
 
   return (
-    <main className="relative flex flex-col gap-2">
+    <main className="relative flex flex-col gap-2 overflow-hidden">
       {/* Header */}
       <Header />
       {/* Hero Section */}

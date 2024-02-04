@@ -47,7 +47,7 @@ const Values = () => {
             Human Resources
           </button>
         </div>
-        <div className="mb-8 mx-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="mb-8 mx-2 sm:mx-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {/* Job Card Section */}
           <div
             className={`${nunito.className} p-4 bg-[#202020] border border-[#313131] rounded-2xl`}
