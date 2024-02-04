@@ -80,7 +80,6 @@ export default function ScrollVelocity({ children }) {
           <h1>deliver Quality</h1>
           <Image src={"/icons/quality.svg"} width={40} height={40} />
         </div>
-        {/* respect Time Plan Well deliver Quality */}
       </ParallaxText>
       {/* <ParallaxText baseVelocity={5}>{children}</ParallaxText> */}
     </section>

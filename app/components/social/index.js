@@ -107,7 +107,7 @@ const socialData = [
 
 const Social = () => {
   return (
-    <div className="w-full min-h-screen">
+    <section className="w-full min-h-screen">
       <div className="grid grid-cols-3 gap-12 w-[60rem] sm:w-[80rem] lg:w-[50rem] h-[55rem] md:h-[90rem] lg:h-[75rem] overflow-hidden origin-[50%_0%]">
         <div className="grid gap-9 w-full h-[440px] animation-sliding-img-up-1">
           {socialData.map((data, index) => (
@@ -129,7 +129,7 @@ const Social = () => {
           height={496}
         />
       </button>
-    </div>
+    </section>
   );
 };
 
