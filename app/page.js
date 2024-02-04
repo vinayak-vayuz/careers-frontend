@@ -15,6 +15,7 @@ import Values from "./components/values";
 import ArKa from "./components/ArKa";
 import Events from "./components/events";
 import Social from "./components/social";
+import ScrollVelocity from "./components/scrollVelocity";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
