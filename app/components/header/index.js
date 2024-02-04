@@ -137,6 +137,23 @@ const Header = () => {
           </svg>
         </button>
       </div>
+
+      <div className="sm:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-fit px-10 py-4 flex justify-between items-center gap-10 bg-[#5B5B5B] rounded-full">
+        <button>
+          <Image
+            src={"/icons/lifeatvayuz.svg"}
+            width={24}
+            height={24}
+            alt="lifeatvayuz"
+          />
+        </button>
+        <button>
+          <Image src={"/icons/bag.svg"} width={24} height={24} alt="bag" />
+        </button>
+        <button>
+          <Image src={"/icons/user.svg"} width={24} height={24} alt="user" />
+        </button>
+      </div>
     </header>
   );
 };

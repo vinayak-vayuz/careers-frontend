@@ -81,7 +81,7 @@ export default function Home() {
       <Events />
       {/* Social Section */}
       <Social />
-      <motion.div className="progress" style={{ scaleX }} />
+      <motion.div className="progress fixed left-0 right-0 bottom-2 sm:bottom-12 h-2 bg-[#fafafa]" style={{ scaleX }} />
     </main>
   );
 }

@@ -124,14 +124,14 @@ body {
   height: 100%;
 }
 
-.progress {
+/* .progress {
   position: fixed;
   left: 0;
   right: 0;
   height: 5px;
   background: #fafafa;
   bottom: 50px;
-}
+} */
 
 /* Animation */
 
