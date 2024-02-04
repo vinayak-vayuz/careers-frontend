@@ -36,7 +36,7 @@ const Legends = () => {
     { imageSrc: "/images/ayush.png", width: 334, height: 330 },
     { imageSrc: "/images/raja.png", width: 330, height: 473 },
     { imageSrc: "/images/monika.png", width: 331, height: 330 },
-    { imageSrc: "/images/ujjawal.png", width: 330, height: 473 },
+    { imageSrc: "/images/ujjawal_lg.png", width: 330, height: 473 },
     { imageSrc: "/images/suhani_lg.png", width: 330, height: 473 },
     { imageSrc: "/images/bhupendra.png", width: 330, height: 330 },
     { imageSrc: "/images/sneha.png", width: 330, height: 473 },
@@ -46,7 +46,15 @@ const Legends = () => {
     { imageSrc: "/images/anupriya.png", width: 330, height: 330 },
     { imageSrc: "/images/someone_2.png", width: 330, height: 473 },
   ];
-  
+
+  // Calculate the number of columns
+  const numColumns = 4; // Change this value as needed
+
+  // Group data by column
+  const columns = Array.from({ length: numColumns }, (_, columnIndex) =>
+    vipData.filter((_, index) => index % numColumns === columnIndex)
+  );
+
   return (
     <section className="relative px-4 w-full min-h-screen flex">
       {legend ? (
@@ -92,16 +100,24 @@ const Legends = () => {
           />
         </div>
       ) : (
-        <div className="w-full min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-          {vipData.map((data, index) => (
-            <Image
-              key={index}
-              src={data.imageSrc}
-              width={data.width}
-              height={data.height}
-            />
-          ))}
-        </div>
+        <>
+          <div className="w-full py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+            {columns.map((column, columnIndex) => (
+              <div key={columnIndex} className="space-y-2">
+                {column.map((data, rowIndex) => (
+                  <Image
+                    key={rowIndex}
+                    width={data.width}
+                    height={data.height}
+                    className="w-full h-auto object-cover"
+                    src={data.imageSrc}
+                    alt="Image Description"
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        </>
       )}
       {legend ? (
         <button
