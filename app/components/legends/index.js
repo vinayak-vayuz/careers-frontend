@@ -48,7 +48,7 @@ const Legends = () => {
   ];
   
   return (
-    <main className="relative px-4 w-full max-h-screen flex">
+    <section className="relative px-4 w-full min-h-screen flex">
       {legend ? (
         <div className="flex">
           <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2">
@@ -92,7 +92,7 @@ const Legends = () => {
           />
         </div>
       ) : (
-        <div className="w-full max-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+        <div className="w-full min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
           {vipData.map((data, index) => (
             <Image
               key={index}
@@ -118,7 +118,7 @@ const Legends = () => {
           <Image src={"/images/back_button.svg"} width={27} height={331} />
         </button>
       )}
-    </main>
+    </section>
   );
 };
 
