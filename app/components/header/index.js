@@ -47,6 +47,23 @@ const Header = () => {
           className={`${permanent_Marker.className} px-6 pt-3 pb-1 rounded-full bg-[#2C2C2C] flex gap-4`}
         >
           <button className="text-white">
+            Life at VAYUZ{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="92"
+              height="13"
+              viewBox="0 0 92 13"
+              fill="none"
+            >
+              <path
+                d="M1 7.37771C31.9751 1.01313 47.6253 1.35991 80.883 1.01313C114.141 0.666356 54.0986 7.27059 61.7274 11.0148C66.244 13.2315 75.5847 11.0148 75.5847 11.0148"
+                stroke="#F8004A"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <button className="text-white">
             Work at VAYUZ{" "}
             <span>
               <svg
@@ -64,23 +81,6 @@ const Header = () => {
                 />
               </svg>
             </span>
-          </button>
-          <button className="text-white">
-            Life at VAYUZ{" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="92"
-              height="13"
-              viewBox="0 0 92 13"
-              fill="none"
-            >
-              <path
-                d="M1 7.37771C31.9751 1.01313 47.6253 1.35991 80.883 1.01313C114.141 0.666356 54.0986 7.27059 61.7274 11.0148C66.244 13.2315 75.5847 11.0148 75.5847 11.0148"
-                stroke="#F8004A"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
           </button>
         </div>
         <button className="p-3 rounded-full bg-[#2C2C2C] flex justify-center items-center">
