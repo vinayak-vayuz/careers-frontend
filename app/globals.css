@@ -133,20 +133,162 @@ body {
   bottom: 50px;
 } */
 
-/* Animation */
+/* Social Animation */
+
+@keyframes sliding-img-up-1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-722px);
+  }
+}
+
+@keyframes sliding-img-up-2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-1098px);
+  }
+}
+
+@keyframes sliding-img-down-1 {
+  0% {
+    transform: translateY(-1161px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes sliding-img-down-2 {
+  0% {
+    transform: translateY(-1389px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 640px) {
+  @keyframes sliding-img-up-1 {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-936px);
+    }
+  }
+
+  @keyframes sliding-img-up-2 {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-1438px);
+    }
+  }
+
+  @keyframes sliding-img-down-1 {
+    0% {
+      transform: translateY(-1511px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes sliding-img-down-2 {
+    0% {
+      transform: translateY(-1135px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes sliding-img-up-1 {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-615px);
+    }
+  }
+
+  @keyframes sliding-img-up-2 {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-928px);
+    }
+  }
+
+  @keyframes sliding-img-down-1 {
+    0% {
+      transform: translateY(-986px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes sliding-img-down-2 {
+    0% {
+      transform: translateY(-928px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@keyframes sliding-img-right-1 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -2880px;
+  }
+}
+
+@keyframes sliding-img-left-1 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 2880px;
+  }
+}
+
+.animation-sliding-img-up-1 {
+  animation: sliding-img-up-1 30s linear infinite;
+}
+
+.animation-sliding-img-up-2 {
+  animation: sliding-img-up-2 30s linear infinite;
+}
 
 .animation-sliding-img-down-1 {
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: sliding-img-down-1;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
+  animation: sliding-img-down-1 30s linear infinite;
 }
 
 /* Scroll Velocity */
@@ -190,5 +332,5 @@ body {
 }
 
 ::-webkit-scrollbar-corner {
-  background: #0E9FAC;
+  background: #0e9fac;
 }
