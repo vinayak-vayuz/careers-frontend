@@ -19,32 +19,32 @@ const Legends = () => {
   };
 
   const legendData = [
-    { imageSrc: "/images/monika.png", width: 200, height: 200 },
-    { imageSrc: "/images/suhani.png", width: 200, height: 200 },
-    { imageSrc: "/images/saurabh.png", width: 200, height: 200 },
+    { imageSrc: "/images/people/monika.png", width: 200, height: 200 },
+    { imageSrc: "/images/people/suhani.png", width: 200, height: 200 },
+    { imageSrc: "/images/people/saurabh.png", width: 200, height: 200 },
     {
-      imageSrc: "/images/bidyut.png",
-      imageExpSrc: "/images/bidyut_color.png",
+      imageSrc: "/images/people/bidyut.png",
+      imageExpSrc: "/images/people/bidyut_color.png",
       width: 200,
       height: 200,
     },
-    { imageSrc: "/images/ujjawal.png", width: 200, height: 200 },
-    { imageSrc: "/images/priya.png", width: 200, height: 200 },
+    { imageSrc: "/images/people/ujjawal.png", width: 200, height: 200 },
+    { imageSrc: "/images/people/priya.png", width: 200, height: 200 },
   ];
 
   const vipData = [
-    { imageSrc: "/images/ayush.png", width: 334, height: 330 },
-    { imageSrc: "/images/raja.png", width: 330, height: 473 },
-    { imageSrc: "/images/monika.png", width: 331, height: 330 },
-    { imageSrc: "/images/ujjawal_lg.png", width: 330, height: 473 },
-    { imageSrc: "/images/suhani_lg.png", width: 330, height: 473 },
-    { imageSrc: "/images/bhupendra.png", width: 330, height: 330 },
-    { imageSrc: "/images/sneha.png", width: 330, height: 473 },
-    { imageSrc: "/images/kushagra.png", width: 330, height: 330 },
-    { imageSrc: "/images/saurabh.png", width: 330, height: 473 },
-    { imageSrc: "/images/someone.png", width: 330, height: 473 },
-    { imageSrc: "/images/anupriya.png", width: 330, height: 330 },
-    { imageSrc: "/images/someone_2.png", width: 330, height: 473 },
+    { imageSrc: "/images/people/ayush.png", width: 334, height: 330 },
+    { imageSrc: "/images/people/raja.png", width: 330, height: 473 },
+    { imageSrc: "/images/people/monika.png", width: 331, height: 330 },
+    { imageSrc: "/images/people/ujjawal_lg.png", width: 330, height: 473 },
+    { imageSrc: "/images/people/suhani_lg.png", width: 330, height: 473 },
+    { imageSrc: "/images/people/bhupendra.png", width: 330, height: 330 },
+    { imageSrc: "/images/people/sneha.png", width: 330, height: 473 },
+    { imageSrc: "/images/people/kushagra.png", width: 330, height: 330 },
+    { imageSrc: "/images/people/saurabh.png", width: 330, height: 473 },
+    { imageSrc: "/images/people/someone.png", width: 330, height: 473 },
+    { imageSrc: "/images/people/anupriya.png", width: 330, height: 330 },
+    { imageSrc: "/images/people/someone_2.png", width: 330, height: 473 },
   ];
 
   // Calculate the number of columns
