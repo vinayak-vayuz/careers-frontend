@@ -108,12 +108,12 @@ const socialData = [
 const Social = () => {
   return (
     <section className="w-full min-h-screen">
-      <div className="grid grid-cols-3 gap-12 w-[60rem] sm:w-[80rem] lg:w-[50rem] h-[55rem] md:h-[90rem] lg:h-[75rem] overflow-hidden origin-[50%_0%]">
-        <div className="grid gap-9 w-full h-[440px] animation-sliding-img-up-1">
+      <div className="">
+        <div className="flex flex-wrap">
           {socialData.map((data, index) => (
             <Image
               key={index}
-              className="w-full object-cover shadow-lg rounded-lg"
+              className="shadow-lg rounded-lg"
               src={data.imageSrc}
               width={data.width}
               height={data.height}
