@@ -27,7 +27,7 @@ const eventsData = [
   },
   {
     imageSrc: "/images/events/horcrux.png",
-    className: "absolute top-[50%] left-[10%]",
+    className: "absolute top-[40%] left-[10%]",
     width: 396,
     height: 320,
   },
