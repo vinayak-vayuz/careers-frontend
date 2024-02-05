@@ -116,6 +116,93 @@ const socialData = [
   },
 ];
 
+const topContributors = [
+  {
+    imageSrc: "/images/people/ayush.png",
+    name: "Ayush",
+    score: 7562,
+    width: 334,
+    height: 330,
+  },
+  {
+    imageSrc: "/images/people/raja.png",
+    name: "Raja",
+    score: 4123,
+    width: 330,
+    height: 473,
+  },
+  {
+    imageSrc: "/images/people/monika.png",
+    name: "Monika",
+    score: 1250,
+    width: 331,
+    height: 330,
+  },
+  {
+    imageSrc: "/images/people/ujjawal_lg.png",
+    name: "Ujjawal",
+    score: 1000,
+    width: 330,
+    height: 473,
+  },
+  {
+    imageSrc: "/images/people/suhani_lg.png",
+    name: "Suhani",
+    score: 750,
+    width: 330,
+    height: 473,
+  },
+  {
+    imageSrc: "/images/people/bhupendra.png",
+    name: "Bhupendra",
+    score: 750,
+    width: 330,
+    height: 330,
+  },
+  {
+    imageSrc: "/images/people/sneha.png",
+    name: "Sneha",
+    score: 750,
+    width: 330,
+    height: 473,
+  },
+  {
+    imageSrc: "/images/people/kushagra.png",
+    name: "Kushagra",
+    score: 560,
+    width: 330,
+    height: 330,
+  },
+  {
+    imageSrc: "/images/people/saurabh.png",
+    name: "Saurabh",
+    score: 560,
+    width: 330,
+    height: 473,
+  },
+  {
+    imageSrc: "/images/people/someone.png",
+    name: "Alex",
+    score: 750,
+    width: 330,
+    height: 473,
+  },
+  {
+    imageSrc: "/images/people/anupriya.png",
+    name: "Anupriya",
+    score: 750,
+    width: 330,
+    height: 330,
+  },
+  {
+    imageSrc: "/images/people/someone_2.png",
+    name: "John",
+    score: 750,
+    width: 330,
+    height: 473,
+  },
+];
+
 const Social = () => {
   const [topcontributors, setTopcontributors] = useState(false);
 
@@ -190,16 +277,26 @@ const Social = () => {
                 height={496}
               />
               <div
-                className={`${mochiy_pop_one.className} absolute top-[60%] -translate-y-1/2 right-[5%] w-[50%] min-h-[10rem] px-5 py-3 bg-[#1C1C1C] rounded-3xl`}
+                className={`${mochiy_pop_one.className} absolute top-[60%] -translate-y-1/2 right-[5%] w-[50%] h-[25rem] overflow-hidden bg-[#1C1C1C] rounded-3xl`}
               >
-                <h1 className="text-white pb-2 border-b">Top Contributors</h1>
-                <div className="flex">
-                  <Image
-                    className="rounded-full"
-                    src={"/images/people/saurabh.png"}
-                    width={45}
-                    height={45}
-                  />
+                <div className="px-5 py-3 h-[25rem] overflow-y-auto">
+                  <h1 className="text-white px-4 pb-2 border-b">
+                    Top Contributors
+                  </h1>
+                  {topContributors.map((data, index) => (
+                    <div className="py-2 flex justify-between items-center gap-4 border-b">
+                      <div className="flex items-center gap-4">
+                        <Image
+                          className="w-10 h-10 rounded-full"
+                          src={data.imageSrc}
+                          width={45}
+                          height={45}
+                        />
+                        <h1 className="text-white">{data.name}</h1>
+                      </div>
+                      <p className="text-[#0AD80A]">{data.score}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
