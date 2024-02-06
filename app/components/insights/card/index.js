@@ -21,6 +21,7 @@ const InsightsCard = ({ title, author, duration, coverImage }) => {
                 src={"/images/insight/arrow.svg"}
                 width={30}
                 height={31}
+                alt=""
               />
             </button>
           </div>

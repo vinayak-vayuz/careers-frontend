@@ -60,6 +60,7 @@ const PEG = ({ className }) => {
                 src={"/images/bubble.svg"}
                 width={252}
                 height={184}
+                alt=""
               />
               <h1
                 className={`${cherry_Bomb_One.className} text-2xl text-center text-white absolute top-10 right-14 -rotate-12`}
@@ -73,8 +74,14 @@ const PEG = ({ className }) => {
               src={"/images/peg.svg"}
               width={287}
               height={197}
+              alt=""
             />
-            <Image src={"/images/pink_circle.svg"} width={334} height={702} />
+            <Image
+              src={"/images/pink_circle.svg"}
+              width={334}
+              height={702}
+              alt=""
+            />
           </div>
           <p className="text-[#DDDDDD]">
             The Product Engineering Group pioneers technological innovation,
@@ -91,6 +98,7 @@ const PEG = ({ className }) => {
                 src={"/images/bubble.svg"}
                 width={252}
                 height={184}
+                alt=""
               />
               <h1
                 className={`${cherry_Bomb_One.className} text-2xl text-center text-white absolute top-10 right-14 -rotate-12`}
@@ -104,8 +112,14 @@ const PEG = ({ className }) => {
               src={"/images/peg.svg"}
               width={287}
               height={197}
+              alt=""
             />
-            <Image src={"/images/pink_circle.svg"} width={334} height={702} />
+            <Image
+              src={"/images/pink_circle.svg"}
+              width={334}
+              height={702}
+              alt=""
+            />
           </div>
         </div>
       </main>

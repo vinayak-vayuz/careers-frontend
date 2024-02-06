@@ -70,6 +70,7 @@ const Events = () => {
             src={data.imageSrc}
             width={data.width}
             height={data.height}
+            alt=""
           />
         ))}
       </div>

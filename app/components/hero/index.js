@@ -50,6 +50,7 @@ const Hero = () => {
         src={"/images/vayuz_vertical.svg"}
         width={26}
         height={214}
+        alt=""
       />
     </main>
   );

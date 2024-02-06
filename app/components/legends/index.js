@@ -152,6 +152,7 @@ const Legends = () => {
                   width={200}
                   height={200}
                   src={id === data.id ? data.imageExpSrc : data.imageSrc}
+                  alt=""
                 />
               ))}
             </div>
@@ -225,7 +226,7 @@ const Legends = () => {
                     height={data.height}
                     className="w-full h-auto object-cover"
                     src={data.imageSrc}
-                    alt="Image Description"
+                    alt=""
                   />
                 ))}
               </div>
@@ -238,14 +239,14 @@ const Legends = () => {
           onClick={handleLegend}
           className="absolute top-1/2 -translate-y-1/2 right-0"
         >
-          <Image src={"/images/vip_button.svg"} width={27} height={484} />
+          <Image src={"/images/vip_button.svg"} width={27} height={484} alt="" />
         </button>
       ) : (
         <button
           onClick={handleLegend}
           className="absolute top-1/2 -translate-y-1/2 left-0"
         >
-          <Image src={"/images/back_button.svg"} width={27} height={331} />
+          <Image src={"/images/back_button.svg"} width={27} height={331} alt="" />
         </button>
       )}
     </section>

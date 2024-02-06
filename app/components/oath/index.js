@@ -1,6 +1,8 @@
 const OathCeremony = () => {
   return (
-    <div></div>
+    <div className="w-full min-h-screen">
+
+    </div>
   )
 }
 

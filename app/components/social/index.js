@@ -233,6 +233,7 @@ const Social = () => {
                     src={data.imageSrc}
                     width={data.width}
                     height={data.height}
+                    alt=""
                   />
                 ))}
               </div>
@@ -244,6 +245,7 @@ const Social = () => {
                     src={data.imageSrc}
                     width={data.width}
                     height={data.height}
+                    alt=""
                   />
                 ))}
               </div>
@@ -255,6 +257,7 @@ const Social = () => {
                     src={data.imageSrc}
                     width={data.width}
                     height={data.height}
+                    alt=""
                   />
                 ))}
               </div>
@@ -275,6 +278,7 @@ const Social = () => {
                 src={"/images/people/vinayak&saurabh.png"}
                 width={205}
                 height={496}
+                alt=""
               />
               <div
                 className={`${mochiy_pop_one.className} absolute top-[60%] -translate-y-1/2 right-[5%] w-[50%] h-[25rem] overflow-hidden bg-[#1C1C1C] rounded-3xl`}
@@ -284,13 +288,14 @@ const Social = () => {
                     Top Contributors
                   </h1>
                   {topContributors.map((data, index) => (
-                    <div className="py-2 flex justify-between items-center gap-4 border-b">
+                    <div key={index} className="py-2 flex justify-between items-center gap-4 border-b">
                       <div className="flex items-center gap-4">
                         <Image
                           className="w-10 h-10 rounded-full"
                           src={data.imageSrc}
                           width={45}
                           height={45}
+                          alt=""
                         />
                         <h1 className="text-white">{data.name}</h1>
                       </div>
@@ -307,6 +312,7 @@ const Social = () => {
             src={"/images/social/top_social_button.png"}
             width={205}
             height={496}
+            alt=""
           />
         </button>
       </section>
