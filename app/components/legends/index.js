@@ -13,23 +13,26 @@ const montserrat = Montserrat({
 
 const Legends = () => {
   const [legend, setLegend] = useState(true);
+  const [initialLegendShown, setInitialLegendShown] = useState(false);
   const [legendexp, setLegendexp] = useState(true);
   const [id, setId] = useState(0);
 
   const handleLegend = () => {
     setLegend(!legend);
+    setInitialLegendShown(false);
   };
+
   const handleLegendexp = (id) => {
     setId(id);
     setLegendexp(!legendexp);
+    setInitialLegendShown(true);
   };
-
   const legendData = [
     {
       id: 1,
-      name: "Monika",
-      designation: "",
-      department: "",
+      name: "Monika Singh",
+      designation: "Digital Marketer",
+      department: "100x",
       title: "",
       description:
         "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
@@ -40,9 +43,9 @@ const Legends = () => {
     },
     {
       id: 2,
-      name: "Suhani",
-      designation: "",
-      department: "",
+      name: "Suhani singh",
+      designation: "HR",
+      department: "Human Resources",
       title: "",
       description:
         "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
@@ -53,9 +56,9 @@ const Legends = () => {
     },
     {
       id: 3,
-      name: "Saurabh",
-      designation: "",
-      department: "",
+      name: "Saurabh Bhatt",
+      designation: "Product Engineer",
+      department: "Team Node",
       title: "",
       description:
         "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
@@ -79,9 +82,9 @@ const Legends = () => {
     },
     {
       id: 5,
-      name: "Ujjawal",
-      designation: "",
-      department: "",
+      name: "Ujjawal Sharma",
+      designation: "Product Engineer",
+      department: "Mobile Team",
       title: "",
       description:
         "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
@@ -92,9 +95,9 @@ const Legends = () => {
     },
     {
       id: 6,
-      name: "Priya",
-      designation: "",
-      department: "",
+      name: "Priya Pal",
+      designation: "HR",
+      department: "Human Resources",
       title: "",
       description:
         "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
@@ -148,49 +151,49 @@ const Legends = () => {
           <div className="w-full md:w-[63%] md:min-h-screen flex items-center gap-2 order-1 md:order-2">
             {legendexp ? (
               <div className="flex flex-col gap-4">
-                <div>
-                  <h1 className={`${bungee.className} text-8xl text-white`}>
-                    Our
-                  </h1>
-                  <h1 className={`${bungee.className} text-8xl text-white`}>
-                    Legend
-                  </h1>
-                </div>
-                <p className="text-lg text-[#DDDDDD]">
-                  Legends are born when ordinary individuals go beyond the call
-                  of duty, creating benchmarks of excellence that inspire the
-                  world to reach new heights
-                </p>
+                {!initialLegendShown && (
+                  <>
+                    <div>
+                      <h1 className={`${bungee.className} text-8xl text-white`}>
+                        Our
+                      </h1>
+                      <h1 className={`${bungee.className} text-8xl text-white`}>
+                        Legend
+                      </h1>
+                    </div>
+                    <p className="text-lg text-[#DDDDDD]">
+                      Legends are born when ordinary individuals go beyond the
+                      call of duty, creating benchmarks of excellence that
+                      inspire the world to reach new heights
+                    </p>
+                  </>
+                )}
               </div>
             ) : (
               <>
-                {legendData.map((data, index) => (
-                  <div
-                    key={index}
-                    className={`${
-                      index === id ? "flex" : "hidden"
-                    } flex-col gap-2`}
-                  >
-                    <h1 className={`${bungee.className} text-white text-6xl`}>
-                      {data.name}
-                    </h1>
-                    <div
-                      className={`${montserrat.className} flex items-center gap-1 text-[#ADADAD]`}
-                    >
-                      <h2>{data.designation + ","}</h2>
-
-                      <h3>{data.department}</h3>
+                {legendData
+                  .filter((data) => data.id === id)
+                  .map((data, index) => (
+                    <div key={index} className="flex flex-col gap-2">
+                      <h1 className={`${bungee.className} text-white text-6xl`}>
+                        {data.name}
+                      </h1>
+                      <div
+                        className={`${montserrat.className} flex items-center gap-1 text-[#ADADAD]`}
+                      >
+                        <h2>{data.designation + ","}</h2>
+                        <h3>{data.department}</h3>
+                      </div>
+                      <h4
+                        className={`${montserrat.className} font-semibold text-[#00C2F8]`}
+                      >
+                        {data.title}
+                      </h4>
+                      <p className={`${montserrat.className} text-[#DDDDDD]`}>
+                        {data.description}
+                      </p>
                     </div>
-                    <h4
-                      className={`${montserrat.className} font-semibold text-[#00C2F8]`}
-                    >
-                      {data.title}
-                    </h4>
-                    <p className={`${montserrat.className} text-[#DDDDDD]`}>
-                      {data.description}
-                    </p>
-                  </div>
-                ))}
+                  ))}
               </>
             )}
           </div>
