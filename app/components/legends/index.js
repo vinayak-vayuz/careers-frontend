@@ -15,7 +15,7 @@ const Legends = () => {
   const handleLegend = () => {
     setLegend(!legend);
   };
-  const handleLegendexp = ({ id }) => {
+  const handleLegendexp = (id) => {
     setId(id);
     setLegendexp(!legendexp);
   };
@@ -23,49 +23,79 @@ const Legends = () => {
   const legendData = [
     {
       id: 1,
+      name: "Monika",
+      designation: "",
+      department: "",
+      title: "",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
       imageSrc: "/images/people/monika.png",
       imageExpSrc: "/images/people/monika_color.png",
-      name: "Monika",
       width: 200,
       height: 200,
     },
     {
       id: 2,
+      name: "Suhani",
+      designation: "",
+      department: "",
+      title: "",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
       imageSrc: "/images/people/suhani.png",
       imageExpSrc: "/images/people/suhani_color.png ",
-      name: "Suhani",
       width: 200,
       height: 200,
     },
     {
       id: 3,
+      name: "Saurabh",
+      designation: "",
+      department: "",
+      title: "",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
       imageSrc: "/images/people/saurabh.png",
       imageExpSrc: "/images/people/saurabh_color.png",
-      name: "Saurabh",
       width: 200,
       height: 200,
     },
     {
       id: 4,
+      name: "Bidyut Majumdar",
+      designation: "Product Engineer",
+      department: "ArKa",
+      title: "Legend: Created 140 page in 5 days",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
       imageSrc: "/images/people/bidyut.png",
       imageExpSrc: "/images/people/bidyut_color.png",
-      name: "Bidyut",
       width: 200,
       height: 200,
     },
     {
       id: 5,
+      name: "Ujjawal",
+      designation: "",
+      department: "",
+      title: "",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
       imageSrc: "/images/people/ujjawal.png",
       imageExpSrc: "/images/people/ujjawal_color.png",
-      name: "Ujjawal",
       width: 200,
       height: 200,
     },
     {
       id: 6,
+      name: "Priya",
+      designation: "",
+      department: "",
+      title: "",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut diam. Adipiscing placerat sit morbi fusce. Eget dictum et aliquam sed non tellus augue. Cursus egestas et ipsum id venenatis. Nibh hendrerit gravida sit fringilla sollicitudin lacus. Sit volutpat egestas et nullam porttitor imperdiet nisi aliquam. Ac tincidunt ultricies sed integer pellentesque massa phasellus. At est congue bibendum purus neque. Vitae pulvinar integer consectetur in pretium. Eu orci in donec viverra nisi a sem blandit semper.",
       imageSrc: "/images/people/priya.png",
       imageExpSrc: "/images/people/priya_color.png",
-      name: "Priya",
       width: 200,
       height: 200,
     },
@@ -102,11 +132,11 @@ const Legends = () => {
             <div className="flex flex-wrap gap-2">
               {legendData.map((data, index) => (
                 <Image
-                  onClick={handleLegendexp}
+                  onClick={() => handleLegendexp(data.id)}
                   key={index}
                   width={200}
                   height={200}
-                  src={legendexp ? data.imageSrc : data.imageExpSrc}
+                  src={id === data.id ? data.imageExpSrc : data.imageSrc}
                 />
               ))}
             </div>
