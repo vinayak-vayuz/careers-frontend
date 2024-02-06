@@ -9,7 +9,7 @@ const InsightsCard = () => {
             <h1 className="font-semibold">
               Error Handling in React Functional Components: A Practical Guide
             </h1>
-            <div className="flex gap-2 font-semibold text-sm">
+            <div className="flex gap-2 font-semibold text-xs">
               <p>By Pankaj Singh</p> <p>|</p> <p>5 mins read</p>
             </div>
           </div>

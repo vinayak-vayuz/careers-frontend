@@ -125,9 +125,9 @@ const Legends = () => {
     { imageSrc: "/images/people/someone_2.png", width: 330, height: 473 },
   ];
 
-   useEffect(() => {
+  useEffect(() => {
     if (!legendexp) {
-      setLegendDataToShow(legendData.filter((data) => data.id === id));
+      setLegendDataToShow(legendData.filter(data => data.id === id));
     }
   }, [legendexp, id, legendData]);
 
