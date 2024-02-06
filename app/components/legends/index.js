@@ -1,6 +1,6 @@
 import { Bungee, Montserrat } from "next/font/google";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const bungee = Bungee({
   weight: "400",
@@ -14,6 +14,7 @@ const montserrat = Montserrat({
 const Legends = () => {
   const [legend, setLegend] = useState(true);
   const [initialLegendShown, setInitialLegendShown] = useState(false);
+  const [legendDataToShow, setLegendDataToShow] = useState([]);
   const [legendexp, setLegendexp] = useState(true);
   const [id, setId] = useState(0);
 
@@ -27,6 +28,7 @@ const Legends = () => {
     setLegendexp(!legendexp);
     setInitialLegendShown(true);
   };
+
   const legendData = [
     {
       id: 1,
@@ -123,6 +125,12 @@ const Legends = () => {
     { imageSrc: "/images/people/someone_2.png", width: 330, height: 473 },
   ];
 
+   useEffect(() => {
+    if (!legendexp) {
+      setLegendDataToShow(legendData.filter((data) => data.id === id));
+    }
+  }, [legendexp, id, legendData]);
+
   // Calculate the number of columns
   const numColumns = 4; // Change this value as needed
 
@@ -207,7 +215,7 @@ const Legends = () => {
         </div>
       ) : (
         <>
-          <div className="w-full py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+          <div className="w-full lg:h-[58rem] lg:overflow-hidden py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
             {columns.map((column, columnIndex) => (
               <div key={columnIndex} className="space-y-2">
                 {column.map((data, rowIndex) => (
