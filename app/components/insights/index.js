@@ -10,6 +10,69 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
+const insightData = [
+  {
+    title: "Error Handling in React Functional Components: A Practical Guide",
+    author: "Pankaj Singh",
+    duration: "5 mins read",
+    coverImage: "/images/insight/insight_dummy.png",
+  },
+  {
+    title: "10 Tips for Effective Time Management",
+    author: "Emily Smith",
+    duration: "7 mins read",
+    coverImage: "/images/insight/insight_dummy.png",
+  },
+  {
+    title: "The Importance of Sleep for Productivity",
+    author: "John Doe",
+    duration: "6 mins read",
+    coverImage: "/images/insight/insight_dummy.png",
+  },
+  {
+    title: "Introduction to Machine Learning Algorithms",
+    author: "Sarah Johnson",
+    duration: "10 mins read",
+    coverImage: "/images/insight/insight_dummy.png",
+  },
+  {
+    title: "Effective Communication Strategies for Teams",
+    author: "Michael Brown",
+    duration: "8 mins read",
+    coverImage: "/images/insight/insight_dummy.png",
+  },
+  {
+    title: "How to Start Your Own Business: A Beginner's Guide",
+    author: "Jennifer Lee",
+    duration: "12 mins read",
+    coverImage: "/images/insight/insight_dummy.png",
+  },
+  {
+    title: "The Benefits of Regular Exercise",
+    author: "David Miller",
+    duration: "9 mins read",
+    coverImage: "/images/insight/insight_dummy.png",
+  },
+  {
+    title: "Introduction to Cryptocurrency: Understanding Bitcoin",
+    author: "Alex Johnson",
+    duration: "7 mins read",
+    coverImage: "/images/insight/insight_dummy.png",
+  },
+  {
+    title: "Healthy Eating Habits for a Better Lifestyle",
+    author: "Sophia Anderson",
+    duration: "6 mins read",
+    coverImage: "/images/insight/insight_dummy.png",
+  },
+  {
+    title: "Tips for Effective Remote Work",
+    author: "Robert Smith",
+    duration: "8 mins read",
+    coverImage: "/images/insight/insight_dummy.png",
+  },
+];
+
 const Insights = () => {
   return (
     <>
@@ -31,7 +94,17 @@ const Insights = () => {
         >
           Insights
         </h1>
-        <InsightsCard />
+        <div className="px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {insightData.map((data, index) => (
+            <InsightsCard
+              key={index}
+              title={data.title}
+              author={data.author}
+              duration={data.duration}
+              coverImage={data.coverImage}
+            />
+          ))}
+        </div>
       </section>
     </>
   );
