@@ -1,9 +1,13 @@
-import { Bungee } from "next/font/google";
+import { Bungee, Montserrat } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
 
 const bungee = Bungee({
   weight: "400",
+  subsets: ["latin"],
+});
+const montserrat = Montserrat({
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -159,7 +163,35 @@ const Legends = () => {
                 </p>
               </div>
             ) : (
-              <></>
+              <>
+                {legendData.map((data, index) => (
+                  <div
+                    key={index}
+                    className={`${
+                      index === id ? "flex" : "hidden"
+                    } flex-col gap-2`}
+                  >
+                    <h1 className={`${bungee.className} text-white text-6xl`}>
+                      {data.name}
+                    </h1>
+                    <div
+                      className={`${montserrat.className} flex items-center gap-1 text-[#ADADAD]`}
+                    >
+                      <h2>{data.designation + ","}</h2>
+
+                      <h3>{data.department}</h3>
+                    </div>
+                    <h4
+                      className={`${montserrat.className} font-semibold text-[#00C2F8]`}
+                    >
+                      {data.title}
+                    </h4>
+                    <p className={`${montserrat.className} text-[#DDDDDD]`}>
+                      {data.description}
+                    </p>
+                  </div>
+                ))}
+              </>
             )}
           </div>
           <Image
