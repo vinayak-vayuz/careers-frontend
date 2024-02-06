@@ -88,7 +88,7 @@ const Insights = () => {
           </p>
         </div>
       </section>
-      <section className="w-full min-h-screen bg-[#00C2F8]">
+      <section className="pb-4 w-full min-h-screen bg-[#00C2F8]">
         <h1
           className={`${michroma.className} py-5 text-black text-center text-4xl`}
         >
