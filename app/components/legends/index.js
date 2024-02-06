@@ -10,26 +10,65 @@ const bungee = Bungee({
 const Legends = () => {
   const [legend, setLegend] = useState(true);
   const [legendexp, setLegendexp] = useState(true);
+  const [id, setId] = useState(0);
 
   const handleLegend = () => {
     setLegend(!legend);
   };
-  const handleLegendexp = () => {
+  const handleLegendexp = ({ id }) => {
+    setId(id);
     setLegendexp(!legendexp);
   };
 
   const legendData = [
-    { imageSrc: "/images/people/monika.png", width: 200, height: 200 },
-    { imageSrc: "/images/people/suhani.png", width: 200, height: 200 },
-    { imageSrc: "/images/people/saurabh.png", width: 200, height: 200 },
     {
-      imageSrc: "/images/people/bidyut.png",
-      imageExpSrc: "/images/people/bidyut_color.png",
+      id: 1,
+      imageSrc: "/images/people/monika.png",
+      imageExpSrc: "/images/people/monika_color.png",
+      name: "Monika",
       width: 200,
       height: 200,
     },
-    { imageSrc: "/images/people/ujjawal.png", width: 200, height: 200 },
-    { imageSrc: "/images/people/priya.png", width: 200, height: 200 },
+    {
+      id: 2,
+      imageSrc: "/images/people/suhani.png",
+      imageExpSrc: "/images/people/suhani_color.png ",
+      name: "Suhani",
+      width: 200,
+      height: 200,
+    },
+    {
+      id: 3,
+      imageSrc: "/images/people/saurabh.png",
+      imageExpSrc: "/images/people/saurabh_color.png",
+      name: "Saurabh",
+      width: 200,
+      height: 200,
+    },
+    {
+      id: 4,
+      imageSrc: "/images/people/bidyut.png",
+      imageExpSrc: "/images/people/bidyut_color.png",
+      name: "Bidyut",
+      width: 200,
+      height: 200,
+    },
+    {
+      id: 5,
+      imageSrc: "/images/people/ujjawal.png",
+      imageExpSrc: "/images/people/ujjawal_color.png",
+      name: "Ujjawal",
+      width: 200,
+      height: 200,
+    },
+    {
+      id: 6,
+      imageSrc: "/images/people/priya.png",
+      imageExpSrc: "/images/people/priya_color.png",
+      name: "Priya",
+      width: 200,
+      height: 200,
+    },
   ];
 
   const vipData = [
@@ -58,8 +97,8 @@ const Legends = () => {
   return (
     <section className="relative px-4 w-full min-h-screen flex">
       {legend ? (
-        <div className="flex">
-          <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2">
+        <div className="w-full flex flex-col md:flex-row gap-8">
+          <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2 order-2 md:order-1">
             <div className="flex flex-wrap gap-2">
               {legendData.map((data, index) => (
                 <Image
@@ -72,15 +111,17 @@ const Legends = () => {
               ))}
             </div>
           </div>
-          <div className="w-full md:w-[63%] md:min-h-screen flex items-center gap-2">
+          <div className="w-full md:w-[63%] md:min-h-screen flex items-center gap-2 order-1 md:order-2">
             {legendexp ? (
-              <div>
-                <h1 className={`${bungee.className} text-8xl text-white`}>
-                  Our
-                </h1>
-                <h1 className={`${bungee.className} text-8xl text-white`}>
-                  Legend
-                </h1>
+              <div className="flex flex-col gap-4">
+                <div>
+                  <h1 className={`${bungee.className} text-8xl text-white`}>
+                    Our
+                  </h1>
+                  <h1 className={`${bungee.className} text-8xl text-white`}>
+                    Legend
+                  </h1>
+                </div>
                 <p className="text-lg text-[#DDDDDD]">
                   Legends are born when ordinary individuals go beyond the call
                   of duty, creating benchmarks of excellence that inspire the
