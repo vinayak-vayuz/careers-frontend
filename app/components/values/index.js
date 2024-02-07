@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Montserrat, Nunito } from "next/font/google";
 import { motion } from "framer-motion";
 import ScrollVelocity from "../scrollVelocity";
@@ -11,7 +12,23 @@ const nunito = Nunito({
   subsets: ["latin"],
 });
 
+const buttons = [
+  { id: 1, label: "Designer" },
+  { id: 2, label: "Web Developers" },
+  { id: 3, label: "Mobile Developers" },
+  { id: 4, label: "Marketing" },
+  { id: 5, label: "Human Resources" },
+];
+
 const Values = ({ id }) => {
+  const [active, setActive] = useState(false);
+  const [buttonid, setButtonid] = useState(0);
+
+  const handleClick = (buttonid) => {
+    setButtonid(buttonid);
+    setActive(!active);
+  };
+
   return (
     <motion.section
       id={id}
@@ -21,32 +38,33 @@ const Values = ({ id }) => {
       whileInView={{ opacity: 1 }}
     >
       <div className="w-full min-h-screen">
-        {/* <h1>respect Time</h1>
-        <h1>Plan well</h1>
-        <h1>deliver Quality</h1> */}
         <div
           className={`${montserrat.className} flex justify-center items-center gap-4 text-white text-4xl overflow-hidden`}
         >
           <ScrollVelocity />
         </div>
-        <div className="my-8 flex flex-wrap justify-center items-center gap-4 text-2xl">
-          <div className="p-0.5 border rounded-lg flex justify-center items-center">
-            <button className="w-full h-full px-4 py-2 bg-black button-gradient-primary">
-              Designer
-            </button>
-          </div>
-          <button className="px-4 py-2 border border-white rounded-lg text-white">
-            Web Developers
-          </button>
-          <button className="px-4 py-2 border border-white rounded-lg text-white">
-            Mobile Developers
-          </button>
-          <button className="px-4 py-2 border border-white rounded-lg text-white">
-            Marketing
-          </button>
-          <button className="px-4 py-2 border border-white rounded-lg text-white">
-            Human Resources
-          </button>
+        <div className="my-8 flex flex-wrap justify-center items-center gap-4">
+          {buttons.map((data, index) => (
+            <div
+              onClick={() => handleClick(index)}
+              key={index}
+              className={`${
+                index === buttonid &&
+                "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
+              } group w-fit bg-white hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] rounded-lg p-[2px] text-center`}
+            >
+              <div className="px-2 py-1 bg-black rounded-lg">
+                <button
+                  className={`${
+                    index === buttonid &&
+                    "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
+                  } text-2xl pt-0.5 font-semibold bg-white group-hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] text-transparent bg-clip-text`}
+                >
+                  {data.label}
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
         <div className="mb-8 mx-2 sm:mx-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {/* Job Card Section */}

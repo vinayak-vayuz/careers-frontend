@@ -20,7 +20,6 @@ import Insights from "./components/insights";
 import OathCeremony from "./components/oath";
 import Memoirs from "./components/memoirs";
 import BecomeAVAYUZer from "./components/VAYUZer";
-import Image from "next/image";
 import VerticalLogoButton from "./components/buttons/VerticalLogoButton";
 import BottomNavigation from "./components/buttons/BottomNavigation";
 

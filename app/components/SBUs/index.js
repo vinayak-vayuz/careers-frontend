@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Bungee, Cherry_Bomb_One } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
 
@@ -11,7 +12,7 @@ const cherry_Bomb_One = Cherry_Bomb_One({
   subsets: ["latin"],
 });
 
-const PEG = ({ className }) => {
+const PEG = ({ className, id }) => {
   const leftSectionRef = useRef(null);
   const [isLeftSticky, setLeftSticky] = useState(false);
 
@@ -32,7 +33,13 @@ const PEG = ({ className }) => {
 
   return (
     <>
-      <main className="relative px-2 md:px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20">
+      <motion.section
+        id={id}
+        transition={{ duration: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="relative px-2 md:px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20 duration-300"
+      >
         <div
           ref={leftSectionRef}
           className={`${className} w-full md:w-1/2 min-h-[80vh] flex flex-col justify-between gap-5 ${
@@ -131,7 +138,7 @@ const PEG = ({ className }) => {
             />
           </div>
         </div>
-      </main>
+      </motion.section>
     </>
   );
 };
