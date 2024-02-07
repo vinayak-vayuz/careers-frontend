@@ -79,7 +79,7 @@ const Memoirs = () => {
   };
 
   return (
-    <div className="relative p-6 w-full min-h-screen">
+    <section className="relative p-6 w-full min-h-screen">
       <div className="flex flex-wrap gap-2">
         {buttons.map((data, index) => (
           <GradientButton
@@ -110,7 +110,7 @@ const Memoirs = () => {
           alt={data.alt}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

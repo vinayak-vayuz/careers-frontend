@@ -29,7 +29,7 @@ const PEG = ({ className }) => {
 
   return (
     <>
-      <main
+      <section
         className={`${
           isLeftSticky ? "sticky top-0" : ""
         } relative px-2 md:px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20`}
@@ -122,7 +122,7 @@ const PEG = ({ className }) => {
             />
           </div>
         </div>
-      </main>
+      </section>
     </>
   );
 };

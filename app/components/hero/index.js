@@ -14,7 +14,7 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 
 const Hero = ({ id }) => {
   return (
-    <main
+    <section
       id={id}
       className={`${bungee.className} w-full min-h-screen sm:min-h-[calc(100vh-100px)] relative flex flex-col justify-center items-center text-center`}
     >
@@ -46,7 +46,7 @@ const Hero = ({ id }) => {
       >
         <h1>#Roadto100</h1>
       </div>
-    </main>
+    </section>
   );
 };
 

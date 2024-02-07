@@ -60,9 +60,7 @@ const eventsData = [
 const Events = () => {
   return (
     <>
-    
-
-      <div className="my-10 relative px-4 w-full min-h-screen flex">
+      <section className="my-10 relative px-4 w-full min-h-screen flex">
         {eventsData.map((data, index) => (
           <Image
             key={index}
@@ -73,7 +71,7 @@ const Events = () => {
             alt=""
           />
         ))}
-      </div>
+      </section>
     </>
   );
 };

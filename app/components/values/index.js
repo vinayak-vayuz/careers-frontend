@@ -13,14 +13,14 @@ const nunito = Nunito({
 
 const Values = ({ id }) => {
   return (
-    <motion.div
+    <motion.section
       id={id}
       className="duration-300"
       transition={{ duration: 1 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
     >
-      <main className="w-full min-h-screen">
+      <div className="w-full min-h-screen">
         {/* <h1>respect Time</h1>
         <h1>Plan well</h1>
         <h1>deliver Quality</h1> */}
@@ -821,8 +821,8 @@ const Values = ({ id }) => {
         </div>
         {/* Video Section */}
         <div className="w-full min-h-[50vh] bg-green-500"></div>
-      </main>
-    </motion.div>
+      </div>
+    </motion.section>
   );
 };
 
