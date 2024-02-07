@@ -19,6 +19,7 @@ import ScrollVelocity from "./components/scrollVelocity";
 import Insights from "./components/insights";
 import OathCeremony from "./components/oath";
 import Memoirs from "./components/memoirs";
+import BecomeAVAYUZer from "./components/VAYUZer";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -88,7 +89,10 @@ export default function Home() {
       {/* Oath Ceremony */}
       <OathCeremony />
       {/* Memoirs */}
-      <Memoirs/>
+      <Memoirs />
+      {/* Become a VAYUZer */}
+      <BecomeAVAYUZer />
+      {/* Progess Bar */}
       <motion.div
         className="progress fixed left-0 right-0 bottom-2 sm:bottom-0 h-2 bg-[#fafafa]"
         style={{ scaleX }}
