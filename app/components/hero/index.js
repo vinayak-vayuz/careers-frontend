@@ -45,13 +45,7 @@ const Hero = () => {
       >
         <h1>#Roadto100</h1>
       </div>
-      <Image
-        className="fixed top-[50%] -translate-y-[50%] left-4"
-        src={"/images/vayuz_vertical.svg"}
-        width={26}
-        height={214}
-        alt=""
-      />
+      
     </main>
   );
 };

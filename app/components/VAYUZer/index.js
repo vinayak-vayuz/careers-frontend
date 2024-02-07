@@ -11,13 +11,14 @@ const montserrat = Montserrat({
 
 const BecomeAVAYUZer = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center gap-4">
-      <h1 className={`${michroma.className} text-[#222222] text-6xl`}>
+    <div className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center gap-4">
+      <div className="spotlight"></div>
+      <h1 className={`${michroma.className} text-[#222222] text-2xl md:text-6xl`}>
         #BecomeaVAYUZer
       </h1>
       <p className={`${montserrat.className} text-[#222222] text-`}>
         Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut
-        diam.{" "}
+        diam.
       </p>
     </div>
   );
