@@ -12,9 +12,10 @@ const cherry_Bomb_One = Cherry_Bomb_One({
   subsets: ["latin"],
 });
 
-const Hero = () => {
+const Hero = ({ id }) => {
   return (
     <main
+      id={id}
       className={`${bungee.className} w-full min-h-screen sm:min-h-[calc(100vh-100px)] relative flex flex-col justify-center items-center text-center`}
     >
       <h1 className="text-[28px] xl:text-[85px] xl:leading-[100px] flex justify-center items-center gap-4">
@@ -45,7 +46,6 @@ const Hero = () => {
       >
         <h1>#Roadto100</h1>
       </div>
-      
     </main>
   );
 };

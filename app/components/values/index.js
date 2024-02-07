@@ -11,9 +11,10 @@ const nunito = Nunito({
   subsets: ["latin"],
 });
 
-const Values = () => {
+const Values = ({ id }) => {
   return (
     <motion.div
+      id={id}
       className="duration-300"
       transition={{ duration: 1 }}
       initial={{ opacity: 0 }}

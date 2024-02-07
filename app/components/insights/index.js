@@ -73,10 +73,10 @@ const insightData = [
   },
 ];
 
-const Insights = () => {
+const Insights = ({id}) => {
   return (
     <>
-      <section className="w-full min-h-screen flex flex-col justify-center items-center">
+      <section id={id} className="w-full min-h-screen flex flex-col justify-center items-center">
         <div className="w-full sm:w-[80%] flex flex-col justify-center items-center text-center gap-4">
           <h1 className={`${michroma.className} text-white text-4xl`}>
             Insights

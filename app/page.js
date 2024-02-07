@@ -66,16 +66,24 @@ export default function Home() {
     }
   }, [scrollYProgress]);
 
+  // Function to handle scrolling to the corresponding section
+  const scrollToSection = (id) => {
+    const section = document.getElementById(`section-${id}`);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="relative flex flex-col gap-2 overflow-hidden">
       {/* Header */}
       <Header />
       {/* Hero Section */}
-      <Hero />
+      <Hero id={1} />
       {/* Vetical Button */}
-      <VerticalLogoButton />
+      <VerticalLogoButton onclick={scrollToSection} />
       {/* Values Section */}
-      <Values />
+      <Values id={2} />
       {/* SBUs Section */}
       {/* <div className={`sticky-container ${isSticky ? "sticky" : ""}`}></div> */}
       <ScrollSnap>
@@ -87,15 +95,15 @@ export default function Home() {
       {/* Events Section */}
       <Events />
       {/* Social Section */}
-      <Social />
+      <Social id={3} />
       {/* Insights Section */}
-      <Insights />
+      <Insights id={4} />
       {/* Oath Ceremony */}
       <OathCeremony />
       {/* Memoirs */}
       <Memoirs />
       {/* Become a VAYUZer */}
-      <BecomeAVAYUZer />
+      <BecomeAVAYUZer id={5} />
       {/* Progess Bar */}
       <motion.div
         className="progress fixed left-0 right-0 bottom-2 sm:bottom-0 h-2 bg-[#fafafa]"

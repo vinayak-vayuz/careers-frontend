@@ -203,7 +203,7 @@ const topContributors = [
   },
 ];
 
-const Social = () => {
+const Social = ({ id }) => {
   const [topcontributors, setTopcontributors] = useState(false);
 
   function handleClick() {
@@ -212,7 +212,7 @@ const Social = () => {
 
   return (
     <>
-      <section className="w-full min-h-screen relative">
+      <section id={id} className="w-full min-h-screen relative">
         {!topcontributors ? (
           <div
             className="w-full h-[20rem] sm:h-[30rem] lg:h-[35rem] overflow-hidden"
@@ -288,7 +288,10 @@ const Social = () => {
                     Top Contributors
                   </h1>
                   {topContributors.map((data, index) => (
-                    <div key={index} className="py-2 flex justify-between items-center gap-4 border-b">
+                    <div
+                      key={index}
+                      className="py-2 flex justify-between items-center gap-4 border-b"
+                    >
                       <div className="flex items-center gap-4">
                         <Image
                           className="w-10 h-10 rounded-full"

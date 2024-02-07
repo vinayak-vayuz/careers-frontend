@@ -9,18 +9,23 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-const BecomeAVAYUZer = () => {
+const BecomeAVAYUZer = ({ id }) => {
   return (
-    <div className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center gap-4">
+    <section
+      id={id}
+      className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center gap-4"
+    >
       <div className="spotlight"></div>
-      <h1 className={`${michroma.className} text-[#222222] text-2xl md:text-6xl`}>
+      <h1
+        className={`${michroma.className} text-[#222222] text-2xl md:text-6xl`}
+      >
         #BecomeaVAYUZer
       </h1>
       <p className={`${montserrat.className} text-[#222222] text-`}>
         Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut
         diam.
       </p>
-    </div>
+    </section>
   );
 };
 

@@ -8,8 +8,15 @@ const buttons = [
   { id: 5, imageSrc: "/icons/z.svg", width: "24", height: "25" },
 ];
 
+const scrollToSection = (id) => {
+  const section = document.getElementById(`${id}`);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const VerticalLogoButton = ({
-  onclick,
+//   onClick,
   containerClassName,
   buttonClassName,
 }) => {
@@ -17,10 +24,13 @@ const VerticalLogoButton = ({
     <div
       className={`${containerClassName} fixed top-[50%] -translate-y-[50%] left-4 flex flex-col items-center gap-5 z-50`}
     >
-      {buttons.map((data, index) => (
-        <button onClick={onclick} className={`${buttonClassName}`}>
+      {buttons.map((data) => (
+        <button
+          onClick={() => scrollToSection(data.id)}
+          className={`${buttonClassName}`}
+        >
           <Image
-            key={index}
+            key={data.id}
             className={`${data.className} opacity-20 hover:opacity-100`}
             src={data.imageSrc}
             width={data.width}
