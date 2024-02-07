@@ -58,7 +58,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
    */
   return (
     <div className="parallax">
-      <motion.div className="scroller" style={{ x }}>
+      <motion.div className="scroller gap-10" style={{ x }}>
         <span>{children}</span>
         <span>{children}</span>
         <span>{children}</span>
