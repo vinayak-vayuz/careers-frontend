@@ -72,13 +72,31 @@ export default function ScrollVelocity({ children }) {
   return (
     <section className="flex">
       <ParallaxText baseVelocity={2}>
-        <div className="flex justify-center items-center gap-3">
+        <div className="flex justify-center items-center gap-5">
           <h1>respect Time</h1>
-          <Image src={"/icons/time.svg"} width={40} height={40} alt="" />
           <h1>Plan well</h1>
-          <Image src={"/icons/plan.svg"} width={40} height={40} alt="" />
           <h1>deliver Quality</h1>
-          <Image src={"/icons/quality.svg"} width={40} height={40} alt="" />
+          <Image
+            className=" w-8"
+            src={"/icons/plan.svg"}
+            width={40}
+            height={40}
+            alt=""
+          />
+          <Image
+            className=" w-8"
+            src={"/icons/time.svg"}
+            width={40}
+            height={40}
+            alt=""
+          />
+          <Image
+            className=" w-8"
+            src={"/icons/quality.svg"}
+            width={40}
+            height={40}
+            alt=""
+          />
         </div>
       </ParallaxText>
       {/* <ParallaxText baseVelocity={5}>{children}</ParallaxText> */}
