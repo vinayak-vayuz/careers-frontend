@@ -57,7 +57,7 @@ const ArKa = ({ className }) => {
             height={197}
             alt=""
           />
-          <Image src={"/images/green_circle.svg"} width={334} height={702} />
+          <Image src={"/images/green_circle.svg"} width={334} height={702} alt="" />
         </div>
       </div>
     </main>

@@ -211,7 +211,7 @@ const Legends = () => {
             src={"/icons/proud_vayuzer.svg"}
             width={199}
             height={200}
-            s
+            alt=""
           />
         </div>
       ) : (

@@ -16,7 +16,7 @@ const scrollToSection = (id) => {
 };
 
 const VerticalLogoButton = ({
-//   onClick,
+  //   onClick,
   containerClassName,
   buttonClassName,
 }) => {
@@ -26,6 +26,7 @@ const VerticalLogoButton = ({
     >
       {buttons.map((data) => (
         <button
+          key={data.id}
           onClick={() => scrollToSection(data.id)}
           className={`${buttonClassName}`}
         >

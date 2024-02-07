@@ -14,7 +14,7 @@ const InsightsCard = ({ title, author, duration, coverImage }) => {
         </div>
         <div className="front">
           <div className="front-content relative">
-            <Image src={coverImage} width={447} height={338} />
+            <Image src={coverImage} width={447} height={338} alt="" />
             <button>
               <Image
                 className="absolute bottom-2 right-2"

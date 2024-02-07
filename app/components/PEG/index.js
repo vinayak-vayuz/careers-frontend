@@ -53,7 +53,7 @@ const PEG = ({ className }) => {
             </p>
           </div>
           <div className="relative flex sm:hidden flex-col justify-between items-center gap-10">
-            <Image src={"/images/teal_bg.svg"} width={334} height={702} />
+            <Image src={"/images/teal_bg.svg"} width={334} height={702} alt="" />
             <div>
               <Image
                 className="scale-75 absolute -top-5 -right-5"
@@ -91,7 +91,7 @@ const PEG = ({ className }) => {
         </div>
         <div className="hidden sm:flex justify-end items-center w-full md:w-1/2 min-h-[80vh]">
           <div className="relative flex flex-col justify-between items-center gap-10">
-            <Image src={"/images/teal_bg.svg"} width={334} height={702} />
+            <Image src={"/images/teal_bg.svg"} width={334} height={702} alt="" />
             <div>
               <Image
                 className="scale-75 absolute -top-5 -right-5"
