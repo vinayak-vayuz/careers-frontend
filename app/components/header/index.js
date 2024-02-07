@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="w-full p-4 flex sm:justify-end md:justify-center">
       <Image
-        className="absolute top-4 left-4 scale-75"
+        className="absolute top-4 left-0 sm:left-4 scale-75"
         src={"/images/vayuz_logo.svg"}
         width={162}
         height={38}
@@ -137,23 +137,7 @@ const Header = () => {
           </svg>
         </button>
       </div>
-
-      <div className="sm:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-fit px-10 py-4 flex justify-between items-center gap-10 bg-[#5B5B5B] rounded-full">
-        <button>
-          <Image
-            src={"/icons/lifeatvayuz.svg"}
-            width={24}
-            height={24}
-            alt="lifeatvayuz"
-          />
-        </button>
-        <button>
-          <Image src={"/icons/bag.svg"} width={24} height={24} alt="bag" />
-        </button>
-        <button>
-          <Image src={"/icons/user.svg"} width={24} height={24} alt="user" />
-        </button>
-      </div>
+     
     </header>
   );
 };

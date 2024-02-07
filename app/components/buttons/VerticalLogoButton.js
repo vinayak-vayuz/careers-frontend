@@ -22,7 +22,7 @@ const VerticalLogoButton = ({
 }) => {
   return (
     <div
-      className={`${containerClassName} fixed top-[50%] -translate-y-[50%] left-4 flex flex-col items-center gap-5 z-50`}
+      className={`${containerClassName} hidden sm:flex fixed top-[50%] -translate-y-[50%] left-4 flex-col items-center gap-5 z-50`}
     >
       {buttons.map((data) => (
         <button

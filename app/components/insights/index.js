@@ -59,24 +59,27 @@ const insightData = [
     duration: "7 mins read",
     coverImage: "/images/insight/insight_dummy.png",
   },
-  {
-    title: "Healthy Eating Habits for a Better Lifestyle",
-    author: "Sophia Anderson",
-    duration: "6 mins read",
-    coverImage: "/images/insight/insight_dummy.png",
-  },
-  {
-    title: "Tips for Effective Remote Work",
-    author: "Robert Smith",
-    duration: "8 mins read",
-    coverImage: "/images/insight/insight_dummy.png",
-  },
+  // {
+  //   title: "Healthy Eating Habits for a Better Lifestyle",
+  //   author: "Sophia Anderson",
+  //   duration: "6 mins read",
+  //   coverImage: "/images/insight/insight_dummy.png",
+  // },
+  // {
+  //   title: "Tips for Effective Remote Work",
+  //   author: "Robert Smith",
+  //   duration: "8 mins read",
+  //   coverImage: "/images/insight/insight_dummy.png",
+  // },
 ];
 
-const Insights = ({id}) => {
+const Insights = ({ id }) => {
   return (
     <>
-      <section id={id} className="w-full min-h-screen flex flex-col justify-center items-center">
+      <section
+        id={id}
+        className="w-full min-h-screen flex flex-col justify-center items-center"
+      >
         <div className="w-full sm:w-[80%] flex flex-col justify-center items-center text-center gap-4">
           <h1 className={`${michroma.className} text-white text-4xl`}>
             Insights

@@ -22,6 +22,7 @@ import Memoirs from "./components/memoirs";
 import BecomeAVAYUZer from "./components/VAYUZer";
 import Image from "next/image";
 import VerticalLogoButton from "./components/buttons/VerticalLogoButton";
+import BottomNavigation from "./components/buttons/BottomNavigation";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -82,6 +83,8 @@ export default function Home() {
       <Hero />
       {/* Vetical Button */}
       <VerticalLogoButton onclick={scrollToSection} />
+      {/* Bottom Navigation */}
+      <BottomNavigation />
       {/* Values Section */}
       <Values id={2} />
       {/* SBUs Section */}
