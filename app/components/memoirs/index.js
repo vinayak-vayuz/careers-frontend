@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 import GradientButton from "../buttons/GradientButton";
 
 const buttons = [
@@ -69,24 +70,45 @@ const convergenceImages = [
   },
 ];
 const Memoirs = () => {
+  const [id, setId] = useState(0);
+  const [select, setSelect] = useState(false);
+
+  const handleClick = (index) => {
+    setId(index);
+    setSelect(!select);
+  };
+
   return (
     <div className="relative p-6 w-full min-h-screen">
       <div className="flex flex-wrap gap-2">
         {buttons.map((data, index) => (
-          <GradientButton key={index}>{data}</GradientButton>
+          <GradientButton
+            containerClassName={`${
+              id === index
+                ? "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
+                : ""
+            }`}
+            buttonClassName={`${
+              id === index
+                ? "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
+                : ""
+            }`}
+            onclick={() => handleClick(index)}
+            key={index}
+          >
+            {data}
+          </GradientButton>
         ))}
       </div>
       {convergenceImages.map((data, index) => (
- 
-          <Image
-            key={index}
-            className={`${data.className} rounded-full grayscale hover:grayscale-0 hover:scale-150 transition-all duration-500 ease-in-out hover:transition-all hover:duration-500 hover:ease-in-out`}
-            src={data.imageSrc}
-            width={data.width}
-            height={data.height}
-            alt={data.alt}
-          />
-        
+        <Image
+          key={index}
+          className={`${data.className} rounded-full grayscale hover:grayscale-0 hover:scale-150 transition-all duration-500 ease-in-out hover:transition-all hover:duration-500 hover:ease-in-out`}
+          src={data.imageSrc}
+          width={data.width}
+          height={data.height}
+          alt={data.alt}
+        />
       ))}
     </div>
   );
