@@ -75,7 +75,7 @@ export default function Home() {
   };
 
   return (
-    <main id={1} className="relative flex flex-col gap-2 overflow-hidden">
+    <main id={1} className="relative flex flex-col overflow-hidden">
       {/* Header */}
       <Header />
       {/* Hero Section */}
