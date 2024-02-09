@@ -126,9 +126,9 @@ const Legends = () => {
   ];
 
   useEffect(() => {
-    if (!legendexp) {
-      setLegendDataToShow(legendData.filter(data => data.id === id));
-    }
+    // if (!legendexp) {
+    setLegendDataToShow(legendData.filter((data) => data.id === id));
+    // }
   }, [legendexp, id, legendData]);
 
   // Calculate the number of columns
@@ -239,14 +239,24 @@ const Legends = () => {
           onClick={handleLegend}
           className="absolute top-1/2 -translate-y-1/2 right-0"
         >
-          <Image src={"/images/vip_button.svg"} width={27} height={484} alt="" />
+          <Image
+            src={"/images/vip_button.svg"}
+            width={27}
+            height={484}
+            alt=""
+          />
         </button>
       ) : (
         <button
           onClick={handleLegend}
           className="absolute top-1/2 -translate-y-1/2 left-0"
         >
-          <Image src={"/images/back_button.svg"} width={27} height={331} alt="" />
+          <Image
+            src={"/images/back_button.svg"}
+            width={27}
+            height={331}
+            alt=""
+          />
         </button>
       )}
     </section>

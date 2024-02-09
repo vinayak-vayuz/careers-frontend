@@ -78,7 +78,7 @@ const Insights = ({ id }) => {
     <>
       <section
         id={id}
-        className="w-full min-h-screen flex flex-col justify-center items-center"
+        className="relative w-full min-h-screen py-10 bg-[#141414] flex flex-col justify-center items-center"
       >
         <div className="w-full sm:w-[80%] flex flex-col justify-center items-center text-center gap-4">
           <h1 className={`${michroma.className} text-white text-4xl`}>
@@ -90,6 +90,7 @@ const Insights = ({ id }) => {
             expanse.
           </p>
         </div>
+        <div className="bg-[#00C2F8] w-4 h-4 rounded-full absolute top-[42%] left-[48.4%] -translate-x-[50%] -translate-y-[50%]"></div>
       </section>
       <section className="pb-4 w-full min-h-screen bg-[#00C2F8]">
         <h1

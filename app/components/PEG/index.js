@@ -16,7 +16,7 @@ const PEG = ({ className }) => {
   const [isLeftSticky, setLeftSticky] = useState(false);
 
   const handleScroll = () => {
-    const scrollThreshold = 200;
+    const scrollThreshold = 100;
     setLeftSticky(window.scrollY > scrollThreshold);
   };
 
@@ -31,13 +31,13 @@ const PEG = ({ className }) => {
     <>
       <section
         className={`${
-          isLeftSticky ? "sticky top-0" : ""
+          isLeftSticky ? "sticky top-0 left-0" : ""
         } relative px-2 md:px-14 py-8 w-full min-h-screen flex justify-between items-center gap-20`}
       >
         <div
           ref={leftSectionRef}
           className={`${
-            isLeftSticky ? "sticky top-0" : ""
+            isLeftSticky ? "sticky top-0 left-0" : ""
           } ${className} w-full md:w-1/2 min-h-[80vh] flex flex-col justify-between gap-5 `}
         >
           <div>
@@ -53,7 +53,12 @@ const PEG = ({ className }) => {
             </p>
           </div>
           <div className="relative flex sm:hidden flex-col justify-between items-center gap-10">
-            <Image src={"/images/teal_bg.svg"} width={334} height={702} alt="" />
+            <Image
+              src={"/images/teal_bg.svg"}
+              width={334}
+              height={702}
+              alt=""
+            />
             <div>
               <Image
                 className="scale-75 absolute -top-5 -right-5"
@@ -91,7 +96,12 @@ const PEG = ({ className }) => {
         </div>
         <div className="hidden sm:flex justify-end items-center w-full md:w-1/2 min-h-[80vh]">
           <div className="relative flex flex-col justify-between items-center gap-10">
-            <Image src={"/images/teal_bg.svg"} width={334} height={702} alt="" />
+            <Image
+              src={"/images/teal_bg.svg"}
+              width={334}
+              height={702}
+              alt=""
+            />
             <div>
               <Image
                 className="scale-75 absolute -top-5 -right-5"
