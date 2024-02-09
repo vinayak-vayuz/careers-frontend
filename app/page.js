@@ -90,6 +90,8 @@ export default function Home() {
       {/* <div className={`sticky-container ${isSticky ? "sticky" : ""}`}></div> */}
       <ScrollSnap>
         <PEG />
+        {/* gads
+         */}
         {/* <ArKa /> */}
       </ScrollSnap>
       {/* Legends Section */}
