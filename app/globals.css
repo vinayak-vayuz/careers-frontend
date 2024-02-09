@@ -531,7 +531,54 @@ body {
   transition: 1s;
   animation: glide 3s ease-in-out 1s infinite alternate;
   transform-origin: top;
-  z-index: -1;
+  z-index: 1;
+}
+
+.spotlight-1 {
+  width: 50%;
+  max-width: 700px;
+  height: 100%;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  background-color: rgba(255, 255, 255, 1);
+  filter: blur(150px);
+  position: absolute;
+  top: 0;
+  left: -25%;
+  rotate: -45deg;
+  transition: 1s;
+  animation: glide 3s ease-in-out 1s infinite alternate;
+  transform-origin: top;
+  z-index: 1;
+}
+.spotlight-2 {
+  width: 50%;
+  max-width: 700px;
+  height: 100%;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  background-color: rgba(255, 255, 255, 1);
+  filter: blur(150px);
+  position: absolute;
+  top: 0;
+  transition: 1s;
+  animation: glide 3s ease-in-out 1s infinite alternate;
+  transform-origin: top;
+  z-index: 1;
+}
+.spotlight-3 {
+  width: 50%;
+  max-width: 700px;
+  height: 100%;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  background-color: rgba(255, 255, 255, 1);
+  filter: blur(150px);
+  position: absolute;
+  top: 0;
+  right: -25%;
+  rotate: 45deg;
+  transition: 1s;
+  animation: glide 3s ease-in-out 1s infinite alternate;
+  transform-origin: top;
+  z-index: 1;
 }
 
 @keyframes glide {

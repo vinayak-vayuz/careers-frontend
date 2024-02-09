@@ -212,7 +212,7 @@ const Social = ({ id }) => {
 
   return (
     <>
-      <section id={id} className="w-full min-h-screen relative">
+      <section id={id} className="w-full min-h-screen bg-[#141414] relative">
         {!topcontributors ? (
           <div
             className="w-full h-[20rem] sm:h-[30rem] lg:h-[35rem] overflow-hidden"
@@ -266,45 +266,46 @@ const Social = ({ id }) => {
         ) : (
           <>
             <div
-              className={`ml-4 relative w-full min-h-screen bg-[url('/images/social/sky_circle.png')] bg-cover bg-no-repeat`}
+              className={`sm:ml-4 py-4 relative w-full min-h-screen flex flex-col gap-10 items-center bg-[url('/images/social/sky_circle_mobile.svg')] md:bg-[url('/images/social/sky_circle.png')] bg-cover bg-no-repeat`}
             >
               <h1
-                className={`${modak.className} absolute top-4 left-60 text-4xl text-white text-right`}
+                className={`${modak.className} text-4xl text-white text-right`}
               >
                 Top social <br /> Contributors
               </h1>
-              <Image
-                className="absolute top-[60%] -translate-y-1/2 left-[20%]"
-                src={"/images/people/vinayak&saurabh.png"}
-                width={205}
-                height={496}
-                alt=""
-              />
-              <div
-                className={`${mochiy_pop_one.className} absolute top-[60%] -translate-y-1/2 right-[5%] w-[50%] h-[25rem] overflow-hidden bg-[#1C1C1C] rounded-3xl`}
-              >
-                <div className="px-5 py-3 h-[25rem] overflow-y-auto">
-                  <h1 className="text-white px-4 pb-2 border-b">
-                    Top Contributors
-                  </h1>
-                  {topContributors.map((data, index) => (
-                    <div
-                      key={index}
-                      className="py-2 flex justify-between items-center gap-4 border-b"
-                    >
-                      <div className="flex items-center gap-4">
-                        <Image
-                          className="w-10 h-10 rounded-full"
-                          src={data.imageSrc}
-                          width={45}
-                          height={45}
-                          alt=""
-                        />
-                        <h1 className="text-white">{data.name}</h1>
+              <div className="w-full flex flex-col md:flex-row justify-center items-center gap-10">
+                <Image
+                  src={"/images/people/vinayak&saurabh.png"}
+                  width={205}
+                  height={496}
+                  alt=""
+                />
+                <div
+                  className={`${mochiy_pop_one.className} w-[80%] sm:w-[30%] h-[25rem] overflow-hidden bg-[#1C1C1C] rounded-3xl`}
+                >
+                  <div className="px-5 py-3 h-[25rem] overflow-y-auto">
+                    <h1 className="text-white px-4 pb-2 border-b">
+                      Top Contributors
+                    </h1>
+                    {topContributors.map((data, index) => (
+                      <div
+                        key={index}
+                        className="py-2 flex justify-between items-center gap-4 border-b"
+                      >
+                        <div className="flex items-center gap-4">
+                          <Image
+                            className="w-10 h-10 rounded-full"
+                            src={data.imageSrc}
+                            width={45}
+                            height={45}
+                            alt=""
+                          />
+                          <h1 className="text-white">{data.name}</h1>
+                        </div>
+                        <p className="text-[#0AD80A]">{data.score}</p>
                       </div>
-                      <p className="text-[#0AD80A]">{data.score}</p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
