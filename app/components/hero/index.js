@@ -16,8 +16,18 @@ const Hero = ({ id }) => {
   return (
     <section
       id={id}
-      className={`${bungee.className} w-full min-h-[calc(100vh-100px)] sm:min-h-[calc(100vh-100px)] relative flex flex-col justify-center items-center text-center`}
+      className={`${bungee.className} relative w-full min-h-[calc(100vh-100px)] sm:min-h-[calc(100vh-100px)] flex flex-col justify-center items-center text-center`}
     >
+      <video
+        autoPlay
+        muted
+        loop
+        className="fixed inset-0 object-cover w-full h-full z-[-1] opacity-25"
+      >
+        <source src="/videos/vayuz_careers.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {/* <div className="fixed inset-0 bg-gradient-to-br from-black via-transparent to-transparent"></div> */}
       <h1 className="text-[32px] sm:text-[40px] md:text-[60px] xl:text-[85px] xl:leading-[100px] flex justify-center items-center gap-4">
         <span className="text-white">We Are</span>
         <span className="font-outline-2">People</span>

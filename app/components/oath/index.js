@@ -12,10 +12,10 @@ const OathCeremony = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex justify-center items-center overflow-hidden">
+    <section className="relative w-full min-h-screen py-10 bg-[#141414] flex justify-center items-center overflow-hidden">
       {animationComplete ? (
-        <video className="w-full sm:w-[60%]" controls>
-          <source src="/path/to/video.mp4" type="video/mp4" />
+        <video autoPlay muted loop className="w-full sm:w-[60%]" controls>
+          <source src="/videos/oath_ceremony.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       ) : (
@@ -24,12 +24,14 @@ const OathCeremony = () => {
       <div
         className={`transition-transform duration-1000 ease-in-out transform ${
           animationComplete
-            ? "absolute left-5 top-1/2 -translate-y-1/2 rotate-[101.5deg]"
-            : "absolute top-[45%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+            ? "absolute -left-2.5 top-1/2 -translate-y-1/2 rotate-[101.5deg]"
+            : "absolute top-[44%] left-[50%] -translate-x-1/2 -translate-y-1/2"
         }`}
       >
         <Image
-          className="w-96"
+          className={`${
+            animationComplete ? "w-[30rem]" : "w-96"
+          } hidden xl:block`}
           src={"/images/oath/cover_01.svg"}
           width={872.45}
           height={245.76}
@@ -39,12 +41,14 @@ const OathCeremony = () => {
       <div
         className={`transition-transform duration-1000 ease-in-out transform ${
           animationComplete
-            ? "absolute right-0 top-1/2 -translate-y-1/2 rotate-[101.5deg]"
+            ? "absolute -right-2.5 top-[49%] -translate-y-1/2 rotate-[101.5deg]"
             : "absolute top-[51%] left-[50%] -translate-x-1/2 -translate-y-1/2 rotate-100"
         }`}
       >
         <Image
-          className="w-96"
+          className={`${
+            animationComplete ? "w-[30rem]" : "w-96"
+          } hidden xl:block`}
           src={"/images/oath/cover_02.svg"}
           width={872.45}
           height={245.76}
