@@ -126,7 +126,7 @@ const Expand = ({
   return (
     <>
       <div
-        className="w-full flex justify-center items-center"
+        className="w-full flex flex-col justify-center items-center"
         ref={menuRef}
         onClick={handleClick}
       >
@@ -141,7 +141,7 @@ const Expand = ({
           <motion.div
             layout
             transition={{ duration: 1 }}
-            className="w-max p-2 bg-black"
+            className="w-max p-4 bg-black bg-opacity-100 rounded-xl"
           >
             <h1 className={`${bungee.className} text-2xl text-[#A35DFF]`}>
               {title}

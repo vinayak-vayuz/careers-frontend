@@ -103,7 +103,7 @@ const Memoirs = () => {
       {convergenceImages.map((data, index) => (
         <Image
           key={index}
-          className={`${data.className} rounded-full grayscale hover:grayscale-0 hover:scale-150 transition-all duration-500 ease-in-out hover:transition-all hover:duration-500 hover:ease-in-out`}
+          className={`${data.className} rounded-full aspect-[1] grayscale hover:grayscale-0 hover:scale-150 transition-all duration-500 ease-in-out hover:transition-all hover:duration-500 hover:ease-in-out`}
           src={data.imageSrc}
           width={data.width}
           height={data.height}
