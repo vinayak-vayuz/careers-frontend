@@ -9,7 +9,7 @@ const buttons = [
 const BottomNavigation = ({ onClick, containerClassName, buttonClassName }) => {
   return (
     <div
-      className={`${containerClassName}sm:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-fit px-4 sm:px-10 py-4 flex justify-between items-center gap-10 bg-[#1F1F1F] border border-[#535353] rounded-full z-50`}
+      className={`${containerClassName} sm:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-fit px-4 sm:px-10 py-4 flex justify-between items-center gap-10 bg-[#1F1F1F] border border-[#535353] rounded-full z-50`}
     >
       {buttons.map((data) => (
         <button

@@ -9,7 +9,7 @@ const permanent_Marker = Permanent_Marker({
 
 const Header = () => {
   return (
-    <header className="w-full p-4 flex sm:justify-end md:justify-center z-50">
+    <header className="fixed top-0 w-full p-4 flex sm:justify-end md:justify-center z-50">
       <Image
         className="fixed top-4 left-0 sm:left-4 scale-75"
         src={"/images/vayuz_logo.svg"}

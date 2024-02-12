@@ -39,7 +39,7 @@ const Values = ({ id }) => {
     >
       <div className="w-full min-h-screen bg-[#141414] py-10">
         <div
-          className={`${montserrat.className} pt-8 flex justify-center items-center gap-4 text-white text-4xl overflow-hidden`}
+          className={`${montserrat.className} flex justify-center items-center gap-4 text-white text-4xl overflow-hidden`}
         >
           <ScrollVelocity />
         </div>

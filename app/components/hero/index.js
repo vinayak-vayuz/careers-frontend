@@ -14,9 +14,10 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 
 const Hero = ({ id }) => {
   return (
+    // min-h-[calc(100vh-100px)] sm:min-h-[calc(100vh-100px)]
     <section
       id={id}
-      className={`${bungee.className} relative w-full min-h-[calc(100vh-100px)] sm:min-h-[calc(100vh-100px)] flex flex-col justify-center items-center text-center`}
+      className={`${bungee.className} relative w-full min-h-screen flex flex-col justify-center items-center text-center`}
     >
       <video
         autoPlay
