@@ -140,7 +140,7 @@ const Legends = () => {
   );
 
   return (
-    <section className="relative px-4 w-full min-h-screen flex">
+    <section className="relative px-4 py-4 w-full min-h-screen bg-[#141414] flex">
       {legend ? (
         <div className="w-full flex flex-col md:flex-row gap-8">
           <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2 order-2 md:order-1">
