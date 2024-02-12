@@ -1,5 +1,6 @@
-import { Bungee, Montserrat } from "next/font/google";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { Bungee, Montserrat } from "next/font/google";
 import React, { useEffect, useState } from "react";
 
 const bungee = Bungee({
@@ -140,7 +141,12 @@ const Legends = () => {
   );
 
   return (
-    <section className="relative px-4 py-4 w-full min-h-screen bg-[#141414] flex">
+    <motion.section
+      transition={{ duration: 1 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="relative px-4 py-4 w-full min-h-screen bg-[#141414] flex"
+    >
       {legend ? (
         <div className="w-full flex flex-col md:flex-row gap-8">
           <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2 order-2 md:order-1">
@@ -259,7 +265,7 @@ const Legends = () => {
           />
         </button>
       )}
-    </section>
+    </motion.section>
   );
 };
 

@@ -159,7 +159,12 @@ const Expand = ({
 const Events = () => {
   return (
     <>
-      <section className="bg-[#141414] px-4 py-10 relative w-full min-h-screen flex">
+      <motion.section
+        transition={{ duration: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="bg-[#141414] px-4 py-10 relative w-full min-h-screen flex"
+      >
         {eventsData.map((data, index) => (
           <Expand
             key={index}
@@ -172,7 +177,7 @@ const Events = () => {
             description={data.description}
           />
         ))}
-      </section>
+      </motion.section>
     </>
   );
 };

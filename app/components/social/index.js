@@ -1,6 +1,7 @@
-import { Mochiy_Pop_One, Modak } from "next/font/google";
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Mochiy_Pop_One, Modak } from "next/font/google";
 
 const modak = Modak({
   weight: "400",
@@ -212,7 +213,13 @@ const Social = ({ id }) => {
 
   return (
     <>
-      <section id={id} className="w-full min-h-screen bg-[#141414] relative">
+      <motion.section
+        transition={{ duration: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        id={id}
+        className="w-full min-h-screen bg-[#141414] relative"
+      >
         {!topcontributors ? (
           <div
             className="w-full h-[20rem] sm:h-[30rem] lg:h-[35rem] overflow-hidden"
@@ -319,7 +326,7 @@ const Social = ({ id }) => {
             alt=""
           />
         </button>
-      </section>
+      </motion.section>
       {/* <section className="w-full min-h-screen">
         <div className="">
           <div className="w-full flex flex-wrap">

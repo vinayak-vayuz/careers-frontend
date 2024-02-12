@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Bungee, Cherry_Bomb_One } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const bungee = Bungee({
   weight: "400",
@@ -29,7 +30,10 @@ const PEG = ({ className }) => {
 
   return (
     <>
-      <section
+      <motion.section
+        transition={{ duration: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         className={`${
           isLeftSticky ? "sticky top-0 left-0" : ""
         } relative px-2 md:px-14 py-8 bg-[#141414] w-full min-h-screen flex justify-between items-center gap-20`}
@@ -132,7 +136,7 @@ const PEG = ({ className }) => {
             />
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };
