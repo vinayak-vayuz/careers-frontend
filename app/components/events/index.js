@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { Bungee } from "next/font/google";
+import { motion } from "framer-motion";
 import { useOutsideClick } from "@/app/functions/outsideClick";
 
 const bungee = Bungee({
@@ -50,6 +51,7 @@ const eventsData = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Tempus mattis netus pretium bibendum lectus. Ultricies eu.",
     imageSrc: "/images/events/horcrux.png",
+    eImageSrc: "/images/events/horcrux_lg.png",
     className: "absolute top-[40%] left-[10%]",
     width: 396,
     height: 320,
@@ -92,11 +94,10 @@ const eventsData = [
   },
 ];
 
-  
-
 const Expand = ({
   className,
   imageSrc,
+  eImageSrc,
   width,
   height,
   alt,
@@ -116,28 +117,40 @@ const Expand = ({
   };
   useOutsideClick(menuRef, closeMenu);
 
+  const spring = {
+    type: "spring",
+    damping: 10,
+    stiffness: 100,
+  };
+
   return (
     <>
-      <div ref={menuRef} onClick={handleClick}>
-        <div className="flex">
-          <Image
-            className={`${className} w-52`}
-            src={imageSrc}
-            width={width}
-            height={height}
-            alt={alt}
-          />
-          {selected ? (
-            <div className="w-[30%] bg-black bg-opacity-30 bg-blur">
-              <h1 className={`${bungee.className} text-2xl text-[#A35DFF]`}>
-                {title}
-              </h1>
-              <h1 className="text-white">{description}</h1>
-            </div>
-          ) : (
-            <></>
-          )}
-        </div>
+      <div
+        className="w-full flex justify-center items-center"
+        ref={menuRef}
+        onClick={handleClick}
+      >
+        <Image
+          className={`${className} w-52`}
+          src={imageSrc}
+          width={width}
+          height={height}
+          alt={alt}
+        />
+        {selected ? (
+          <motion.div
+            layout
+            transition={{ duration: 1 }}
+            className="w-max p-2 bg-black"
+          >
+            <h1 className={`${bungee.className} text-2xl text-[#A35DFF]`}>
+              {title}
+            </h1>
+            <h1 className="text-white">{description}</h1>
+          </motion.div>
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );
