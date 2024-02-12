@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Bungee, Montserrat } from "next/font/google";
 import React, { useEffect, useState } from "react";
+import { Bungee, Montserrat } from "next/font/google";
+import { data } from "autoprefixer";
 
 const bungee = Bungee({
   weight: "400",
@@ -26,8 +27,9 @@ const Legends = () => {
 
   const handleLegendexp = (id) => {
     setId(id);
-    setLegendexp(!legendexp);
+    // setLegendexp(!legendexp);
     setInitialLegendShown(true);
+    setLegendDataToShow(legendData.filter((data) => data.id === id));
   };
 
   const legendData = [
@@ -126,11 +128,11 @@ const Legends = () => {
     { imageSrc: "/images/people/someone_2.png", width: 330, height: 473 },
   ];
 
-  useEffect(() => {
-    // if (!legendexp) {
-    setLegendDataToShow(legendData.filter((data) => data.id === id));
-    // }
-  }, [legendexp, id, legendData]);
+  // useEffect(() => {
+  //   // if (!legendexp) {
+  //   setLegendDataToShow(legendData.filter((data) => data.id === id));
+  //   // }
+  // }, [legendexp, id, legendData]);
 
   // Calculate the number of columns
   const numColumns = 4; // Change this value as needed
@@ -164,7 +166,7 @@ const Legends = () => {
             </div>
           </div>
           <div className="w-full md:w-[63%] md:min-h-screen flex items-center gap-2 order-1 md:order-2">
-            {legendexp ? (
+            {id == 0 ? (
               <div className="flex flex-col gap-4">
                 {!initialLegendShown && (
                   <>
