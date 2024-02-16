@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Montserrat, Nunito } from "next/font/google";
 import { motion } from "framer-motion";
 import ScrollVelocity from "../scrollVelocity";
+import Image from "next/image";
 
 const montserrat = Montserrat({
   weight: "400",
@@ -72,27 +73,9 @@ const Values = ({ id }) => {
             className={`${nunito.className} p-4 bg-[#202020] border border-[#313131] rounded-2xl`}
           >
             <div className="relative flex gap-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="70"
-                height="70"
-                viewBox="0 0 70 70"
-                fill="none"
-              >
-                <rect width="70" height="70" rx="20" fill="#424242" />
-                <path
-                  d="M48.2005 13.5625H39.0859V56.4011C43.6432 56.4011 48.175 57.3344 48.2005 57.3125C48.226 57.2906 48.2005 13.5625 48.2005 13.5625Z"
-                  fill="#B71C1C"
-                />
-                <path
-                  d="M22.6754 13.5625H31.79V56.4011C27.2327 56.4011 22.7009 57.3344 22.6754 57.3125C22.6499 57.2906 22.6754 13.5625 22.6754 13.5625Z"
-                  fill="#B71C1C"
-                />
-                <path
-                  d="M31.7943 13.5625H22.6797L39.0859 56.4011C43.6432 56.4011 48.175 57.3344 48.2005 57.3125C48.226 57.2906 31.7943 13.5625 31.7943 13.5625Z"
-                  fill="#E53935"
-                />
-              </svg>
+              <div className="p-2 w-16 h-16 bg-[#424242] flex justify-center items-center rounded-2xl">
+                <Image width={42} height={20} src={"/icons/y.svg"} alt="" />
+              </div>
               <div className="flex flex-col">
                 <h1 className="font-bold text-lg text-[#F2F2F2]">
                   UI/UX Assistant Manager
@@ -264,27 +247,9 @@ const Values = ({ id }) => {
             className={`${nunito.className} p-4 bg-[#202020] border border-[#313131] rounded-2xl`}
           >
             <div className="relative flex gap-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="70"
-                height="70"
-                viewBox="0 0 70 70"
-                fill="none"
-              >
-                <rect width="70" height="70" rx="20" fill="#424242" />
-                <path
-                  d="M48.2005 13.5625H39.0859V56.4011C43.6432 56.4011 48.175 57.3344 48.2005 57.3125C48.226 57.2906 48.2005 13.5625 48.2005 13.5625Z"
-                  fill="#B71C1C"
-                />
-                <path
-                  d="M22.6754 13.5625H31.79V56.4011C27.2327 56.4011 22.7009 57.3344 22.6754 57.3125C22.6499 57.2906 22.6754 13.5625 22.6754 13.5625Z"
-                  fill="#B71C1C"
-                />
-                <path
-                  d="M31.7943 13.5625H22.6797L39.0859 56.4011C43.6432 56.4011 48.175 57.3344 48.2005 57.3125C48.226 57.2906 31.7943 13.5625 31.7943 13.5625Z"
-                  fill="#E53935"
-                />
-              </svg>
+              <div className="p-2 w-16 h-16 bg-[#424242] flex justify-center items-center rounded-2xl">
+                <Image width={42} height={20} src={"/icons/y.svg"} alt="" />
+              </div>
               <div className="flex flex-col">
                 <h1 className="font-bold text-lg text-[#F2F2F2]">
                   UI/UX Assistant Manager
@@ -456,27 +421,9 @@ const Values = ({ id }) => {
             className={`${nunito.className} p-4 bg-[#202020] border border-[#313131] rounded-2xl`}
           >
             <div className="relative flex gap-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="70"
-                height="70"
-                viewBox="0 0 70 70"
-                fill="none"
-              >
-                <rect width="70" height="70" rx="20" fill="#424242" />
-                <path
-                  d="M48.2005 13.5625H39.0859V56.4011C43.6432 56.4011 48.175 57.3344 48.2005 57.3125C48.226 57.2906 48.2005 13.5625 48.2005 13.5625Z"
-                  fill="#B71C1C"
-                />
-                <path
-                  d="M22.6754 13.5625H31.79V56.4011C27.2327 56.4011 22.7009 57.3344 22.6754 57.3125C22.6499 57.2906 22.6754 13.5625 22.6754 13.5625Z"
-                  fill="#B71C1C"
-                />
-                <path
-                  d="M31.7943 13.5625H22.6797L39.0859 56.4011C43.6432 56.4011 48.175 57.3344 48.2005 57.3125C48.226 57.2906 31.7943 13.5625 31.7943 13.5625Z"
-                  fill="#E53935"
-                />
-              </svg>
+              <div className="p-2 w-16 h-16 bg-[#424242] flex justify-center items-center rounded-2xl">
+                <Image width={42} height={20} src={"/icons/y.svg"} alt="" />
+              </div>
               <div className="flex flex-col">
                 <h1 className="font-bold text-lg text-[#F2F2F2]">
                   UI/UX Assistant Manager
@@ -648,27 +595,9 @@ const Values = ({ id }) => {
             className={`${nunito.className} p-4 bg-[#202020] border border-[#313131] rounded-2xl`}
           >
             <div className="relative flex gap-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="70"
-                height="70"
-                viewBox="0 0 70 70"
-                fill="none"
-              >
-                <rect width="70" height="70" rx="20" fill="#424242" />
-                <path
-                  d="M48.2005 13.5625H39.0859V56.4011C43.6432 56.4011 48.175 57.3344 48.2005 57.3125C48.226 57.2906 48.2005 13.5625 48.2005 13.5625Z"
-                  fill="#B71C1C"
-                />
-                <path
-                  d="M22.6754 13.5625H31.79V56.4011C27.2327 56.4011 22.7009 57.3344 22.6754 57.3125C22.6499 57.2906 22.6754 13.5625 22.6754 13.5625Z"
-                  fill="#B71C1C"
-                />
-                <path
-                  d="M31.7943 13.5625H22.6797L39.0859 56.4011C43.6432 56.4011 48.175 57.3344 48.2005 57.3125C48.226 57.2906 31.7943 13.5625 31.7943 13.5625Z"
-                  fill="#E53935"
-                />
-              </svg>
+              <div className="p-2 w-16 h-16 bg-[#424242] flex justify-center items-center rounded-2xl">
+                <Image width={42} height={20} src={"/icons/y.svg"} alt="" />
+              </div>
               <div className="flex flex-col">
                 <h1 className="font-bold text-lg text-[#F2F2F2]">
                   UI/UX Assistant Manager
