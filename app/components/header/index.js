@@ -9,14 +9,16 @@ const permanent_Marker = Permanent_Marker({
 
 const Header = () => {
   return (
-    <header className="fixed top-0 w-full p-4 flex sm:justify-end md:justify-center z-50 backdrop-blur">
-      <Image
-        className="fixed top-4 left-0 sm:left-4 scale-75"
-        src={"/images/vayuz_logo.svg"}
-        width={162}
-        height={38}
-        alt="logo"
-      />
+    <header className="fixed top-0 w-full p-4 flex sm:justify-end md:justify-center z-50">
+      <div className="fixed top-4 left-0 sm:left-4 p-2 rounded-full backdrop-blur-xl">
+        <Image
+          className="scale-75"
+          src={"/images/vayuz_logo.svg"}
+          width={162}
+          height={38}
+          alt="logo"
+        />
+      </div>
       <button className="block sm:hidden p-2 bg-[#5B5B5B] rounded-full absolute top-5 right-4">
         <Image src={"/icons/search.svg"} width={18} height={18} alt="search" />
       </button>
@@ -106,7 +108,9 @@ const Header = () => {
           </svg>
         </button>
         <button className="p-3 rounded-full bg-[#2C2C2C] flex justify-center items-center gap-2">
-          <h1 className={`${permanent_Marker.className} text-white`}>Sign In</h1>
+          <h1 className={`${permanent_Marker.className} text-white`}>
+            Sign In
+          </h1>
           <svg
             className="scale-75"
             xmlns="http://www.w3.org/2000/svg"
