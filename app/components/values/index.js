@@ -3,6 +3,7 @@ import { Montserrat, Nunito } from "next/font/google";
 import { motion } from "framer-motion";
 import ScrollVelocity from "../scrollVelocity";
 import Image from "next/image";
+import JobCard from "./jobCard";
 
 const montserrat = Montserrat({
   weight: "400",
@@ -69,6 +70,7 @@ const Values = ({ id }) => {
         </div>
         <div className="mb-8 mx-2 sm:mx-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {/* Job Card Section */}
+          <JobCard title={"UI/UX Assistant Manager"} company={"VAYUZ"} location={"India"} salary={"25,000 Rupees P.M."} city={"Noida"} experience={"2 years"} applicants={"120 Applicants"} views={"4k Viewed"} postedAt={"15h"} />
           <div
             className={`${nunito.className} p-4 bg-[#202020] border border-[#313131] rounded-2xl`}
           >
