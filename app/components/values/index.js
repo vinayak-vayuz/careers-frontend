@@ -56,7 +56,7 @@ const Values = ({ id }) => {
         >
           <ScrollVelocity />
         </div>
-        <div className="my-8 px-14 flex flex-wrap items-center gap-4">
+        <div className="my-8 px-2 sm:px-14 flex flex-wrap items-center gap-4">
           {buttons.map((data, index) => (
             <div
               onClick={() => handleClick(index)}
