@@ -1,4 +1,14 @@
-const JobCard = ({title, company, location, }) => {
+const JobCard = ({
+  title,
+  company,
+  location,
+  salary,
+  address,
+  experience,
+  applicants,
+  views,
+  postedAt,
+}) => {
   return (
     <div
       className={`${nunito.className} p-4 bg-[#202020] border border-[#313131] rounded-2xl`}
@@ -8,10 +18,8 @@ const JobCard = ({title, company, location, }) => {
           <Image width={42} height={20} src={"/icons/y.svg"} alt="" />
         </div>
         <div className="flex flex-col">
-          <h1 className="font-bold text-lg text-[#F2F2F2]">
-            UI/UX Assistant Manager
-          </h1>
-          <p className="text-sm text-[#B5B5B5]">Netflix, Casablanca</p>
+          <h1 className="font-bold text-lg text-[#F2F2F2]">{title}</h1>
+          <p className="text-sm text-[#B5B5B5]">{`${company}, ${location}`}</p>
         </div>
         <button className="absolute top-2 right-2">
           <svg
@@ -49,7 +57,7 @@ const JobCard = ({title, company, location, }) => {
               </clipPath>
             </defs>
           </svg>
-          <p className="text-[#B5B5B5] text-[13px]">85,000 MADS p.a.</p>
+          <p className="text-[#B5B5B5] text-[13px]">{salary}</p>
         </div>
         <div className="flex items-center gap-2">
           <svg
@@ -76,7 +84,7 @@ const JobCard = ({title, company, location, }) => {
               </clipPath>
             </defs>
           </svg>
-          <p className="text-[#B5B5B5] text-[13px]">Casablanca</p>
+          <p className="text-[#B5B5B5] text-[13px]">{address}</p>
         </div>
         <div className="flex items-center gap-2">
           <svg
@@ -103,7 +111,7 @@ const JobCard = ({title, company, location, }) => {
               </clipPath>
             </defs>
           </svg>
-          <p className="text-[#B5B5B5] text-[13px]">2 years</p>
+          <p className="text-[#B5B5B5] text-[13px]">{experience}</p>
         </div>
         <div className="flex items-center gap-2">
           <svg
@@ -125,7 +133,7 @@ const JobCard = ({title, company, location, }) => {
               </clipPath>
             </defs>
           </svg>
-          <p className="text-[#B5B5B5] text-[13px]">120 Applicants</p>
+          <p className="text-[#B5B5B5] text-[13px]">{applicants}</p>
         </div>
         <div className="flex items-center gap-2">
           <svg
@@ -152,25 +160,14 @@ const JobCard = ({title, company, location, }) => {
               </clipPath>
             </defs>
           </svg>
-          <p className="text-[#B5B5B5] text-[13px]">4k Viewed</p>
+          <p className="text-[#B5B5B5] text-[13px]">{views}</p>
         </div>
       </div>
       <div className="mt-10 flex justify-between items-center">
-        <p className="text-[13px] text-[#B5B5B5]">15h</p>
+        <p className="text-[13px] text-[#B5B5B5]">{postedAt}</p>
         <button className="px-3 py-1 rounded-full bg-[#393939] hover:bg-[#4BB3FF] font-bold text-white flex justify-center items-center gap-2">
           Apply
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="17"
-            height="11"
-            viewBox="0 0 17 11"
-            fill="none"
-          >
-            <path
-              d="M1.125 4.85C0.766015 4.85 0.475 5.14101 0.475 5.5C0.475 5.85899 0.766015 6.15 1.125 6.15V4.85ZM16.5846 5.95962C16.8385 5.70578 16.8385 5.29422 16.5846 5.04038L12.448 0.903806C12.1942 0.649965 11.7826 0.649965 11.5288 0.903806C11.275 1.15765 11.275 1.5692 11.5288 1.82304L15.2058 5.5L11.5288 9.17696C11.275 9.4308 11.275 9.84235 11.5288 10.0962C11.7826 10.35 12.1942 10.35 12.448 10.0962L16.5846 5.95962ZM1.125 6.15H16.125V4.85H1.125V6.15Z"
-              fill="white"
-            />
-          </svg>
+          <Image width={17} height={11} src={"/icons/arrow_right.svg"} alt="" />
         </button>
       </div>
     </div>
