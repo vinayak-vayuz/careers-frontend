@@ -22,6 +22,7 @@ import Memoirs from "./components/memoirs";
 import BecomeAVAYUZer from "./components/VAYUZer";
 import VerticalLogoButton from "./components/buttons/VerticalLogoButton";
 import BottomNavigation from "./components/buttons/BottomNavigation";
+import ParallaxComponent from "./components/test";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -88,6 +89,7 @@ export default function Home() {
       <Values id={2} />
       {/* SBUs Section */}
       {/* <div className={`sticky-container ${isSticky ? "sticky" : ""}`}></div> */}
+      <ParallaxComponent />
       <ScrollSnap>
         <PEG />
         {/* gads

@@ -154,14 +154,22 @@ const Legends = () => {
           <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2 order-2 md:order-1">
             <div className="flex flex-wrap gap-2">
               {legendData.map((data, index) => (
-                <Image
-                  onClick={() => handleLegendexp(data.id)}
+                <motion.div
+                  transition={{ duration: 1 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   key={index}
-                  width={200}
-                  height={200}
-                  src={id === data.id ? data.imageExpSrc : data.imageSrc}
-                  alt=""
-                />
+                  className="overflow-hidden"
+                >
+                  <Image
+                    className="object-contain transition-all hover:transition-all duration-300 hover:duration-300 ease-in-out hover:ease-in-out hover:scale-110"
+                    onClick={() => handleLegendexp(data.id)}
+                    width={200}
+                    height={200}
+                    src={id === data.id ? data.imageExpSrc : data.imageSrc}
+                    alt=""
+                  />
+                </motion.div>
               ))}
             </div>
           </div>
