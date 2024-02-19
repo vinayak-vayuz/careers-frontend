@@ -24,6 +24,18 @@ export const jobData = [
     category: "Designer",
   },
   {
+    title: "Figma",
+    company: "CreativeWorks",
+    location: "USA",
+    salary: "50,000 USD",
+    city: "New York",
+    experience: "3 years",
+    applicants: "80 Applicants",
+    views: "3.5k Viewed",
+    postedAt: "1d",
+    category: "Designer",
+  },
+  {
     title: "Graphic Designer",
     company: "DesignHub",
     location: "Canada",

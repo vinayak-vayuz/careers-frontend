@@ -3,12 +3,17 @@ import JobCard from "./jobCard";
 import { jobData } from "./JobData";
 import { motion } from "framer-motion";
 import ScrollVelocity from "../scrollVelocity";
-import { Montserrat, Nunito } from "next/font/google";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
   weight: "400",
   subsets: ["latin"],
 });
+
+// Import Swiper styles
+import "../../swiper.css";
+import "swiper/css/pagination"
 
 const buttons = [
   { id: 1, label: "Designer" },
@@ -51,7 +56,7 @@ const Values = ({ id }) => {
         >
           <ScrollVelocity />
         </div>
-        <div className="my-8 flex flex-wrap justify-center items-center gap-4">
+        <div className="my-8 px-14 flex flex-wrap items-center gap-4">
           {buttons.map((data, index) => (
             <div
               onClick={() => handleClick(index)}
@@ -59,14 +64,14 @@ const Values = ({ id }) => {
               className={`${
                 index === buttonid &&
                 "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
-              } group w-fit bg-white hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] rounded-lg p-[2px] text-center`}
+              } group w-fit bg-gray-500 hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] rounded-lg p-[2px] text-center`}
             >
-              <div className="px-2 py-1 bg-black rounded-lg">
+              <div className="px-2 py-1 bg-[#141414] rounded-lg">
                 <button
                   className={`${
                     index === buttonid &&
                     "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
-                  } text-xl pt-0.5 font-semibold bg-white group-hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] text-transparent bg-clip-text`}
+                  } text-lg pt-0.5 font-semibold bg-gray-500 group-hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] text-transparent bg-clip-text`}
                 >
                   {data.label}
                 </button>
@@ -74,7 +79,32 @@ const Values = ({ id }) => {
             </div>
           ))}
         </div>
-        <div className="mb-8 mx-2 sm:mx-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {/* <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          className="mySwiper"
+        >
+          {filteredJobData.map((data, index) => (
+            <SwiperSlide key={index}>
+              <JobCard
+                title={data.title}
+                company={data.company}
+                location={data.location}
+                salary={data.salary}
+                city={data.city}
+                experience={data.experience}
+                applicants={data.applicants}
+                views={data.views}
+                postedAt={data.postedAt}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper> */}
+        <div className="mb-8 mx-2 sm:mx-14 w-full overflow-x-auto flex flex-nowrap gap-4">
           {/* Job Card Section */}
           {filteredJobData.map((data, index) => (
             <JobCard
