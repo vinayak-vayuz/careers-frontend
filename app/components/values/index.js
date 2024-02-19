@@ -59,7 +59,7 @@ const Values = ({ id }) => {
               className={`${
                 index === buttonid &&
                 "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
-              } group w-fit bg-white hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] rounded-lg p-[1px] text-center`}
+              } group w-fit bg-white hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] rounded-lg p-[2px] text-center`}
             >
               <div className="px-2 py-1 bg-black rounded-lg">
                 <button
