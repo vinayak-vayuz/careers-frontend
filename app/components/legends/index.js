@@ -150,12 +150,12 @@ const Legends = () => {
             <div className="flex flex-wrap gap-2">
               {legendData.map((data, index) => (
                 <ReactModal
+                  key={index}
                   title={"Our Legends"}
                   closeButton={true}
                   childrenClassName={"h-[70vh] p-3 bg-[#141414]"}
                   button={
                     <Image
-                      key={index}
                       className="object-contain"
                       onClick={() => handleLegendexp(data.id)}
                       width={200}
@@ -183,7 +183,6 @@ const Legends = () => {
                           alt=""
                         />
                         <div key={index} className="flex flex-col gap-2">
-                          
                           <h1
                             className={`${bungee.className} text-white text-6xl`}
                           >
