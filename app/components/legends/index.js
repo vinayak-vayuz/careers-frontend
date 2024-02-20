@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { Bungee, Montserrat } from "next/font/google";
 import { data } from "autoprefixer";
+import ReactModal from "../modal";
 
 const bungee = Bungee({
   weight: "400",
@@ -128,12 +129,6 @@ const Legends = () => {
     { imageSrc: "/images/people/someone_2.png", width: 330, height: 473 },
   ];
 
-  // useEffect(() => {
-  //   // if (!legendexp) {
-  //   setLegendDataToShow(legendData.filter((data) => data.id === id));
-  //   // }
-  // }, [legendexp, id, legendData]);
-
   // Calculate the number of columns
   const numColumns = 4; // Change this value as needed
 
@@ -154,27 +149,86 @@ const Legends = () => {
           <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2 order-2 md:order-1">
             <div className="flex flex-wrap gap-2">
               {legendData.map((data, index) => (
-                <motion.div
-                  transition={{ duration: 1 }}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  key={index}
-                  className="overflow-hidden"
+                <ReactModal
+                  title={"Our Legends"}
+                  closeButton={true}
+                  childrenClassName={"h-[70vh] p-3 bg-[#141414]"}
+                  button={
+                    <Image
+                      key={index}
+                      className="object-contain"
+                      onClick={() => handleLegendexp(data.id)}
+                      width={200}
+                      height={200}
+                      src={data.imageSrc}
+                      alt=""
+                    />
+                  }
                 >
-                  <Image
-                    className="object-contain"
-                    onClick={() => handleLegendexp(data.id)}
-                    width={200}
-                    height={200}
-                    src={id === data.id ? data.imageExpSrc : data.imageSrc}
-                    alt=""
-                  />
-                </motion.div>
+                  {legendData
+                    .filter((data) => data.id === id)
+                    .map((data, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col sm:flex-row justify-center items-center gap-4"
+                      >
+                        <Image
+                          className="object-contain"
+                          onClick={() => handleLegendexp(data.id)}
+                          width={200}
+                          height={200}
+                          src={
+                            id === data.id ? data.imageExpSrc : data.imageSrc
+                          }
+                          alt=""
+                        />
+                        <div key={index} className="flex flex-col gap-2">
+                          
+                          <h1
+                            className={`${bungee.className} text-white text-6xl`}
+                          >
+                            {data.name}
+                          </h1>
+                          <div
+                            className={`${montserrat.className} flex items-center gap-1 text-[#ADADAD]`}
+                          >
+                            <h2>{data.designation + ","}</h2>
+                            <h3>{data.department}</h3>
+                          </div>
+                          <h4
+                            className={`${montserrat.className} font-semibold text-[#00C2F8]`}
+                          >
+                            {data.title}
+                          </h4>
+                          <p
+                            className={`${montserrat.className} text-[#DDDDDD]`}
+                          >
+                            {data.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                </ReactModal>
               ))}
             </div>
           </div>
           <div className="w-full md:w-[63%] md:min-h-screen flex items-center gap-2 order-1 md:order-2">
-            {id == 0 ? (
+            <>
+              <div>
+                <h1 className={`${bungee.className} text-8xl text-white`}>
+                  Our
+                </h1>
+                <h1 className={`${bungee.className} text-8xl text-white`}>
+                  Legend
+                </h1>
+              </div>
+              <p className="text-lg text-[#DDDDDD]">
+                Legends are born when ordinary individuals go beyond the call of
+                duty, creating benchmarks of excellence that inspire the world
+                to reach new heights
+              </p>
+            </>
+            {/* {id == 0 ? (
               <div className="flex flex-col gap-4">
                 {!initialLegendShown && (
                   <>
@@ -220,7 +274,7 @@ const Legends = () => {
                     </div>
                   ))}
               </>
-            )}
+            )} */}
           </div>
           <Image
             className="w-32 absolute bottom-0 right-0"
