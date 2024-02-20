@@ -1,17 +1,20 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 const ParallaxComponent = () => {
+  const [isSidebarSticky, setIsSidebarSticky] = useState(false);
   const controls = useAnimation();
 
   const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const translateY = -scrollY * 0.3;
+    const scrollThreshold = 100;
+    setIsSidebarSticky(window.scrollY > scrollThreshold);
+    // const scrollY = window.scrollY;
+    // const translateY = -scrollY * 0.3;
 
-    controls.start({ translateY });
+    // controls.start({ translateY });
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -21,7 +24,11 @@ const ParallaxComponent = () => {
 
   return (
     <div className="relative w-full h-screen flex overflow-hidden">
-      <motion.div className="sticky top-0 left-0 h-screen w-1/2 bg-yellow-600 flex justify-center items-center">
+      <motion.div
+        className={`${
+          isSidebarSticky ? "sticky top-0 left-0" : ""
+        } w-1/2 h-screen bg-yellow-600 flex justify-center items-center`}
+      >
         <h1>Sticky Section</h1>
       </motion.div>
 

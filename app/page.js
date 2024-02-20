@@ -89,7 +89,7 @@ export default function Home() {
       <Values id={2} />
       {/* SBUs Section */}
       {/* <div className={`sticky-container ${isSticky ? "sticky" : ""}`}></div> */}
-      <ParallaxComponent />
+      {/* <ParallaxComponent /> */}
       <ScrollSnap>
         <PEG />
         {/* gads

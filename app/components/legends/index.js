@@ -162,7 +162,7 @@ const Legends = () => {
                   className="overflow-hidden"
                 >
                   <Image
-                    className="object-contain transition-all hover:transition-all duration-300 hover:duration-300 ease-in-out hover:ease-in-out hover:scale-110"
+                    className="object-contain"
                     onClick={() => handleLegendexp(data.id)}
                     width={200}
                     height={200}
