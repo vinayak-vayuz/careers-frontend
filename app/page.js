@@ -23,6 +23,7 @@ import BecomeAVAYUZer from "./components/VAYUZer";
 import VerticalLogoButton from "./components/buttons/VerticalLogoButton";
 import BottomNavigation from "./components/buttons/BottomNavigation";
 import ParallaxComponent from "./components/test";
+import Test from "./components/test";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -76,7 +77,7 @@ export default function Home() {
   };
 
   return (
-    <main id={1} className="relative flex flex-col overflow-hidden">
+    <main id={1} className="relative flex flex-col">
       {/* Header */}
       <Header />
       {/* Hero Section */}
@@ -89,13 +90,14 @@ export default function Home() {
       <Values id={2} />
       {/* SBUs Section */}
       {/* <div className={`sticky-container ${isSticky ? "sticky" : ""}`}></div> */}
-      {/* <ParallaxComponent /> */}
-      <ScrollSnap>
-        <PEG />
-        {/* gads
-         */}
-        {/* <ArKa /> */}
-      </ScrollSnap>
+      <Test />
+      {/* <PEG /> */}
+      {/* <ScrollSnap> */}
+      {/* <PEG /> */}
+      {/* gads
+       */}
+      {/* <ArKa /> */}
+      {/* </ScrollSnap> */}
       {/* Legends Section */}
       <Legends />
       {/* Events Section */}

@@ -1,55 +1,99 @@
-import { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
+import { ArKa } from "../SBUs/ArKa";
+import PEGContent from "../SBUs/PEG";
+import RapidExchange from "../SBUs/Rapid";
+import { Bungee, Cherry_Bomb_One } from "next/font/google";
+import HundredX from "../SBUs/100x";
+import BusinessImpact from "../SBUs/Buisness";
+import PeopleGroup from "../SBUs/People";
+import Stealth from "../SBUs/Stealth";
 
-const ParallaxComponent = () => {
-  const [isSidebarSticky, setIsSidebarSticky] = useState(false);
-  const controls = useAnimation();
+const bungee = Bungee({
+  weight: "400",
+  subsets: ["latin"],
+});
+const cherry_Bomb_One = Cherry_Bomb_One({
+  weight: "400",
+  subsets: ["latin"],
+});
 
-  const handleScroll = () => {
-    const scrollThreshold = 100;
-    setIsSidebarSticky(window.scrollY > scrollThreshold);
-    // const scrollY = window.scrollY;
-    // const translateY = -scrollY * 0.3;
-
-    // controls.start({ translateY });
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+export default function Test() {
   return (
-    <div className="relative w-full h-screen flex overflow-hidden">
-      <motion.div
-        className={`${
-          isSidebarSticky ? "sticky top-0 left-0" : ""
-        } w-1/2 h-screen bg-yellow-600 flex justify-center items-center`}
-      >
-        <h1>Sticky Section</h1>
-      </motion.div>
-
-      <motion.div
-        className="w-1/2 h-[300vh] bg-red-600 flex justify-center items-center\"
-        animate={controls}
-      >
-        <h1>Parallax Section</h1>
-        {/* Add your text content or article here */}
-        <p>
-          As a Frontend Developer at [Your Company Name], you will play a key
-          role in designing, implementing, and maintaining our user interfaces.
-          You will collaborate with cross-functional teams, including designers
-          and backend developers, to create visually appealing and highly
-          functional web applications. The ideal candidate is not only
-          proficient in frontend technologies but also possesses a keen eye for
-          design, usability, and performance optimization.
-        </p>
-      </motion.div>
-    </div>
+    <>
+      <section className="bg-[#141414] px-2 md:px-14 py-10 my-auto">
+        <div className="grid grid-cols-12 items-start gap-x-20">
+          <div className="relative hidden md:sticky md:top-20 md:col-span-6 md:block">
+            <div
+              className={`w-full min-h-[80vh] flex flex-col justify-between gap-5`}
+            >
+              <div>
+                <div>
+                  <h1 className={`${bungee.className} text-8xl text-white`}>
+                    Our
+                  </h1>
+                  <h1 className={`${bungee.className} text-8xl text-white`}>
+                    SBUs
+                  </h1>
+                </div>
+                <p className="text-[#DDDDDD]">
+                  Empowering Futures, Unleashing Potential: Our SBUs - Pillars
+                  of Excellence in Every Endeavor.
+                </p>
+              </div>
+              <div className="relative flex sm:hidden flex-col justify-between items-center gap-10">
+                <Image
+                  src={"/images/teal_bg.svg"}
+                  width={334}
+                  height={702}
+                  alt=""
+                />
+                <div>
+                  <Image
+                    className="scale-75 absolute -top-5 -right-5"
+                    src={"/images/bubble.svg"}
+                    width={252}
+                    height={184}
+                    alt=""
+                  />
+                  <h1
+                    className={`${cherry_Bomb_One.className} text-2xl text-center text-white absolute top-10 right-14 -rotate-12`}
+                  >
+                    We Can &<br />
+                    we will!!
+                  </h1>
+                </div>
+                <Image
+                  className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+                  src={"/images/peg.svg"}
+                  width={287}
+                  height={197}
+                  alt=""
+                />
+                <Image
+                  src={"/images/pink_circle.svg"}
+                  width={334}
+                  height={702}
+                  alt=""
+                />
+              </div>
+              <p className="text-[#DDDDDD]">
+                The Product Engineering Group pioneers technological innovation,
+                crafting market-leading solutions through creativity, precision,
+                and a commitment to excellence. Join our transformative journey.
+              </p>
+            </div>
+          </div>
+          <div className="col-span-12 flex flex-col gap-y-175 md:col-span-6 md:gap-y-[50vh]">
+            <PEGContent />
+            <ArKa />
+            <RapidExchange />
+            <HundredX />
+            <BusinessImpact />
+            <PeopleGroup />
+            <Stealth />
+          </div>
+        </div>
+      </section>
+    </>
   );
-};
-
-export default ParallaxComponent;
+}

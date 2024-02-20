@@ -45,7 +45,7 @@ const Values = ({ id }) => {
   return (
     <motion.section
       id={id}
-      className="duration-300"
+      className="duration-300 overflow-hidden"
       transition={{ duration: 1 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
