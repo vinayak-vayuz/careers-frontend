@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Mochiy_Pop_One, Modak } from "next/font/google";
+import { useOutsideClick } from "@/app/functions/outsideClick";
 
 const modak = Modak({
   weight: "400",
@@ -211,6 +212,13 @@ const Social = ({ id }) => {
     setTopcontributors(!topcontributors);
   }
 
+  // Handling outside click events
+  const menuRef = useRef(null);
+  const closeMenu = () => {
+    setTopcontributors(!topcontributors);
+  };
+  useOutsideClick(menuRef, closeMenu);
+
   return (
     <>
       <motion.section
@@ -273,6 +281,7 @@ const Social = ({ id }) => {
         ) : (
           <>
             <div
+              ref={menuRef}
               className={`sm:ml-4 py-4 relative w-full min-h-screen flex flex-col gap-10 items-center bg-[url('/images/social/sky_circle_mobile.svg')] md:bg-[url('/images/social/sky_circle.png')] bg-cover bg-no-repeat`}
             >
               <h1
@@ -288,7 +297,7 @@ const Social = ({ id }) => {
                   alt=""
                 />
                 <div
-                  className={`${mochiy_pop_one.className} w-[80%] sm:w-[30%] h-[25rem] overflow-hidden bg-[#1C1C1C] rounded-3xl`}
+                  className={`${mochiy_pop_one.className} w-[90%] sm:w-[30%] h-[25rem] overflow-hidden bg-[#1C1C1C] rounded-3xl`}
                 >
                   <div className="px-5 py-3 h-[25rem] overflow-y-auto">
                     <h1 className="text-white px-4 pb-2 border-b">
@@ -318,14 +327,21 @@ const Social = ({ id }) => {
             </div>
           </>
         )}
-        <button onClick={handleClick} className="absolute bottom-0 right-0">
-          <Image
-            src={"/images/social/top_social_button.png"}
-            width={205}
-            height={496}
-            alt=""
-          />
-        </button>
+        {!topcontributors ? (
+          <button
+            onClick={handleClick}
+            className="w-24 sm:w-auto absolute bottom-0 right-0"
+          >
+            <Image
+              src={"/images/social/top_social_button.png"}
+              width={205}
+              height={496}
+              alt=""
+            />
+          </button>
+        ) : (
+          <></>
+        )}
       </motion.section>
       {/* <section className="w-full min-h-screen">
         <div className="">
