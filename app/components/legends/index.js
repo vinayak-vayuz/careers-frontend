@@ -153,7 +153,8 @@ const Legends = () => {
                   key={index}
                   title={"Our Legends"}
                   closeButton={true}
-                  childrenClassName={"h-[70vh] p-3 bg-[#141414]"}
+                  childrenClassName={"h-[70vh] py-3 bg-[#141414]"}
+                  childrenCloseButton={true}
                   button={
                     <Image
                       className="object-contain"

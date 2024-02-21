@@ -1,6 +1,7 @@
 import Modal from "react-modal";
 import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ReactModal = ({
   id,
@@ -11,7 +12,9 @@ const ReactModal = ({
   className,
   buttonClassName,
   childrenClassName,
+  childrenCloseButton,
   title,
+  heading,
   closeButton,
   bottomButton,
 }) => {
@@ -53,45 +56,69 @@ const ReactModal = ({
           ariaHideApp={false}
           // closeTimeoutMS={300}
         >
-          <div className="p-3 bg-gray-50 dark:bg-gray-950 z-10 sticky top-0 flex justify-between items-center border-b !border-gray-200 dark:!border-gray-700">
-            {title ? <h1 className="text-xl text-white font-bold">{title}</h1> : null}
-            {closeButton === true ? (
-              <button
-                onClick={handleClick}
-                className={`p-2 flex justify-center items-center rounded-full border !border-gray-200 dark:!border-gray-700 font-medium bg-gray-50 hover:bg-gray-200 text-gray-700 shadow-sm align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-bee-primary transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800 cursor-pointer`}
-              >
-                <span
-                  className={`text-gray-500 hover:text-bee-primary dark:text-gray-400 dark:hover:text-bee-primary`}
-                >
-                  <RxCross2 className="text-xl dark:text-white" />
-                </span>
-              </button>
-            ) : (
-              <></>
-            )}
-          </div>
-          <div
-            className={`${
-              childrenClassName ? childrenClassName : "bg-gray-50 dark:bg-bee-blackRussian px-3"
-            } relative w-full dark:text-white overflow-auto`}
-          >
-            {children}
-            {bottomButton === true ? (
-              <div className="flex justify-center space-x-2 mt-4">
-                <button className="px-4 py-1 rounded-lg text-white bg-red-500">
-                  {t("header:yes")}
-                </button>
+          <AnimatePresence>
+            <div
+              className={`${
+                heading === true ? "block" : "hidden"
+              } p-3 bg-gray-50 dark:bg-gray-950 z-10 sticky top-0 flex justify-between items-center border-b !border-gray-200 dark:!border-gray-700`}
+            >
+              {title ? (
+                <h1 className="text-xl text-white font-bold">{title}</h1>
+              ) : null}
+              {closeButton === true ? (
                 <button
-                  className="px-4 py-1 rounded-lg bg-gradient-to-r from-[#2193B0] to-[#6DD5ED] text-white"
                   onClick={handleClick}
+                  className={`p-2 flex justify-center items-center rounded-full border !border-gray-200 dark:!border-gray-700 font-medium bg-gray-50 hover:bg-gray-200 text-gray-700 shadow-sm align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-bee-primary transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800 cursor-pointer`}
                 >
-                  {t("header:no")}
+                  <span
+                    className={`text-gray-500 hover:text-bee-primary dark:text-gray-400 dark:hover:text-bee-primary`}
+                  >
+                    <RxCross2 className="text-xl dark:text-white" />
+                  </span>
                 </button>
-              </div>
-            ) : (
-              <></>
-            )}
-          </div>
+              ) : (
+                <></>
+              )}
+            </div>
+            <div
+              className={`${
+                childrenClassName
+                  ? childrenClassName
+                  : "bg-gray-50 dark:bg-bee-blackRussian px-3"
+              } relative w-full dark:text-white overflow-auto`}
+            >
+              {children}
+              {childrenCloseButton === true ? (
+                <button
+                  onClick={handleClick}
+                  className={`fixed top-2 right-2 p-2 flex justify-center items-center rounded-full border !border-gray-200 dark:!border-gray-700 font-medium bg-gray-50 hover:bg-gray-200 text-gray-700 shadow-sm align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-bee-primary transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800 cursor-pointer`}
+                >
+                  <span
+                    className={`text-gray-500 hover:text-bee-primary dark:text-gray-400 dark:hover:text-bee-primary`}
+                  >
+                    <RxCross2 className="text-xl dark:text-white" />
+                  </span>
+                </button>
+              ) : (
+                <></>
+              )}
+              {bottomButton === true ? (
+                <div className="flex justify-center space-x-2 mt-4">
+                  <button className="px-4 py-1 rounded-lg text-white bg-red-500">
+                    {t("header:yes")}
+                  </button>
+                  <button
+                    className="px-4 py-1 rounded-lg bg-gradient-to-r from-[#2193B0] to-[#6DD5ED] text-white"
+                    onClick={handleClick}
+                  >
+                    {t("header:no")}
+                  </button>
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
+          </AnimatePresence>
         </Modal>
       }
     </>
