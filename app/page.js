@@ -90,8 +90,7 @@ export default function Home() {
       {/* Values Section */}
       <Values id={2} />
       {/* SBUs Section */}
-      <Test />
-      {/* <SBUs /> */}
+      <SBUs />
       {/* Legends Section */}
       <Legends />
       {/* Events Section */}
