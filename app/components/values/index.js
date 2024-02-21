@@ -12,8 +12,12 @@ const montserrat = Montserrat({
 });
 
 // Import Swiper styles
-import "../../swiper.css";
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+
+// import required modules
+import { FreeMode, Pagination } from "swiper/modules";
 
 const buttons = [
   { id: 1, label: "Designer" },
@@ -79,33 +83,50 @@ const Values = ({ id }) => {
             </div>
           ))}
         </div>
-        {/* <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
-          freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
-          className="mySwiper"
-        >
-          {filteredJobData.map((data, index) => (
-            <SwiperSlide key={index}>
-              <JobCard
-                title={data.title}
-                company={data.company}
-                location={data.location}
-                salary={data.salary}
-                city={data.city}
-                experience={data.experience}
-                applicants={data.applicants}
-                views={data.views}
-                postedAt={data.postedAt}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper> */}
-        <div className="mb-8 mx-2 sm:mx-14 w-full overflow-x-auto flex flex-nowrap gap-4">
-          {/* Job Card Section */}
+        <div className="pb-8 px-2 sm:px-14 w-full">
+          <Swiper
+            className={"mySwiper py-10"}
+            // slidesPerView={3}
+            spaceBetween={30}
+            freeMode={true}
+            breakpoints={{
+              200: {
+                slidesPerView: 1,
+              },
+              576: {
+                // width: 576,
+                slidesPerView: 2,
+              },
+              768: {
+                // width: 768,
+                slidesPerView: 3,
+              },
+              1024: {
+                // width: 768,
+                slidesPerView: 3,
+              },
+            }}
+            modules={[FreeMode, Pagination]}
+          >
+            {filteredJobData.map((data, index) => (
+              <SwiperSlide key={index}>
+                <JobCard
+                  title={data.title}
+                  company={data.company}
+                  location={data.location}
+                  salary={data.salary}
+                  city={data.city}
+                  experience={data.experience}
+                  applicants={data.applicants}
+                  views={data.views}
+                  postedAt={data.postedAt}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        {/* <div className="mb-8 mx-2 sm:mx-14 w-full overflow-x-auto flex flex-nowrap gap-4">
+          Job Card Section
           {filteredJobData.map((data, index) => (
             <JobCard
               key={index}
@@ -120,7 +141,7 @@ const Values = ({ id }) => {
               postedAt={data.postedAt}
             />
           ))}
-        </div>
+        </div> */}
         {/* Video Section */}
         <div className="w-full min-h-[50vh] bg-green-500"></div>
       </div>
