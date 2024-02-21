@@ -35,7 +35,7 @@ const Stealth = () => {
         height={197}
         alt=""
       />
-      <p className="block sm:hidden text-[#DDDDDD]">
+      <p className="block md:hidden text-[#DDDDDD]">
         In Stealth, we silently architect organizational evolution, dedicating
         our SBU to strategic planning, fostering growth through unseen pathways,
         and crafting precise futures.

@@ -39,7 +39,7 @@ const RapidExchange = () => {
         height={228}
         alt=""
       />
-      <p className="block sm:hidden text-[#DDDDDD]">
+      <p className="block md:hidden text-[#DDDDDD]">
         Welcome to Rapid Exchange, our strategic business unit connecting
         clients with top-tier talent, fostering growth through skilled and
         dedicated professionals.

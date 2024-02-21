@@ -35,7 +35,7 @@ const ArKa = () => {
         height={146}
         alt=""
       />
-      <p className="block sm:hidden text-[#DDDDDD]">
+      <p className="block md:hidden text-[#DDDDDD]">
         Arka is where UI/UX is a way of life, sculpting digital experiences with
         intuitive interfaces that redefine user engagement through design
         artistry and precision.

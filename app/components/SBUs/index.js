@@ -75,7 +75,7 @@ export default function SBUs() {
                   of Excellence in Every Endeavor.
                 </p>
               </div>
-              <p className="hidden sm:block text-[#DDDDDD]">
+              <p className="hidden md:block text-[#DDDDDD]">
                 {activeSBU === "PEG" &&
                   "The Product Engineering Group pioneers technological innovation, crafting market-leading solutions through creativity, precision, and a commitment to excellence. Join our transformative journey."}
                 {activeSBU === "ArKa" && "Your ArKa content here..."}

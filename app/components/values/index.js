@@ -54,7 +54,7 @@ const Values = ({ id }) => {
       // initial={{ opacity: 0 }}
       // whileInView={{ opacity: 1 }}
     >
-      <div className="w-full min-h-screen bg-[#141414] py-10">
+      <div className="w-full bg-[#141414] py-10">
         <div
           className={`${montserrat.className} flex justify-center items-center gap-4 text-white text-4xl overflow-hidden`}
         >
@@ -83,7 +83,7 @@ const Values = ({ id }) => {
             </div>
           ))}
         </div>
-        <div className="pb-8 px-2 sm:px-14 w-full">
+        <div className="px-2 sm:px-14 w-full">
           <Swiper
             className={"mySwiper py-10"}
             // slidesPerView={3}

@@ -39,7 +39,7 @@ const BusinessImpact = () => {
         height={104}
         alt=""
       />
-      <p className="block sm:hidden text-[#DDDDDD]">
+      <p className="block md:hidden text-[#DDDDDD]">
         The Business Impact Group, a dynamic consortium, propels transformative
         corporate change through innovation, strategic foresight, and
         collaborative excellence, shaping a resilient future.

@@ -35,7 +35,7 @@ const PeopleGroup = () => {
         height={243}
         alt=""
       />
-      <p className="block sm:hidden text-[#DDDDDD]">
+      <p className="block md:hidden text-[#DDDDDD]">
         Introducing our People&apos;s Champions, the heart of our organization,
         dedicated to nurturing talent, fostering a vibrant workplace, and
         empowering individuals.

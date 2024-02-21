@@ -35,7 +35,7 @@ const PEG = () => {
           height={197}
           alt=""
         />
-        <p className="block sm:hidden text-[#DDDDDD]">
+        <p className="block md:hidden text-[#DDDDDD]">
           The Product Engineering Group pioneers technological innovation,
           crafting market-leading solutions through creativity, precision, and a
           commitment to excellence. Join our transformative journey.
