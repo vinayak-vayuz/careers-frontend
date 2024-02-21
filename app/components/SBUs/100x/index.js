@@ -12,7 +12,10 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 
 const HundredX = () => {
   return (
-    <div className="relative flex flex-col justify-between items-center gap-10">
+    <div
+      id="HundredX"
+      className="relative flex flex-col justify-between items-center gap-10"
+    >
       <Image src={"/images/sky_bg.svg"} width={334} height={702} alt="" />
       <div>
         <Image
@@ -36,7 +39,11 @@ const HundredX = () => {
         height={197}
         alt=""
       />
-      {/* <Image src={"/images/red_circle.svg"} width={334} height={702} alt="" /> */}
+      <p className="block sm:hidden text-[#DDDDDD]">
+        Meet 100 X, a cutting-edge marketing team driving success through
+        creativity, strategy, and groundbreaking campaigns that leave a lasting
+        impact.
+      </p>
     </div>
   );
 };

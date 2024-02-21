@@ -31,43 +31,35 @@ export default function SBUs() {
     Stealth: useRef(null),
   };
 
-  const handleIntersection = (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActiveSBU(entry.target.id);
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+    for (const [key, ref] of Object.entries(sbuRefs)) {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        if (rect.top <= scrollPosition && rect.bottom >= scrollPosition) {
+          setActiveSBU(key);
+        }
       }
-    });
+    }
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5, // Adjust as needed
-    });
-
-    Object.values(sbuRefs).forEach((ref) => {
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-    });
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      Object.values(sbuRefs).forEach((ref) => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      });
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [sbuRefs]);
+  }, []);
 
+  console.log(activeSBU, "SBU");
   return (
     <>
-      <section className="bg-[#141414] px-2 md:px-14 py-10 my-auto">
+      <section className="max-w-[80rem] bg-[#141414] px-2 md:px-14 py-10 my-auto">
         <div className="w-full flex flex-col md:flex-row items-start gap-x-20 gap-y-10">
           <div className="relative md:sticky md:top-20 md:w-1/2 md:block">
             <div
-              className={`w-full min-h-[80vh] flex flex-col justify-between gap-5`}
+              className={`w-full sm:min-h-[80vh] flex flex-col justify-between gap-5`}
             >
               <div>
                 <div>
@@ -83,43 +75,7 @@ export default function SBUs() {
                   of Excellence in Every Endeavor.
                 </p>
               </div>
-              <div className="relative flex sm:hidden flex-col justify-between items-center gap-10">
-                <Image
-                  src={"/images/teal_bg.svg"}
-                  width={334}
-                  height={702}
-                  alt=""
-                />
-                <div>
-                  <Image
-                    className="scale-75 absolute -top-5 -right-5"
-                    src={"/images/bubble.svg"}
-                    width={252}
-                    height={184}
-                    alt=""
-                  />
-                  <h1
-                    className={`${cherry_Bomb_One.className} text-2xl text-center text-white absolute top-10 right-14 -rotate-12`}
-                  >
-                    We Can &<br />
-                    we will!!
-                  </h1>
-                </div>
-                <Image
-                  className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
-                  src={"/images/peg.svg"}
-                  width={287}
-                  height={197}
-                  alt=""
-                />
-                <Image
-                  src={"/images/pink_circle.svg"}
-                  width={334}
-                  height={702}
-                  alt=""
-                />
-              </div>
-              <p className="text-[#DDDDDD]">
+              <p className="hidden sm:block text-[#DDDDDD]">
                 {activeSBU === "PEG" &&
                   "The Product Engineering Group pioneers technological innovation, crafting market-leading solutions through creativity, precision, and a commitment to excellence. Join our transformative journey."}
                 {activeSBU === "ArKa" && "Your ArKa content here..."}
@@ -131,7 +87,7 @@ export default function SBUs() {
               </p>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-y-175 md:w-1/2 md:gap-y-[50vh] snap-y">
+          <div className="w-full flex flex-col gap-y-10 md:w-1/2 md:gap-y-[50vh] snap-y">
             <PEG />
             <ArKa />
             <RapidExchange />

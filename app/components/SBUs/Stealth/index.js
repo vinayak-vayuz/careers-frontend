@@ -8,7 +8,10 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 
 const Stealth = () => {
   return (
-    <div className="relative flex flex-col justify-between items-center gap-10">
+    <div
+      id="Stealth"
+      className="relative flex flex-col justify-between items-center gap-10"
+    >
       <Image src={"/images/black_bg.svg"} width={334} height={702} alt="" />
       <div>
         <Image
@@ -32,7 +35,11 @@ const Stealth = () => {
         height={197}
         alt=""
       />
-      {/* <Image src={"/images/pink_circle.svg"} width={334} height={702} alt="" /> */}
+      <p className="block sm:hidden text-[#DDDDDD]">
+        In Stealth, we silently architect organizational evolution, dedicating
+        our SBU to strategic planning, fostering growth through unseen pathways,
+        and crafting precise futures.
+      </p>
     </div>
   );
 };

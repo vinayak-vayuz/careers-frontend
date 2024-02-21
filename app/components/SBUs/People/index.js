@@ -8,7 +8,10 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 
 const PeopleGroup = () => {
   return (
-    <div className="relative flex flex-col justify-between items-center gap-10">
+    <div
+      id="PeopleGroup"
+      className="relative flex flex-col justify-between items-center gap-10"
+    >
       <Image src={"/images/orange_bg.svg"} width={334} height={702} alt="" />
       <div>
         <Image
@@ -32,7 +35,11 @@ const PeopleGroup = () => {
         height={243}
         alt=""
       />
-      {/* <Image src={"/images/black_circle.svg"} width={334} height={702} alt="" /> */}
+      <p className="block sm:hidden text-[#DDDDDD]">
+        Introducing our People's Champions, the heart of our organization,
+        dedicated to nurturing talent, fostering a vibrant workplace, and
+        empowering individuals.
+      </p>
     </div>
   );
 };

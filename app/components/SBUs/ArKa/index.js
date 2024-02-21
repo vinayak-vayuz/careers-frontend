@@ -8,7 +8,10 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 
 const ArKa = () => {
   return (
-    <div className="relative flex flex-col justify-between items-center gap-10">
+    <div
+      id="ArKa"
+      className="relative flex flex-col justify-between items-center gap-10"
+    >
       <Image src={"/images/pink_bg.svg"} width={334} height={702} alt="" />
       <div>
         <Image
@@ -32,7 +35,11 @@ const ArKa = () => {
         height={146}
         alt=""
       />
-      {/* <Image src={"/images/green_circle.svg"} width={334} height={702} alt="" /> */}
+      <p className="block sm:hidden text-[#DDDDDD]">
+        Arka is where UI/UX is a way of life, sculpting digital experiences with
+        intuitive interfaces that redefine user engagement through design
+        artistry and precision.
+      </p>
     </div>
   );
 };

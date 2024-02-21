@@ -12,7 +12,10 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 
 const BusinessImpact = () => {
   return (
-    <div className="relative flex flex-col justify-between items-center gap-10">
+    <div
+      id="BusinessImpact"
+      className="relative flex flex-col justify-between items-center gap-10"
+    >
       <Image src={"/images/red_bg.svg"} width={334} height={702} alt="" />
       <div>
         <Image
@@ -36,7 +39,11 @@ const BusinessImpact = () => {
         height={104}
         alt=""
       />
-      {/* <Image src={"/images/orange_circle.svg"} width={334} height={702} alt="" /> */}
+      <p className="block sm:hidden text-[#DDDDDD]">
+        The Business Impact Group, a dynamic consortium, propels transformative
+        corporate change through innovation, strategic foresight, and
+        collaborative excellence, shaping a resilient future.
+      </p>
     </div>
   );
 };

@@ -8,7 +8,10 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 const PEG = () => {
   return (
     <>
-      <div className="relative flex flex-col justify-between items-center gap-10">
+      <div
+        id="PEG"
+        className="relative flex flex-col justify-between items-center gap-4"
+      >
         <Image src={"/images/teal_bg.svg"} width={334} height={702} alt="" />
         <div>
           <Image
@@ -32,12 +35,11 @@ const PEG = () => {
           height={197}
           alt=""
         />
-        {/* <Image
-          src={"/images/pink_circle.svg"}
-          width={334}
-          height={702}
-          alt=""
-        /> */}
+        <p className="block sm:hidden text-[#DDDDDD]">
+          The Product Engineering Group pioneers technological innovation,
+          crafting market-leading solutions through creativity, precision, and a
+          commitment to excellence. Join our transformative journey.
+        </p>
       </div>
     </>
   );

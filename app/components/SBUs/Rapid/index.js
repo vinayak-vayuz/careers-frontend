@@ -12,7 +12,10 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 
 const RapidExchange = () => {
   return (
-    <div className="relative flex flex-col justify-between items-center gap-10">
+    <div
+      id="RapidExchange"
+      className="relative flex flex-col justify-between items-center gap-10"
+    >
       <Image src={"/images/green_bg.svg"} width={334} height={702} alt="" />
       <div>
         <Image
@@ -36,7 +39,11 @@ const RapidExchange = () => {
         height={228}
         alt=""
       />
-      {/* <Image src={"/images/teal_circle.svg"} width={334} height={702} alt="" /> */}
+      <p className="block sm:hidden text-[#DDDDDD]">
+        Welcome to Rapid Exchange, our strategic business unit connecting
+        clients with top-tier talent, fostering growth through skilled and
+        dedicated professionals.
+      </p>
     </div>
   );
 };
