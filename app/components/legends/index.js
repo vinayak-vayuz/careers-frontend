@@ -173,8 +173,9 @@ const Legends = () => {
                         key={index}
                         className="flex flex-col sm:flex-row justify-center items-center gap-4"
                       >
+                        {/* <div className="w-full h-full"></div> */}
                         <Image
-                          className="object-contain"
+                          className="object-cover"
                           onClick={() => handleLegendexp(data.id)}
                           width={200}
                           height={200}
@@ -215,10 +216,14 @@ const Legends = () => {
           <div className="w-full md:w-[63%] md:min-h-screen flex flex-col items-start justify-center gap-2 order-1 md:order-2">
             <>
               <div>
-                <h1 className={`${bungee.className} text-6xl sm:text-8xl text-white`}>
+                <h1
+                  className={`${bungee.className} text-6xl sm:text-8xl text-white`}
+                >
                   Our
                 </h1>
-                <h1 className={`${bungee.className} text-6xl sm:text-8xl text-white`}>
+                <h1
+                  className={`${bungee.className} text-6xl sm:text-8xl text-white`}
+                >
                   Legend
                 </h1>
               </div>
