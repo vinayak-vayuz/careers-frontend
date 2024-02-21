@@ -75,7 +75,7 @@ const Legends = () => {
     },
     {
       id: 4,
-      name: "Bidyut Majumdar",
+      name: "Bidyut M.",
       designation: "Product Engineer",
       department: "ArKa",
       title: "Legend: Created 140 page in 5 days",
@@ -153,7 +153,7 @@ const Legends = () => {
                   key={index}
                   title={"Our Legends"}
                   closeButton={true}
-                  childrenClassName={"max-h-screen px-3 py-3 bg-[#141414]"}
+                  childrenClassName={"max-h-[90vh] px-3 py-3 bg-[#141414]"}
                   childrenCloseButton={true}
                   button={
                     <Image
