@@ -8,7 +8,7 @@ const cherry_Bomb_One = Cherry_Bomb_One({
   weight: "400",
   subsets: ["latin"],
 });
-const PEGContent = () => {
+const PEG = () => {
   return (
     <>
       <div className="relative flex flex-col justify-between items-center gap-10">
@@ -46,4 +46,4 @@ const PEGContent = () => {
   );
 };
 
-export default PEGContent;
+export default PEG;
