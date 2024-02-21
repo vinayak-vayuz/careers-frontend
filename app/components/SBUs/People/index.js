@@ -36,7 +36,7 @@ const PeopleGroup = () => {
         alt=""
       />
       <p className="block sm:hidden text-[#DDDDDD]">
-        Introducing our People's Champions, the heart of our organization,
+        Introducing our People&apos;s Champions, the heart of our organization,
         dedicated to nurturing talent, fostering a vibrant workplace, and
         empowering individuals.
       </p>
