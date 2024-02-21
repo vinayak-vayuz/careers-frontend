@@ -327,12 +327,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0e9fac;
+  background: white;
   -webkit-border-radius: 1ex;
 }
 
 ::-webkit-scrollbar-corner {
-  background: #0e9fac;
+  background: white;
 }
 
 /* Insights card CSS */
