@@ -153,7 +153,7 @@ const Legends = () => {
                   key={index}
                   title={"Our Legends"}
                   closeButton={true}
-                  childrenClassName={"h-[70vh] py-3 bg-[#141414]"}
+                  childrenClassName={"max-h-screen px-3 py-3 bg-[#141414]"}
                   childrenCloseButton={true}
                   button={
                     <Image
