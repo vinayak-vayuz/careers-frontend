@@ -7,13 +7,13 @@ const Test = () => {
   const zSpacing = -1000;
   const numFrames = 2;
 
+  const scrollMsgRef = useRef(null);
+  const frames = Array.from({ length: numFrames }, () => useRef(null));
+
   const zVals = Array.from(
     { length: numFrames },
     (_, i) => (numFrames - i) * zSpacing
   );
-
-  const frames = Array.from({ length: numFrames }, () => useRef(null));
-  const scrollMsgRef = useRef(null);
 
   const handleScroll = () => {
     const top = window.scrollY || document.documentElement.scrollTop;
