@@ -47,12 +47,12 @@ const Values = ({ id }) => {
   });
 
   return (
-    <motion.section
+    <section
       id={id}
       className="duration-300 overflow-hidden"
-      transition={{ duration: 1 }}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      // transition={{ duration: 1 }}
+      // initial={{ opacity: 0 }}
+      // whileInView={{ opacity: 1 }}
     >
       <div className="w-full min-h-screen bg-[#141414] py-10">
         <div
@@ -145,7 +145,7 @@ const Values = ({ id }) => {
         {/* Video Section */}
         <div className="w-full min-h-[50vh] bg-green-500"></div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
