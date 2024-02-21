@@ -143,7 +143,7 @@ const Values = ({ id }) => {
           ))}
         </div> */}
         {/* Video Section */}
-        <div className="w-full min-h-[50vh] bg-green-500"></div>
+        {/* <div className="w-full min-h-[50vh] bg-green-500"></div> */}
       </div>
     </section>
   );
