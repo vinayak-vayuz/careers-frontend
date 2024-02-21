@@ -6,6 +6,7 @@ import Stealth from "../SBUs/Stealth";
 import PeopleGroup from "../SBUs/People";
 import RapidExchange from "../SBUs/Rapid";
 import BusinessImpact from "../SBUs/Buisness";
+import { useState, useEffect, useRef } from "react";
 import { Bungee, Cherry_Bomb_One } from "next/font/google";
 
 const bungee = Bungee({
@@ -18,6 +19,48 @@ const cherry_Bomb_One = Cherry_Bomb_One({
 });
 
 export default function SBUs() {
+  const [activeSBU, setActiveSBU] = useState("PEG");
+
+  const sbuRefs = {
+    PEG: useRef(null),
+    ArKa: useRef(null),
+    RapidExchange: useRef(null),
+    HundredX: useRef(null),
+    BusinessImpact: useRef(null),
+    PeopleGroup: useRef(null),
+    Stealth: useRef(null),
+  };
+
+  const handleIntersection = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSBU(entry.target.id);
+      }
+    });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Adjust as needed
+    });
+
+    Object.values(sbuRefs).forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => {
+      Object.values(sbuRefs).forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+    };
+  }, [sbuRefs]);
+
   return (
     <>
       <section className="bg-[#141414] px-2 md:px-14 py-10 my-auto">
@@ -77,14 +120,19 @@ export default function SBUs() {
                 />
               </div>
               <p className="text-[#DDDDDD]">
-                The Product Engineering Group pioneers technological innovation,
+                {activeSBU === "PEG" &&
+                  "The Product Engineering Group pioneers technological innovation, crafting market-leading solutions through creativity, precision, and a commitment to excellence. Join our transformative journey."}
+                {activeSBU === "ArKa" && "Your ArKa content here..."}
+                {activeSBU === "RapidExchange" &&
+                  "Your RapidExchange content here..."}
+                {/* The Product Engineering Group pioneers technological innovation,
                 crafting market-leading solutions through creativity, precision,
-                and a commitment to excellence. Join our transformative journey.
+                and a commitment to excellence. Join our transformative journey. */}
               </p>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-y-175 md:w-1/2 md:gap-y-[50vh]">
-            <PEG/>
+          <div className="w-full flex flex-col gap-y-175 md:w-1/2 md:gap-y-[50vh] snap-y">
+            <PEG />
             <ArKa />
             <RapidExchange />
             <HundredX />

@@ -26,18 +26,18 @@ const PEG = () => {
           </h1>
         </div>
         <Image
-          className="scale-50 absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+          className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
           src={"/images/peg.svg"}
           width={287}
           height={197}
           alt=""
         />
-        <Image
+        {/* <Image
           src={"/images/pink_circle.svg"}
           width={334}
           height={702}
           alt=""
-        />
+        /> */}
       </div>
     </>
   );
