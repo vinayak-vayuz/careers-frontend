@@ -60,7 +60,7 @@ const Values = ({ id }) => {
         >
           <ScrollVelocity />
         </div>
-        <div className="my-8 px-2 sm:px-14 flex flex-wrap items-center gap-4">
+        <div className="my-8 px-2 sm:px-14 flex flex-nowrap items-center gap-4 overflow-x-auto no-scrollbar">
           {buttons.map((data, index) => (
             <div
               onClick={() => handleClick(index)}
@@ -75,7 +75,7 @@ const Values = ({ id }) => {
                   className={`${
                     index === buttonid &&
                     "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
-                  } text-lg pt-0.5 font-semibold bg-gray-500 group-hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] text-transparent bg-clip-text`}
+                  } text-lg whitespace-nowrap pt-0.5 font-semibold bg-gray-500 group-hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] text-transparent bg-clip-text`}
                 >
                   {data.label}
                 </button>

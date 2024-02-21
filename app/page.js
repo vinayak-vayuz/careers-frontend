@@ -43,6 +43,8 @@ export default function Home() {
       <BottomNavigation />
       {/* Values Section */}
       <Values id={2} />
+      {/* Test */}
+      {/* <Test/> */}
       {/* SBUs Section */}
       <SBUs />
       {/* Legends Section */}

@@ -19,6 +19,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #141414;
+  scroll-behavior: smooth;
 }
 
 /* @layer utilities {
@@ -588,4 +589,80 @@ body {
   to {
     transform: rotateZ(-5deg);
   }
+}
+
+/* ZoomGallery.css */
+
+.zoom-gallery-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.zoom-image {
+  transition: transform 0.5s ease;
+}
+
+.element {
+  height: 100vh; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Scroll 3D */
+.body-content {
+  background-color: black;
+  height:1600px;
+  position: relative;
+}
+#content {
+  position:fixed; 
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  /* if smaller content box is used and centering is needed: 
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  */
+  border: 2px dashed red;
+}
+#viewport {
+  perspective:300px;
+  perspective-origin:50% 50%;
+  transform-style: preserve-3d;
+  width:100%;
+  height:100%;
+}
+
+#instructions-overlay{
+  position: fixed;
+  width:100%;
+  height:100%;
+  z-index: -1;
+  background: rgba(0,0,0,.5);
+}
+  
+.frame{
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform-style: preserve-3d;
+}
+/* .frame.box {
+  border-radius:.5em;
+  background-color:white;
+  padding:2em;
+} */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
