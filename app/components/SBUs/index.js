@@ -5,15 +5,19 @@ import HundredX from "../SBUs/100x";
 import Stealth from "../SBUs/Stealth";
 import PeopleGroup from "../SBUs/People";
 import RapidExchange from "../SBUs/Rapid";
+import { Bungee } from "next/font/google";
 import BusinessImpact from "../SBUs/Buisness";
 import { useState, useEffect, useRef } from "react";
-import { Bungee, Cherry_Bomb_One } from "next/font/google";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+
+// import required modules
+import { FreeMode } from "swiper/modules";
 
 const bungee = Bungee({
-  weight: "400",
-  subsets: ["latin"],
-});
-const cherry_Bomb_One = Cherry_Bomb_One({
   weight: "400",
   subsets: ["latin"],
 });
@@ -87,7 +91,7 @@ export default function SBUs() {
               </p>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-y-10 md:w-1/2 md:gap-y-[50vh] snap-y">
+          <div className="hidden sm:flex w-full flex-col gap-y-10 md:w-1/2 md:gap-y-[50vh] snap-y">
             <PEG />
             <ArKa />
             <RapidExchange />
@@ -95,6 +99,54 @@ export default function SBUs() {
             <BusinessImpact />
             <PeopleGroup />
             <Stealth />
+          </div>
+          <div className="block sm:hidden w-full">
+            <Swiper
+              className={"mySwiper py-10"}
+              // slidesPerView={3}
+              spaceBetween={30}
+              freeMode={true}
+              breakpoints={{
+                200: {
+                  slidesPerView: 1,
+                },
+                576: {
+                  // width: 576,
+                  slidesPerView: 2,
+                },
+                768: {
+                  // width: 768,
+                  slidesPerView: 3,
+                },
+                1024: {
+                  // width: 768,
+                  slidesPerView: 3,
+                },
+              }}
+              modules={[FreeMode]}
+            >
+              <SwiperSlide>
+                <PEG />
+              </SwiperSlide>
+              <SwiperSlide>
+                <ArKa />
+              </SwiperSlide>
+              <SwiperSlide>
+                <RapidExchange />
+              </SwiperSlide>
+              <SwiperSlide>
+                <HundredX />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BusinessImpact />
+              </SwiperSlide>
+              <SwiperSlide>
+                <PeopleGroup />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Stealth />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </section>
