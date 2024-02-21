@@ -139,16 +139,16 @@ const Expand = ({
           alt={alt}
         />
         {selected ? (
-          <motion.div
-            layout
-            transition={{ duration: 1 }}
-            className="w-max p-4 bg-black bg-opacity-100 rounded-xl"
+          <div
+            // layout
+            // transition={{ duration: 1 }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 p-4 bg-black rounded-xl"
           >
             <h1 className={`${bungee.className} text-2xl text-[#A35DFF]`}>
               {title}
             </h1>
             <h1 className="text-white">{description}</h1>
-          </motion.div>
+          </div>
         ) : (
           <></>
         )}
