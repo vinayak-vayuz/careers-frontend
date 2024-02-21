@@ -60,7 +60,7 @@ const Values = ({ id }) => {
         >
           <ScrollVelocity />
         </div>
-        <div className="my-8 px-2 sm:px-14 flex flex-nowrap items-center gap-4 overflow-x-auto no-scrollbar">
+        <div className="my-8 px-2 sm:px-14 flex flex-nowrap items-center gap-4 overflow-x-auto no-scrollbar scroll-smooth">
           {buttons.map((data, index) => (
             <div
               onClick={() => handleClick(index)}
