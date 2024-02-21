@@ -79,7 +79,7 @@ const Memoirs = () => {
   };
 
   return (
-    <section className="py-10 bg-[#141414] relative px-6 w-full min-h-screen">
+    <section className="py-10 bg-[#141414] relative px-6 w-full min-h-screen overflow-hidden">
       <div className="flex flex-wrap gap-2">
         {buttons.map((data, index) => (
           <GradientButton

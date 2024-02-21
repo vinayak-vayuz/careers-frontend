@@ -214,10 +214,10 @@ const Legends = () => {
           <div className="w-full md:w-[63%] md:min-h-screen flex flex-col items-start gap-2 order-1 md:order-2">
             <>
               <div>
-                <h1 className={`${bungee.className} text-8xl text-white`}>
+                <h1 className={`${bungee.className} text-6xl sm:text-8xl text-white`}>
                   Our
                 </h1>
-                <h1 className={`${bungee.className} text-8xl text-white`}>
+                <h1 className={`${bungee.className} text-6xl sm:text-8xl text-white`}>
                   Legend
                 </h1>
               </div>
