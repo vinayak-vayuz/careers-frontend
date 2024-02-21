@@ -1,11 +1,11 @@
 import Image from "next/image";
+import PEG from "../SBUs/PEG";
 import ArKa from "../SBUs/ArKa";
-import PEGContent from "../SBUs/PEG";
-import RapidExchange from "../SBUs/Rapid";
 import HundredX from "../SBUs/100x";
-import BusinessImpact from "../SBUs/Buisness";
-import PeopleGroup from "../SBUs/People";
 import Stealth from "../SBUs/Stealth";
+import PeopleGroup from "../SBUs/People";
+import RapidExchange from "../SBUs/Rapid";
+import BusinessImpact from "../SBUs/Buisness";
 import { Bungee, Cherry_Bomb_One } from "next/font/google";
 
 const bungee = Bungee({
@@ -84,7 +84,7 @@ export default function SBUs() {
             </div>
           </div>
           <div className="w-full flex flex-col gap-y-175 md:w-1/2 md:gap-y-[50vh]">
-            <PEGContent />
+            <PEG/>
             <ArKa />
             <RapidExchange />
             <HundredX />
