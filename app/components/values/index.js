@@ -17,7 +17,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode } from "swiper/modules";
 
 const buttons = [
   { id: 1, label: "Designer" },
@@ -106,7 +106,7 @@ const Values = ({ id }) => {
                 slidesPerView: 3,
               },
             }}
-            modules={[FreeMode, Pagination]}
+            modules={[FreeMode]}
           >
             {filteredJobData.map((data, index) => (
               <SwiperSlide key={index}>

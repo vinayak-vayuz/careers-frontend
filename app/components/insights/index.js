@@ -1,6 +1,15 @@
-import { Michroma, Montserrat } from "next/font/google";
 import InsightsCard from "./card";
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Michroma, Montserrat } from "next/font/google";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+
+// import required modules
+import { FreeMode } from "swiper/modules";
 
 const michroma = Michroma({
   weight: "400",
@@ -90,7 +99,7 @@ const Insights = ({ id }) => {
       {loading ? (
         <section
           id={id}
-          className="relative w-full min-h-screen py-10 bg-[#141414] flex flex-col justify-center items-center"
+          className="hidden sm:flex relative w-full sm:min-h-screen py-10 bg-[#141414] flex-col justify-center items-center"
         >
           <div className="w-full sm:w-[80%] flex flex-col justify-center items-center text-center gap-4">
             <h1 className={`${michroma.className} text-white text-4xl`}>
@@ -105,13 +114,13 @@ const Insights = ({ id }) => {
           <div className="bg-[#00C2F8] w-4 h-4 rounded-full absolute top-[42%] left-[48.4%] -translate-x-[50%] -translate-y-[50%]"></div>
         </section>
       ) : (
-        <section className="pb-4 w-full min-h-screen bg-[#00C2F8]">
+        <section className="pb-4 w-full sm:min-h-screen bg-[#00C2F8]">
           <h1
             className={`${michroma.className} py-5 text-black text-center text-4xl`}
           >
             Insights
           </h1>
-          <div className="w-full px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-4">
+          <div className="hidden sm:grid w-full px-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-4">
             {insightData.map((data, index) => (
               <InsightsCard
                 key={index}
@@ -121,6 +130,27 @@ const Insights = ({ id }) => {
                 coverImage={data.coverImage}
               />
             ))}
+          </div>
+          <div className="block sm:hidden px-2 w-full">
+            <Swiper
+              className={"mySwiper py-10"}
+              slidesPerView={1}
+              spaceBetween={30}
+              freeMode={true}
+              
+              modules={[FreeMode]}
+            >
+              {insightData.map((data, index) => (
+                <SwiperSlide key={index}>
+                  <InsightsCard
+                    title={data.title}
+                    author={data.author}
+                    duration={data.duration}
+                    coverImage={data.coverImage}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </section>
       )}
