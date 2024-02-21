@@ -125,7 +125,7 @@ const Expand = ({
 
   return (
     <>
-      <div
+      <section
         className="w-full flex flex-col justify-center items-center"
         ref={menuRef}
         onClick={handleClick}
@@ -151,7 +151,7 @@ const Expand = ({
         ) : (
           <></>
         )}
-      </div>
+      </section>
     </>
   );
 };
@@ -163,7 +163,7 @@ const Events = () => {
         transition={{ duration: 1 }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className="bg-[#141414] px-4 py-10 relative w-full min-h-screen flex"
+        className="bg-[#141414] px-4 py-10 relative w-full min-h-screen flex overflow-hidden"
       >
         {eventsData.map((data, index) => (
           <Expand

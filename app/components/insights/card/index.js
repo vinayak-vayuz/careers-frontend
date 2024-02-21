@@ -2,7 +2,8 @@ import Image from "next/image";
 
 const InsightsCard = ({ title, author, duration, coverImage }) => {
   return (
-    <div className="card">
+    // sm:w-[290px]
+    <div className="card overflow-visible w-full h-[220px]">
       <div className="content">
         <div className="back">
           <div className="back-content p-2 flex justify-between">

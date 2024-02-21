@@ -19,8 +19,9 @@ const JobCard = ({
   postedAt,
 }) => {
   return (
+    // w-[20rem]
     <div
-      className={`${nunito.className} w-[20rem] p-3 bg-[#202020] border border-[#313131] rounded-2xl flex flex-col justify-between`}
+      className={`${nunito.className} w-full p-3 bg-[#202020] border border-[#313131] rounded-2xl flex flex-col justify-between`}
     >
       <div className="flex flex-col">
         <div className="relative flex gap-4">

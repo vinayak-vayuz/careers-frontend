@@ -19,7 +19,7 @@ const cherry_Bomb_One = Cherry_Bomb_One({
   subsets: ["latin"],
 });
 
-const PEG = ({ className, id }) => {
+const SBUs = ({ className, id }) => {
   const leftSectionRef = useRef(null);
   const [isLeftSticky, setLeftSticky] = useState(false);
 
@@ -50,7 +50,7 @@ const PEG = ({ className, id }) => {
         <div className="relative bg-[#141414] px-2 md:px-14 py-10 w-full min-h-screen flex justify-between items-center gap-20 ">
           <div
             ref={leftSectionRef}
-            className={`${className}  w-full md:w-1/2 min-h-[80vh] flex flex-col justify-between gap-5 ${
+            className={`${className} w-full md:w-1/2 min-h-[80vh] flex flex-col justify-between gap-5 ${
               isLeftSticky ? "sticky top-0" : ""
             }`}
           >
@@ -125,4 +125,4 @@ const PEG = ({ className, id }) => {
   );
 };
 
-export default PEG;
+export default SBUs;

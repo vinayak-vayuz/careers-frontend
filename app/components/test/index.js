@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { ArKa } from "../SBUs/ArKa";
+import ArKa from "../SBUs/ArKa";
 import PEGContent from "../SBUs/PEG";
 import RapidExchange from "../SBUs/Rapid";
-import { Bungee, Cherry_Bomb_One } from "next/font/google";
 import HundredX from "../SBUs/100x";
 import BusinessImpact from "../SBUs/Buisness";
 import PeopleGroup from "../SBUs/People";
 import Stealth from "../SBUs/Stealth";
+import { Bungee, Cherry_Bomb_One } from "next/font/google";
 
 const bungee = Bungee({
   weight: "400",
@@ -21,8 +21,8 @@ export default function Test() {
   return (
     <>
       <section className="bg-[#141414] px-2 md:px-14 py-10 my-auto">
-        <div className="grid grid-cols-12 items-start gap-x-20">
-          <div className="relative hidden md:sticky md:top-20 md:col-span-6 md:block">
+        <div className="w-full flex flex-col md:flex-row items-start gap-x-20 gap-y-10">
+          <div className="relative md:sticky md:top-20 md:w-1/2 md:block">
             <div
               className={`w-full min-h-[80vh] flex flex-col justify-between gap-5`}
             >
@@ -83,7 +83,7 @@ export default function Test() {
               </p>
             </div>
           </div>
-          <div className="col-span-12 flex flex-col gap-y-175 md:col-span-6 md:gap-y-[50vh]">
+          <div className="w-full flex flex-col gap-y-175 md:w-1/2 md:gap-y-[50vh]">
             <PEGContent />
             <ArKa />
             <RapidExchange />

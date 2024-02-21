@@ -6,7 +6,7 @@ const cherry_Bomb_One = Cherry_Bomb_One({
   subsets: ["latin"],
 });
 
-export const ArKa = () => {
+const ArKa = () => {
   return (
     <div className="relative flex flex-col justify-between items-center gap-10">
       <Image src={"/images/pink_bg.svg"} width={334} height={702} alt="" />
@@ -36,3 +36,5 @@ export const ArKa = () => {
     </div>
   );
 };
+
+export default ArKa;

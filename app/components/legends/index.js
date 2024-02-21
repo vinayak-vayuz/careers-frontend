@@ -211,7 +211,7 @@ const Legends = () => {
               ))}
             </div>
           </div>
-          <div className="w-full md:w-[63%] md:min-h-screen flex items-center gap-2 order-1 md:order-2">
+          <div className="w-full md:w-[63%] md:min-h-screen flex flex-col items-start gap-2 order-1 md:order-2">
             <>
               <div>
                 <h1 className={`${bungee.className} text-8xl text-white`}>
