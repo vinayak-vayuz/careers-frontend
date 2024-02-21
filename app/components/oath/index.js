@@ -12,7 +12,7 @@ const OathCeremony = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen py-10 bg-[#141414] flex justify-center items-center overflow-hidden">
+    <section className="relative w-full md:min-h-screen py-10 bg-[#141414] flex justify-center items-center overflow-hidden">
       {animationComplete ? (
         <video autoPlay muted loop className="w-full sm:w-[60%]" controls>
           <source src="/videos/oath_ceremony.mp4" type="video/mp4" />

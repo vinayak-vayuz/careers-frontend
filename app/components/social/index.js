@@ -226,7 +226,7 @@ const Social = ({ id }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         id={id}
-        className="w-full min-h-screen bg-[#141414] relative"
+        className="w-full py-4 md:min-h-screen bg-[#141414] relative"
       >
         {!topcontributors ? (
           <div
