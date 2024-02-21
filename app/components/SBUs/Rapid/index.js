@@ -30,10 +30,10 @@ const RapidExchange = () => {
         </h1>
       </div>
       <Image
-        className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+        className="scale-50 absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2"
         src={"/images/rapid.svg"}
-        width={287}
-        height={197}
+        width={496}
+        height={228}
         alt=""
       />
       <Image src={"/images/teal_circle.svg"} width={334} height={702} alt="" />

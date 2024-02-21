@@ -26,10 +26,10 @@ const PeopleGroup = () => {
         </h1>
       </div>
       <Image
-        className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+        className="scale-50 absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2"
         src={"/images/people_group.svg"}
-        width={287}
-        height={197}
+        width={271}
+        height={243}
         alt=""
       />
       <Image src={"/images/black_circle.svg"} width={334} height={702} alt="" />

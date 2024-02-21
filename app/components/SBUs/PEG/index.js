@@ -1,9 +1,6 @@
 import { Cherry_Bomb_One } from "next/font/google";
 import Image from "next/image";
-// const bungee = Bungee({
-//     weight: "400",
-//     subsets: ["latin"],
-//   });
+
 const cherry_Bomb_One = Cherry_Bomb_One({
   weight: "400",
   subsets: ["latin"],
@@ -29,7 +26,7 @@ const PEG = () => {
           </h1>
         </div>
         <Image
-          className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+          className="scale-50 absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2"
           src={"/images/peg.svg"}
           width={287}
           height={197}

@@ -30,9 +30,9 @@ const HundredX = () => {
         </h1>
       </div>
       <Image
-        className="scale-50 absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+        className="scale-50 absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2"
         src={"/images/100x.svg"}
-        width={287}
+        width={387}
         height={197}
         alt=""
       />
