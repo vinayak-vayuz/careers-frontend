@@ -545,7 +545,7 @@ body {
   position: absolute;
   top: 0;
   left: -25%;
-  rotate: -45deg;
+  /* rotate: -45deg; */
   transition: 1s;
   animation: glide 3s ease-in-out 1s infinite alternate;
   transform-origin: top;
@@ -575,11 +575,28 @@ body {
   position: absolute;
   top: 0;
   right: -25%;
-  rotate: 45deg;
+  /* rotate: 45deg; */
   transition: 1s;
   animation: glide 3s ease-in-out 1s infinite alternate;
   transform-origin: top;
   z-index: 1;
+}
+
+@media (min-width: 300px) {
+  .spotlight-1{
+    rotate: -10deg;
+  }
+  .spotlight-3{
+    rotate: 10deg;
+  }
+}
+@media (min-width: 640px) {
+  .spotlight-1{
+    rotate: -45deg;
+  }
+  .spotlight-3{
+    rotate: 45deg;
+  }
 }
 
 @keyframes glide {
