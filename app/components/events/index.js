@@ -126,11 +126,7 @@ const Expand = ({
 
   return (
     <>
-      <section
-        className="w-full flex flex-col justify-center items-center"
-        ref={menuRef}
-        onClick={handleClick}
-      >
+      <div ref={menuRef} onClick={handleClick}>
         <Image
           className={`${className} w-52`}
           src={imageSrc}
@@ -152,7 +148,7 @@ const Expand = ({
         ) : (
           <></>
         )}
-      </section>
+      </div>
     </>
   );
 };
@@ -164,7 +160,7 @@ const Events = () => {
         transition={{ duration: 1 }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className="bg-[#141414] px-4 py-10 relative w-full min-h-screen flex overflow-hidden"
+        className="bg-[#141414] px-4 py-10 relative w-full min-h-screen flex flex-wrap justify-center items-center gap-2 overflow-hidden"
       >
         {eventsData.map((data, index) => (
           <Expand
