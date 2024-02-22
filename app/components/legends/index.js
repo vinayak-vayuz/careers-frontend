@@ -142,12 +142,12 @@ const Legends = () => {
       transition={{ duration: 1 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="relative px-4 py-4 w-full min-h-screen bg-[#141414] flex"
+      className="relative px-4 py-4 w-full min-h-[40rem] sm:min-h-screen bg-[#141414] flex"
     >
       {legend ? (
         <div className="w-full flex flex-col md:flex-row gap-8">
           <div className="w-full md:w-[35%] flex flex-col md:flex-row gap-2 order-2 md:order-1">
-            <div className="flex flex-wrap gap-2">
+            <div className="flex sm:flex-wrap gap-2 overflow-x-auto no-scrollbar scroll-smooth">
               {legendData.map((data, index) => (
                 <ReactModal
                   key={index}
@@ -157,7 +157,7 @@ const Legends = () => {
                   childrenCloseButton={true}
                   button={
                     <Image
-                      className="object-contain"
+                      className="sm:object-contain min-w-[200px] flex-shrink-0"
                       onClick={() => handleLegendexp(data.id)}
                       width={200}
                       height={200}

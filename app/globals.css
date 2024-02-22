@@ -552,7 +552,7 @@ body {
   z-index: 1;
 }
 .spotlight-2 {
-  width: 50%;
+  /* width: 50%; */
   max-width: 700px;
   height: 100%;
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
@@ -583,19 +583,29 @@ body {
 }
 
 @media (min-width: 300px) {
-  .spotlight-1{
+  .spotlight-1 {
     rotate: -10deg;
+    display: none;
   }
-  .spotlight-3{
+  .spotlight-2 {
+    width: 100%;
+  }
+  .spotlight-3 {
     rotate: 10deg;
+    display: none;
   }
 }
 @media (min-width: 640px) {
-  .spotlight-1{
+  .spotlight-1 {
     rotate: -45deg;
+    display: block;
   }
-  .spotlight-3{
+  .spotlight-2 {
+    width: 50%;
+  }
+  .spotlight-3 {
     rotate: 45deg;
+    display: block;
   }
 }
 
@@ -629,15 +639,15 @@ body {
 /* Scroll 3D */
 .body-content {
   background-color: black;
-  height:1600px;
+  height: 1600px;
   position: relative;
 }
 #content {
-  position:fixed; 
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   /* if smaller content box is used and centering is needed: 
   top:50%;
   left:50%;
@@ -646,25 +656,25 @@ body {
   border: 2px dashed red;
 }
 #viewport {
-  perspective:300px;
-  perspective-origin:50% 50%;
+  perspective: 300px;
+  perspective-origin: 50% 50%;
   transform-style: preserve-3d;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
-#instructions-overlay{
+#instructions-overlay {
   position: fixed;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
 }
-  
-.frame{
-  position:absolute;
-  width:100%;
-  height:100%;
+
+.frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   transform-style: preserve-3d;
 }
 /* .frame.box {
@@ -680,6 +690,6 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

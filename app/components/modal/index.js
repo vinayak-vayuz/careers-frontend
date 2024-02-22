@@ -30,7 +30,7 @@ const ReactModal = ({
       <button
         disabled={disabled}
         id={id}
-        className={`${buttonClassName} ${
+        className={`${buttonClassName ? buttonClassName : ""} ${
           disabled
             ? "bg-bee-lightgray dark:bg-bee-matterHornDark cursor-not-allowed"
             : ""
