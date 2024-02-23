@@ -44,13 +44,13 @@ export default function Home() {
       {/* Values Section */}
       <Values id={2} />
       {/* Test */}
-      {/* <Test /> */}
+      <Test />
       {/* SBUs Section */}
       <SBUs />
       {/* Legends Section */}
       <Legends />
       {/* Events Section */}
-      <Events />
+      {/* <Events /> */}
       {/* Social Section */}
       <Social id={3} />
       {/* Insights Section */}
