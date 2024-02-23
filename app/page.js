@@ -44,7 +44,7 @@ export default function Home() {
       {/* Values Section */}
       <Values id={2} />
       {/* Test */}
-      {/* <Test/> */}
+      <Test/>
       {/* SBUs Section */}
       <SBUs />
       {/* Legends Section */}

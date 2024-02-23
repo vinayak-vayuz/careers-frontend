@@ -638,9 +638,10 @@ body {
 
 /* Scroll 3D */
 .body-content {
-  background-color: black;
-  height: 1600px;
+  background-color: #141414;
+  height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 #content {
   position: absolute;
