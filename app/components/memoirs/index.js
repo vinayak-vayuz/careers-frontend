@@ -49,7 +49,8 @@ const convergenceImages = [
   },
   {
     imageSrc: "/images/convergence/convergence_6.png",
-    className: "hidden sm:block w-full sm:w-32 md:absolute top-1/2 -translate-y-1/2 left-[40%]",
+    className:
+      "hidden sm:block w-full sm:w-32 md:absolute top-1/2 -translate-y-1/2 left-[40%]",
     width: "425",
     height: "282",
     alt: "saurabh",
@@ -78,6 +79,14 @@ const Memoirs = () => {
     setSelect(!select);
   };
 
+  // Calculate the number of columns
+  const numColumns = 4; // Change this value as needed
+
+  // Group data by column
+  const columns = Array.from({ length: numColumns }, (_, columnIndex) =>
+    convergenceImages.filter((_, index) => index % numColumns === columnIndex)
+  );
+
   return (
     <section className="pb-10 bg-[#141414] relative px-2 md:px-6 w-full md:min-h-screen overflow-hidden">
       <div className="py-4 flex flex-nowrap gap-2 overflow-x-auto no-scrollbar scroll-smooth">
@@ -100,7 +109,23 @@ const Memoirs = () => {
           </GradientButton>
         ))}
       </div>
-      <div className="flex flex-nowrap overflow-x-auto gap-2 no-scrollbar">
+      <div className="w-full lg:h-[35rem] lg:overflow-hidden py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        {columns.map((column, columnIndex) => (
+          <div key={columnIndex} className="space-y-2">
+            {column.map((data, rowIndex) => (
+              <Image
+                key={rowIndex}
+                width={data.width}
+                height={data.height}
+                className="w-full h-auto object-cover"
+                src={data.imageSrc}
+                alt=""
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+      {/* <div className="flex flex-nowrap overflow-x-auto gap-2 no-scrollbar">
         {convergenceImages.map((data, index) => (
           <Image
             key={index}
@@ -111,7 +136,7 @@ const Memoirs = () => {
             alt={data.alt}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import { Michroma, Montserrat } from "next/font/google";
+import Link from "next/link";
 
 const michroma = Michroma({
   weight: "400",
@@ -27,6 +28,7 @@ const BecomeAVAYUZer = ({ id }) => {
         Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut
         diam.
       </p>
+      <Link className="px-2 py-1 border border-black rounded-full z-[2]" target="_blank" href={"https://www.vayuz.com/"}>Enroll Now</Link>
     </section>
   );
 };
