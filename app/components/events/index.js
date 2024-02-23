@@ -72,8 +72,8 @@ const Events = () => {
     { length: numFrames },
     (_, i) => (numFrames - i) * zSpacing
   );
-
-  const frames = Array.from({ length: numFrames }, () => useRef(null));
+  const nullRef = useRef(null);
+  const frames = Array.from({ length: numFrames }, () => nullRef);
   const scrollMsgRef = useRef(null);
 
   const handleScroll = () => {
