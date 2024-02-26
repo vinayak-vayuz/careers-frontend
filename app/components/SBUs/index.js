@@ -1,8 +1,8 @@
-import Image from "next/image";
 import PEG from "../SBUs/PEG";
 import ArKa from "../SBUs/ArKa";
 import HundredX from "../SBUs/100x";
 import Stealth from "../SBUs/Stealth";
+import { motion } from "framer-motion";
 import PeopleGroup from "../SBUs/People";
 import RapidExchange from "../SBUs/Rapid";
 import { Bungee } from "next/font/google";
@@ -37,14 +37,31 @@ export default function SBUs() {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-    for (const [key, ref] of Object.entries(sbuRefs)) {
-      if (ref.current) {
-        const rect = ref.current.getBoundingClientRect();
-        if (rect.top <= scrollPosition && rect.bottom >= scrollPosition) {
-          setActiveSBU(key);
-        }
-      }
+    console.log(scrollPosition);
+    switch (true) {
+      case scrollPosition >= 2000 && scrollPosition < 2500:
+        setActiveSBU("PEG");
+        break;
+      case scrollPosition >= 2250 && scrollPosition < 3000:
+        setActiveSBU("ArKa");
+        break;
+      case scrollPosition >= 3000 && scrollPosition < 3800:
+        setActiveSBU("RapidExchange");
+        break;
+      case scrollPosition >= 3800 && scrollPosition < 4700:
+        setActiveSBU("HundredX");
+        break;
+      case scrollPosition >= 4700 && scrollPosition < 5500:
+        setActiveSBU("BusinessImpact");
+        break;
+      case scrollPosition >= 5500 && scrollPosition < 6300:
+        setActiveSBU("PeopleGroup");
+        break;
+      case scrollPosition >= 6300:
+        setActiveSBU("Stealth");
+        break;
+      default:
+        break;
     }
   };
 
@@ -79,16 +96,22 @@ export default function SBUs() {
                   of Excellence in Every Endeavor.
                 </p>
               </div>
-              <p className="hidden md:block text-[#DDDDDD]">
+              <motion.p className="hidden md:block text-[#DDDDDD] transition-all ease-in-out duration-300">
                 {activeSBU === "PEG" &&
                   "The Product Engineering Group pioneers technological innovation, crafting market-leading solutions through creativity, precision, and a commitment to excellence. Join our transformative journey."}
-                {activeSBU === "ArKa" && "Your ArKa content here..."}
+                {activeSBU === "ArKa" &&
+                  "Arka is where UI/UX is a way of life, sculpting digital experiences with intuitive interfaces that redefine user engagement through design artistry and precision."}
                 {activeSBU === "RapidExchange" &&
-                  "Your RapidExchange content here..."}
-                {/* The Product Engineering Group pioneers technological innovation,
-                crafting market-leading solutions through creativity, precision,
-                and a commitment to excellence. Join our transformative journey. */}
-              </p>
+                  "Welcome to Rapid Exchange, our strategic business unit connecting clients with top-tier talent, fostering growth through skilled and dedicated professionals."}
+                {activeSBU === "HundredX" &&
+                  "Meet 100 X, a cutting-edge marketing team driving success through creativity, strategy, and groundbreaking campaigns that leave a lasting impact."}
+                {activeSBU === "BusinessImpact" &&
+                  "The Business Impact Group, a dynamic consortium, propels transformative corporate change through innovation, strategic foresight, and collaborative excellence, shaping a resilient future."}
+                {activeSBU === "PeopleGroup" &&
+                  "Introducing our People's Champions, the heart of our organization, dedicated to nurturing talent, fostering a vibrant workplace, and empowering individuals."}
+                {activeSBU === "Stealth" &&
+                  "In Stealth, we silently architect organizational evolution, dedicating our SBU to strategic planning, fostering growth through unseen pathways, and crafting precise futures."}
+              </motion.p>
             </div>
           </div>
           <div className="hidden sm:flex w-full flex-col gap-y-10 md:w-1/2 md:gap-y-[50vh] snap-y">
