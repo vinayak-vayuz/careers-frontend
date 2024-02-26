@@ -297,13 +297,13 @@ const Social = ({ id }) => {
                   alt=""
                 />
                 <div
-                  className={`${mochiy_pop_one.className} w-[90%] sm:w-[30%] h-[25rem] overflow-hidden bg-[#1C1C1C] rounded-3xl`}
+                  className={`${mochiy_pop_one.className} w-[90%] sm:w-[30%] bg-[#1C1C1C] rounded-3xl`}
                 >
-                  <div className="px-5 py-3 h-[25rem] overflow-y-auto">
+                  <div className="px-5 py-3">
                     <h1 className="text-white px-4 pb-2 border-b">
                       Top Contributors
                     </h1>
-                    {topContributors.map((data, index) => (
+                    {topContributors.slice(0, 5).map((data, index) => (
                       <div
                         key={index}
                         className="py-2 flex justify-between items-center gap-4 border-b"
