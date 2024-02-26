@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import GradientButton from "../buttons/GradientButton";
+import AnimatedButton from "../buttons/AnimatedButton";
 
 const buttons = [
   "Convergence",
@@ -91,22 +92,29 @@ const Memoirs = () => {
     <section className="pb-10 bg-[#141414] relative px-2 md:px-6 w-full md:min-h-screen overflow-hidden">
       <div className="py-4 flex flex-nowrap gap-2 overflow-x-auto no-scrollbar scroll-smooth">
         {buttons.map((data, index) => (
-          <GradientButton
-            containerClassName={`${
-              id === index
-                ? "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
-                : ""
-            }`}
-            buttonClassName={`${
-              id === index
-                ? "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
-                : ""
-            } whitespace-nowrap`}
+          <AnimatedButton
             onclick={() => handleClick(index)}
             key={index}
+            className={`${id === index ? "running" : ""}`}
           >
             {data}
-          </GradientButton>
+          </AnimatedButton>
+          // <GradientButton
+          //   containerClassName={`${
+          //     id === index
+          //       ? "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
+          //       : ""
+          //   }`}
+          //   buttonClassName={`${
+          //     id === index
+          //       ? "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
+          //       : ""
+          //   } whitespace-nowrap`}
+          //   onclick={() => handleClick(index)}
+          //   key={index}
+          // >
+          //   {data}
+          // </GradientButton>
         ))}
       </div>
       <div className="w-full lg:h-[35rem] lg:overflow-hidden py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">

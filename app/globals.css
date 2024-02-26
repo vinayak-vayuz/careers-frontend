@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url(../app/components/buttons/AnimatedButton.css);
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -27,6 +29,16 @@ body {
     text-wrap: balance;
   }
 } */
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+
+  .running {
+    animation-play-state: running;
+  }
+}
 
 @layer base {
   .font-outline-1 {
