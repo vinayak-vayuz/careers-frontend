@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { FreeMode } from "swiper/modules";
+import AnimatedButton from "../buttons/AnimatedButton";
 
 const buttons = [
   { id: 1, label: "Designer" },
@@ -62,25 +63,28 @@ const Values = ({ id }) => {
         </div>
         <div className="my-8 px-2 sm:px-14 flex flex-nowrap items-center gap-4 overflow-x-auto no-scrollbar scroll-smooth">
           {buttons.map((data, index) => (
-            <div
-              onClick={() => handleClick(index)}
-              key={index}
-              className={`${
-                index === buttonid &&
-                "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
-              } group w-fit bg-gray-500 hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] rounded-lg p-[2px] text-center`}
-            >
-              <div className="px-2 py-1 bg-[#141414] rounded-lg">
-                <button
-                  className={`${
-                    index === buttonid &&
-                    "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
-                  } text-lg whitespace-nowrap pt-0.5 font-semibold bg-gray-500 group-hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] text-transparent bg-clip-text`}
-                >
-                  {data.label}
-                </button>
-              </div>
-            </div>
+            <AnimatedButton selected={index === buttonid && true} onClick={() => handleClick(index)} key={index}>
+              {data.label}
+            </AnimatedButton>
+            // <div
+            //   onClick={() => handleClick(index)}
+            //   key={index}
+            //   className={`${
+            //     index === buttonid &&
+            //     "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
+            //   } group w-fit bg-gray-500 hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] rounded-lg p-[2px] text-center`}
+            // >
+            //   <div className="px-2 py-1 bg-[#141414] rounded-lg">
+            //     <button
+            //       className={`${
+            //         index === buttonid &&
+            //         "bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A]"
+            //       } text-lg whitespace-nowrap pt-0.5 font-semibold bg-gray-500 group-hover:bg-gradient-to-r from-[#9208CE] via-[#FC0600] to-[#0AD80A] text-transparent bg-clip-text`}
+            //     >
+            //       {data.label}
+            //     </button>
+            //   </div>
+            // </div>
           ))}
         </div>
         <div className="px-2 sm:px-14 w-full">

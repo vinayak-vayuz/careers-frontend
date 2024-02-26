@@ -1,13 +1,26 @@
 import "./AnimatedButton.css";
-const AnimatedButton = ({ className, children, onClick }) => {
+const AnimatedButton = ({ className, children, onClick, selected }) => {
   return (
-    <button
-      className={`${className ? className : ""} button-animation`}
-      onClick={onClick}
-      
+    <div
+      className={`${
+        selected
+          ? ""
+          : "group w-fit bg-gray-400 hover:background-gradient rounded-lg p-[2px] text-center"
+      }`}
     >
-      {children}
-    </button>
+      <div className={`${selected ? "" : "px-2 py-1 bg-black rounded-lg"}`}>
+        <button
+          className={`${
+            selected
+              ? "button-animation"
+              : "py-1 font-semibold text-base bg-gray-400 group-hover:text-white group-hover:font-semibold text-transparent bg-clip-text hover:button-animation"
+          } ${className ? className : ""} `}
+          onClick={onClick}
+        >
+          {children}
+        </button>
+      </div>
+    </div>
   );
 };
 

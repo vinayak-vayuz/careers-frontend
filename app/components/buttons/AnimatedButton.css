@@ -1,6 +1,6 @@
 .button-animation {
-  --border-radius: 1.5rem;
-  --border-width: 4px;
+  --border-radius: 8px;
+  --border-width: 2px;
   border-radius: var(--border-radius);
   appearance: none;
   position: relative;
@@ -64,3 +64,15 @@
 .button-animation:active {
   --border-width: 5px;
 }
+
+/* .background-gradient {
+  background-image: conic-gradient(
+    #488cfb,
+    #29dbbc,
+    #ddf505,
+    #ff9f0e,
+    #e440bb,
+    #655adc,
+    #488cfb
+  );
+} */

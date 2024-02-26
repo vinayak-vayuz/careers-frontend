@@ -29,7 +29,7 @@ const BecomeAVAYUZer = ({ id }) => {
         Lorem ipsum dolor sit amet consectetur. Vel rutrum habitasse cursus ut
         diam.
       </p>
-      <AnimatedButton className={"z-[2]"}>Enroll Now</AnimatedButton>
+      <AnimatedButton selected={true} className={"z-[2]"}>Enroll Now</AnimatedButton>
       {/* <Link
         className="px-2 py-1 border border-black rounded-full z-[2]"
         target="_blank"

@@ -75,9 +75,12 @@ const Memoirs = () => {
   const [id, setId] = useState(0);
   const [select, setSelect] = useState(false);
 
+  
+
   const handleClick = (index) => {
     setId(index);
     setSelect(!select);
+    console.log(id)
   };
 
   // Calculate the number of columns
@@ -93,8 +96,9 @@ const Memoirs = () => {
       <div className="py-4 flex flex-nowrap gap-2 overflow-x-auto no-scrollbar scroll-smooth">
         {buttons.map((data, index) => (
           <AnimatedButton
-            onclick={() => handleClick(index)}
             key={index}
+            onClick={() => handleClick(index)}
+            selected={id === index && true}
             className={`${id === index ? "running" : ""}`}
           >
             {data}
