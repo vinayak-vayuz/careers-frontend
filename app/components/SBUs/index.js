@@ -59,7 +59,7 @@ export default function SBUs() {
   console.log(activeSBU, "SBU");
   return (
     <>
-      <section className="max-w-[80rem] bg-[#141414] px-2 md:px-14 py-10 my-auto">
+      <section className="bg-[#141414] px-2 md:px-14 py-10 my-auto">
         <div className="w-full flex flex-col md:flex-row items-start gap-x-20 gap-y-10">
           <div className="relative md:sticky md:top-20 md:w-1/2 md:block">
             <div
