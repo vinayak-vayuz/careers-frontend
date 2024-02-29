@@ -46,11 +46,11 @@ const Header = () => {
           </svg>
         </button>
         <div
-          className={`${permanent_Marker.className} px-6 pt-3 pb-1 rounded-full bg-[#2C2C2C] flex gap-4`}
+          className={`${permanent_Marker.className} px-6 pt-3 pb-3 rounded-full bg-[#2C2C2C] flex gap-4`}
         >
           <button className="text-white">
             Life at VAYUZ{" "}
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width="92"
               height="13"
@@ -63,11 +63,11 @@ const Header = () => {
                 stroke-width="2"
                 stroke-linecap="round"
               />
-            </svg>
+            </svg> */}
           </button>
           <button className="text-white">
             Work at VAYUZ{" "}
-            <span>
+            {/* <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="92"
@@ -82,7 +82,7 @@ const Header = () => {
                   stroke-linecap="round"
                 />
               </svg>
-            </span>
+            </span> */}
           </button>
         </div>
         <button className="p-3 rounded-full bg-[#2C2C2C] flex justify-center items-center">
@@ -108,10 +108,11 @@ const Header = () => {
           </svg>
         </button>
         <button className="p-3 rounded-full bg-[#2C2C2C] flex justify-center items-center gap-2">
-          <h1 className={`${permanent_Marker.className} text-white`}>
+          {/* <h1 className={`${permanent_Marker.className} text-white`}>
             Sign In
-          </h1>
-          <svg
+          </h1> */}
+          <Image width={24} height={25} src={"/icons/user.svg"} />
+          {/* <svg
             className="scale-75"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -139,7 +140,7 @@ const Header = () => {
                 />
               </clipPath>
             </defs>
-          </svg>
+          </svg> */}
         </button>
       </div>
     </header>
