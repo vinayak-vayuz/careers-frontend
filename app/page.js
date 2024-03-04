@@ -32,7 +32,7 @@ export default function Home() {
   };
 
   return (
-    <main id={1} className="relative flex flex-col">
+    <main id={1} className="max-w-[85rem] relative flex flex-col">
       {/* Header */}
       <Header />
       {/* Hero Section */}
